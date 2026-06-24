@@ -2,15 +2,6 @@
 <html lang=en style>
 
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18244923747"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18244923747');
-</script>
   <!-- Favicons -->
   <link rel="icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
@@ -126,6 +117,29 @@
 }
 </script>
   <title>MotoReclamo - Accidentes de tránsito en moto | Reclamos e Indemnizaciones</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18244923747"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18244923747');
+  </script>
+  <!-- Google Ads conversion event -->
+  <script>
+    function gtagSendEvent(url) {
+      var callback = function () {
+        if (typeof url === 'string') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'ads_conversion_Contacto_1', {
+        'event_callback': callback,
+        'event_timeout': 2000,
+      });
+      return false;
+    }
+  </script>
 </head>
 
 <body>
@@ -2619,7 +2633,7 @@
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30"></div>
               </div>
               <nav class="relative z-20 flex items-center justify-between px-5 md:px-10 lg:px-16 py-5"><a href=# class=flex-shrink-0><img src=img/logo.webp alt=MotoReclamo class="h-16 w-auto object-contain"></a>
-                <div class="hidden md:flex items-center gap-8"><a href=#servicios class="text-white/80 hover:text-amber-400 transition-colors text-sm font-semibold tracking-wider uppercase">Servicios</a><a href=#nosotros class="text-white/80 hover:text-amber-400 transition-colors text-sm font-semibold tracking-wider uppercase">Nosotros</a><a href=#contacto class="text-white/80 hover:text-amber-400 transition-colors text-sm font-semibold tracking-wider uppercase">Contacto</a><a href=https://wa.me/5491164677648 target=_blank rel="noopener noreferrer" class="bg-amber-400 text-black px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-amber-300 transition-colors flex items-center gap-2"><svg xmlns=http://www.w3.org/2000/svg width=16 height=16 viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round class="lucide lucide-message-circle">
+                <div class="hidden md:flex items-center gap-8"><a href=#servicios class="text-white/80 hover:text-amber-400 transition-colors text-sm font-semibold tracking-wider uppercase">Servicios</a><a href=#nosotros class="text-white/80 hover:text-amber-400 transition-colors text-sm font-semibold tracking-wider uppercase">Nosotros</a><a href=#contacto class="text-white/80 hover:text-amber-400 transition-colors text-sm font-semibold tracking-wider uppercase">Contacto</a><a href=https://wa.me/5491164677648 onclick="return gtagSendEvent('https://wa.me/5491164677648')" target=_blank rel="noopener noreferrer" class="bg-amber-400 text-black px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-amber-300 transition-colors flex items-center gap-2"><svg xmlns=http://www.w3.org/2000/svg width=16 height=16 viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round class="lucide lucide-message-circle">
                       <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
                     </svg>WhatsApp</a></div><button class="md:hidden text-white p-2 z-30 relative sf-hidden" aria-label=Menú><svg xmlns=http://www.w3.org/2000/svg width=28 height=28 viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round class="lucide lucide-menu">
                     <line x1=4 x2=20 y1=12 y2=12></line>
@@ -2632,7 +2646,7 @@
                   <div class="inline-flex items-center gap-2 bg-amber-400/20 border border-amber-400/40 text-amber-400 px-4 py-2 rounded-full mb-6 text-sm font-semibold tracking-wide"><span class="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span>Especialistas en Accidentes de Tránsito · Morón, Buenos Aires</div>
                   <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-4 leading-[0.95] uppercase" style='font-family:"Bebas Neue",sans-serif;letter-spacing:0.02em'>Tu Mejor<span class="block text-amber-400">Indemnización</span></h1>
                   <p class="text-base sm:text-lg text-gray-300 mb-8 leading-relaxed max-w-xl">Asesoramiento legal completo para víctimas de accidentes de tránsito en Buenos Aires. Somos motoqueros que entienden tu situación. <strong class=text-amber-400>Sin costos adelantados — solo cobramos si ganamos.</strong>
-                  <div class="flex flex-col sm:flex-row gap-3 mb-12"><a href=#contacto class="bg-amber-400 text-black px-7 py-4 rounded-lg text-base font-bold hover:bg-amber-300 transition-colors text-center">Consulta Gratuita</a><a href=https://wa.me/5491164677648 target=_blank rel="noopener noreferrer" class="bg-white/10 backdrop-blur-sm text-white px-7 py-4 rounded-lg text-base font-semibold hover:bg-white/20 transition-colors flex items-center justify-center gap-2 border border-white/20"><svg xmlns=http://www.w3.org/2000/svg width=18 height=18 viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round class="lucide lucide-message-circle">
+                  <div class="flex flex-col sm:flex-row gap-3 mb-12"><a href=#contacto class="bg-amber-400 text-black px-7 py-4 rounded-lg text-base font-bold hover:bg-amber-300 transition-colors text-center">Consulta Gratuita</a><a href=https://wa.me/5491164677648 onclick="return gtagSendEvent('https://wa.me/5491164677648')" target=_blank rel="noopener noreferrer" class="bg-white/10 backdrop-blur-sm text-white px-7 py-4 rounded-lg text-base font-semibold hover:bg-white/20 transition-colors flex items-center justify-center gap-2 border border-white/20"><svg xmlns=http://www.w3.org/2000/svg width=18 height=18 viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round class="lucide lucide-message-circle">
                         <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
                       </svg>WhatsApp 11-6467-7648</a></div>
                   <div class="grid grid-cols-3 gap-4">
@@ -2913,7 +2927,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                   <div class=space-y-6>
                     <h3 class="text-xl font-bold text-white">Información de Contacto</h3>
-                    <div class=space-y-4><a href=https://wa.me/5491164677648 target=_blank rel="noopener noreferrer" class="flex items-center gap-4 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 hover:border-amber-400/40 p-5 rounded-xl transition-all group">
+                    <div class=space-y-4><a href=https://wa.me/5491164677648 onclick="return gtagSendEvent('https://wa.me/5491164677648')" target=_blank rel="noopener noreferrer" class="flex items-center gap-4 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 hover:border-amber-400/40 p-5 rounded-xl transition-all group">
                         <div class="w-11 h-11 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-amber-400/20 transition-colors"><svg xmlns=http://www.w3.org/2000/svg width=20 height=20 viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round class="lucide lucide-message-circle text-amber-400">
                             <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
                           </svg></div>
@@ -2965,7 +2979,7 @@
                   </div>
                   <div class="bg-zinc-950 border border-zinc-800 p-7 sm:p-9 rounded-2xl">
                     <h3 class="text-xl font-bold text-white mb-6">Envianos tu Consulta</h3>
-                    <form class=space-y-5 id=contactForm onsubmit="return enviarWhatsApp(event)">
+                    <form class=space-y-5 id=contactForm onsubmit="gtag('event', 'ads_conversion_Contacto_1'); return enviarWhatsApp(event)">
                       <div><label for=name class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Nombre Completo *</label><input type=text id=name class="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 text-white rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent outline-none transition-all placeholder-gray-600" placeholder="Tu nombre" required value></div>
                       <div><label for=phone class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Teléfono *</label><input type=tel id=phone class="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 text-white rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent outline-none transition-all placeholder-gray-600" placeholder="+54 9 11 XXXX-XXXX" required value></div>
                       <div><label for=email class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Email *</label><input type=email id=email class="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 text-white rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent outline-none transition-all placeholder-gray-600" placeholder=tu@email.com required value></div>
@@ -3016,7 +3030,7 @@
 
     <!-- WHATSAPP -->
     <li>
-      <a href="https://wa.me/5491164677648" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-gray-500 hover:text-amber-400 transition-colors text-sm">
+      <a href="https://wa.me/5491164677648" onclick="return gtagSendEvent('https://wa.me/5491164677648')" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-gray-500 hover:text-amber-400 transition-colors text-sm">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle text-amber-400 flex-shrink-0">
           <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
         </svg>
