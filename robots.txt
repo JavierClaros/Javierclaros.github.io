@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://www.motoreclamo.ar/sitemap.xml
+Sitemap: https://motoreclamo.ar/sitemap.xml
