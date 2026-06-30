@@ -15,13 +15,15 @@
 
   <!-- SEO básico -->
   <title>MotoReclamo - Accidentes de tránsito en moto | Reclamos e Indemnizaciones</title>
-  <meta name="description" content="¿Tuviste un accidente en moto en Argentina? Reclamá tu indemnización sin costo adelantado. Red de abogados en todo el país. Solo cobramos si ganamos.">
+  <meta name="description"
+    content="¿Tuviste un accidente en moto en Argentina? Reclamá tu indemnización sin costo adelantado. Red de abogados en todo el país. Solo cobramos si ganamos.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://motoreclamo.ar">
 
   <!-- Open Graph -->
   <meta property="og:title" content="¿Tuviste un accidente en moto? Reclama lo que te corresponde">
-  <meta property="og:description" content="Calculá tu indemnización GRATIS en segundos. Sin costos adelantados. Solo cobramos si ganamos.">
+  <meta property="og:description"
+    content="Calculá tu indemnización GRATIS en segundos. Sin costos adelantados. Solo cobramos si ganamos.">
   <meta property="og:image" content="https://motoreclamo.ar/preview.jpg?v=1">
   <meta property="og:image:secure_url" content="https://motoreclamo.ar/preview.jpg?v=1">
   <meta property="og:image:type" content="image/jpeg">
@@ -115,13 +117,18 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18244923747"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'AW-18244923747');
   </script>
 </head>
 
 <body>
+
+  <!-- PRELOADER -->
+  <div id="preloader" role="status" aria-label="Cargando MotoReclamo">
+    <img src="img/logo.webp" alt="MotoReclamo" width="200" height="80">
+  </div>
 
   <!-- ============================================================
        MENÚ MOBILE (overlay)
@@ -137,8 +144,8 @@
     <a href="#servicios">Servicios</a>
     <a href="#nosotros">Nosotros</a>
     <a href="#contacto">Contacto</a>
-    <a href="https://wa.me/5491164677648" onclick="return gtagSendEvent('https://wa.me/5491164677648')"
-      target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a href="https://wa.me/5491164677648" onclick="return gtagSendEvent('https://wa.me/5491164677648')" target="_blank"
+      rel="noopener noreferrer">WhatsApp</a>
   </nav>
 
   <!-- ============================================================
@@ -152,8 +159,8 @@
 
             <!-- HERO -->
             <div class="relative min-h-screen">
-              <div class="absolute inset-0 z-0">
-                <img src="img/hero-bg.jpg" alt="Motociclista en calles urbanas de noche"
+              <div class="absolute inset-0 z-0" id="hero-bg-wrap">
+                <img id="hero-bg-img" src="img/hero-bg.jpg" alt="Motociclista en calles urbanas de noche"
                   class="w-full h-full object-cover" width="1920" height="1080">
                 <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/50"></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30"></div>
@@ -167,16 +174,15 @@
                 </a>
 
                 <!-- Links desktop -->
-                <div class="hidden md:flex items-center gap-8">
+                <div class="hidden md:flex items-center gap-8 desktop-nav">
                   <a href="#servicios"
                     class="text-white/80 hover:text-amber-400 transition-colors text-sm font-semibold tracking-wider uppercase">Servicios</a>
                   <a href="#nosotros"
                     class="text-white/80 hover:text-amber-400 transition-colors text-sm font-semibold tracking-wider uppercase">Nosotros</a>
                   <a href="#contacto"
                     class="text-white/80 hover:text-amber-400 transition-colors text-sm font-semibold tracking-wider uppercase">Contacto</a>
-                  <a href="https://wa.me/5491164677648"
-                    onclick="return gtagSendEvent('https://wa.me/5491164677648')" target="_blank"
-                    rel="noopener noreferrer"
+                  <a href="https://wa.me/5491164677648" onclick="return gtagSendEvent('https://wa.me/5491164677648')"
+                    target="_blank" rel="noopener noreferrer"
                     class="bg-amber-400 text-black px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-amber-300 transition-colors flex items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -188,8 +194,8 @@
                 </div>
 
                 <!-- Botón hamburguesa -->
-                <button id="btn-menu-open" class="md:hidden text-white p-2 z-30 relative"
-                  aria-label="Abrir menú" aria-controls="mobile-menu" aria-expanded="false">
+                <button id="btn-menu-open" class="md:hidden text-white p-2 z-30 relative" aria-label="Abrir menú"
+                  aria-controls="mobile-menu" aria-expanded="false">
                   <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     aria-hidden="true">
@@ -209,7 +215,8 @@
                     Especialistas en Accidentes de Tránsito · Todo el País
                   </div>
 
-                  <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-4 leading-[0.95] uppercase"
+                  <h1
+                    class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-4 leading-[0.95] uppercase"
                     style='font-family:"Bebas Neue",sans-serif;letter-spacing:0.02em'>
                     Tu Mejor<span class="block text-amber-400">Indemnización</span>
                   </h1>
@@ -228,9 +235,8 @@
                     <a href="#contacto"
                       class="bg-amber-400 text-black px-7 py-4 rounded-lg text-base font-bold hover:bg-amber-300 transition-colors text-center">Consulta
                       Gratuita</a>
-                    <a href="https://wa.me/5491164677648"
-                      onclick="return gtagSendEvent('https://wa.me/5491164677648')" target="_blank"
-                      rel="noopener noreferrer"
+                    <a href="https://wa.me/5491164677648" onclick="return gtagSendEvent('https://wa.me/5491164677648')"
+                      target="_blank" rel="noopener noreferrer"
                       class="bg-white/10 backdrop-blur-sm text-white px-7 py-4 rounded-lg text-base font-semibold hover:bg-white/20 transition-colors flex items-center justify-center gap-2 border border-white/20">
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -245,17 +251,20 @@
                   <div class="grid grid-cols-3 gap-4">
                     <div class="border-l-2 border-amber-400 pl-4">
                       <div class="text-3xl sm:text-4xl font-black text-amber-400"
-                        style='font-family:"Bebas Neue",sans-serif'>100+</div>
+                        style='font-family:"Bebas Neue",sans-serif' data-counter data-target="100" data-suffix="+">0+
+                      </div>
                       <div class="text-gray-400 text-xs sm:text-sm">Casos Resueltos</div>
                     </div>
                     <div class="border-l-2 border-amber-400 pl-4">
                       <div class="text-3xl sm:text-4xl font-black text-amber-400"
-                        style='font-family:"Bebas Neue",sans-serif'>95%</div>
+                        style='font-family:"Bebas Neue",sans-serif' data-counter data-target="95" data-suffix="%">0%
+                      </div>
                       <div class="text-gray-400 text-xs sm:text-sm">Éxito en Reclamos</div>
                     </div>
                     <div class="border-l-2 border-amber-400 pl-4">
                       <div class="text-3xl sm:text-4xl font-black text-amber-400"
-                        style='font-family:"Bebas Neue",sans-serif'>24/7</div>
+                        style='font-family:"Bebas Neue",sans-serif' data-counter data-target="24" data-suffix="/7">0/7
+                      </div>
                       <div class="text-gray-400 text-xs sm:text-sm">Atención Disponible</div>
                     </div>
                   </div>
@@ -393,8 +402,8 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                   <div class="relative reveal">
                     <div class="relative rounded-2xl overflow-hidden shadow-2xl">
-                      <img src="img/nosotros.jpg" alt="Motociclista en la ruta"
-                        class="w-full h-[440px] object-cover" loading="lazy" width="800" height="440">
+                      <img src="img/nosotros.jpg" alt="Motociclista en la ruta" class="w-full h-[440px] object-cover"
+                        loading="lazy" width="800" height="440">
                       <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     </div>
                     <div class="absolute -bottom-5 -right-5 bg-amber-400 text-black p-6 rounded-xl shadow-xl">
@@ -414,14 +423,14 @@
 
                     <div class="grid grid-cols-2 gap-4 mb-8">
                       <div class="bg-zinc-800 border border-zinc-700 rounded-xl p-5">
-                        <div class="text-3xl font-black text-amber-400"
-                          style='font-family:"Bebas Neue",sans-serif'>+20</div>
+                        <div class="text-3xl font-black text-amber-400" style='font-family:"Bebas Neue",sans-serif'>+20
+                        </div>
                         <div class="text-white text-sm font-semibold mt-1">Profesionales</div>
                         <div class="text-gray-500 text-xs mt-0.5">Abogados, peritos y médicos</div>
                       </div>
                       <div class="bg-zinc-800 border border-zinc-700 rounded-xl p-5">
-                        <div class="text-3xl font-black text-amber-400"
-                          style='font-family:"Bebas Neue",sans-serif'>+10</div>
+                        <div class="text-3xl font-black text-amber-400" style='font-family:"Bebas Neue",sans-serif'>+10
+                        </div>
                         <div class="text-white text-sm font-semibold mt-1">Años de Experiencia</div>
                         <div class="text-gray-500 text-xs mt-0.5">En reclamos de tránsito</div>
                       </div>
@@ -431,9 +440,9 @@
                       <div class="flex items-start gap-4">
                         <div
                           class="w-11 h-11 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="text-amber-400" aria-hidden="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-amber-400" aria-hidden="true">
                             <circle cx="18.5" cy="17.5" r="3.5"></circle>
                             <circle cx="5.5" cy="17.5" r="3.5"></circle>
                             <circle cx="15" cy="5" r="1"></circle>
@@ -449,9 +458,9 @@
                       <div class="flex items-start gap-4">
                         <div
                           class="w-11 h-11 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="text-amber-400" aria-hidden="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-amber-400" aria-hidden="true">
                             <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path>
                             <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path>
                             <path d="M7 21h10"></path>
@@ -468,9 +477,9 @@
                       <div class="flex items-start gap-4">
                         <div
                           class="w-11 h-11 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="text-amber-400" aria-hidden="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-amber-400" aria-hidden="true">
                             <path d="m11 17 2 2a1 1 0 1 0 3-3"></path>
                             <path
                               d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4">
@@ -489,9 +498,9 @@
                       <div class="flex items-start gap-4">
                         <div
                           class="w-11 h-11 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="text-amber-400" aria-hidden="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-amber-400" aria-hidden="true">
                             <path
                               d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
                             </path>
@@ -670,42 +679,180 @@
                   <h2 class="text-4xl sm:text-5xl font-black text-white mt-2 mb-4 uppercase leading-tight"
                     style='font-family:"Bebas Neue",sans-serif'>Preguntas Frecuentes</h2>
                 </div>
-                <div class="space-y-5">
-                  <div class="bg-zinc-800 border border-zinc-700 rounded-xl p-6 reveal">
-                    <h3 class="text-white font-bold mb-2">¿Cuánto tiempo tengo para reclamar después de un
-                      accidente?</h3>
-                    <p class="text-gray-400 leading-relaxed">En general, el plazo de prescripción para reclamar
-                      daños y perjuicios por un accidente de tránsito en Argentina es de 3 años desde la fecha del
-                      hecho. Te recomendamos iniciar el reclamo cuanto antes, para no perder documentación ni
-                      testigos clave.</p>
+                <div class="space-y-4" id="faq-list">
+                  <div class="faq-item reveal">
+                    <button class="faq-toggle" aria-expanded="false">
+                      <h3>¿Cuánto tiempo tengo para reclamar después de un accidente?</h3>
+                      <span class="faq-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <line x1="12" y1="5" x2="12" y2="19" />
+                          <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="faq-body">
+                      <div class="faq-body-inner">En general, el plazo de prescripción para reclamar daños y perjuicios
+                        por un accidente de tránsito en Argentina es de 3 años desde la fecha del hecho. Te recomendamos
+                        iniciar el reclamo cuanto antes, para no perder documentación ni testigos clave.</div>
+                    </div>
                   </div>
-                  <div class="bg-zinc-800 border border-zinc-700 rounded-xl p-6 reveal">
-                    <h3 class="text-white font-bold mb-2">¿Qué pasa si el vehículo responsable no tenía seguro?
-                    </h3>
-                    <p class="text-gray-400 leading-relaxed">Igual podés iniciar el reclamo. Evaluamos otras vías
-                      de cobro disponibles según el caso. En la consulta gratuita analizamos tu situación puntual.
-                    </p>
+                  <div class="faq-item reveal">
+                    <button class="faq-toggle" aria-expanded="false">
+                      <h3>¿Qué pasa si el vehículo responsable no tenía seguro?</h3>
+                      <span class="faq-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <line x1="12" y1="5" x2="12" y2="19" />
+                          <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="faq-body">
+                      <div class="faq-body-inner">Igual podés iniciar el reclamo. Evaluamos otras vías de cobro
+                        disponibles según el caso. En la consulta gratuita analizamos tu situación puntual.</div>
+                    </div>
                   </div>
-                  <div class="bg-zinc-800 border border-zinc-700 rounded-xl p-6 reveal">
-                    <h3 class="text-white font-bold mb-2">¿Cuánto cuesta el servicio?</h3>
-                    <p class="text-gray-400 leading-relaxed">No cobramos nada por adelantado, ni en la mediación
-                      extrajudicial ni en el proceso judicial. Nuestros honorarios se descuentan como un porcentaje
-                      de la indemnización únicamente si logramos cobrarla.</p>
+                  <div class="faq-item reveal">
+                    <button class="faq-toggle" aria-expanded="false">
+                      <h3>¿Cuánto cuesta el servicio?</h3>
+                      <span class="faq-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <line x1="12" y1="5" x2="12" y2="19" />
+                          <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="faq-body">
+                      <div class="faq-body-inner">No cobramos nada por adelantado, ni en la mediación extrajudicial ni
+                        en el proceso judicial. Nuestros honorarios se descuentan como un porcentaje de la indemnización
+                        únicamente si logramos cobrarla.</div>
+                    </div>
                   </div>
-                  <div class="bg-zinc-800 border border-zinc-700 rounded-xl p-6 reveal">
-                    <h3 class="text-white font-bold mb-2">¿Qué documentación necesito para empezar?</h3>
-                    <p class="text-gray-400 leading-relaxed">Como punto de partida sirve la denuncia o exposición
-                      policial del accidente, datos del otro vehículo y su seguro, y cualquier informe médico o
-                      estudio relacionado con tus lesiones. Si no tenés todo, no hay problema: te guiamos para
-                      reunir lo necesario.</p>
+                  <div class="faq-item reveal">
+                    <button class="faq-toggle" aria-expanded="false">
+                      <h3>¿Qué documentación necesito para empezar?</h3>
+                      <span class="faq-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <line x1="12" y1="5" x2="12" y2="19" />
+                          <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="faq-body">
+                      <div class="faq-body-inner">Como punto de partida sirve la denuncia o exposición policial del
+                        accidente, datos del otro vehículo y su seguro, y cualquier informe médico o estudio relacionado
+                        con tus lesiones. Si no tenés todo, no hay problema: te guiamos para reunir lo necesario.</div>
+                    </div>
                   </div>
-                  <div class="bg-zinc-800 border border-zinc-700 rounded-xl p-6 reveal">
-                    <h3 class="text-white font-bold mb-2">¿Conviene la mediación extrajudicial o el proceso
-                      judicial?</h3>
-                    <p class="text-gray-400 leading-relaxed">Depende de cada caso. La mediación es más rápida
-                      (cerca de 3 meses) pero la indemnización suele ser hasta 10 veces menor. El proceso judicial
-                      lleva más tiempo (cerca de 3 años) pero permite reclamar montos mayores. En la consulta
-                      gratuita te explicamos cuál conviene según tu situación.</p>
+                  <div class="faq-item reveal">
+                    <button class="faq-toggle" aria-expanded="false">
+                      <h3>¿Conviene la mediación extrajudicial o el proceso judicial?</h3>
+                      <span class="faq-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <line x1="12" y1="5" x2="12" y2="19" />
+                          <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="faq-body">
+                      <div class="faq-body-inner">Depende de cada caso. La mediación es más rápida (cerca de 3 meses)
+                        pero la indemnización suele ser hasta 10 veces menor. El proceso judicial lleva más tiempo
+                        (cerca de 3 años) pero permite reclamar montos mayores. En la consulta gratuita te explicamos
+                        cuál conviene según tu situación.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- TESTIMONIOS -->
+            <section id="testimonios" class="py-20 px-5 md:px-10 lg:px-16 bg-zinc-950">
+              <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-14 reveal">
+                  <span class="text-amber-400 text-sm font-bold tracking-widest uppercase">Lo que dicen nuestros
+                    clientes</span>
+                  <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white mt-2 mb-4 uppercase"
+                    style='font-family:"Bebas Neue",sans-serif;letter-spacing:0.03em'>Testimonios</h2>
+                  <p class="text-gray-400 max-w-2xl mx-auto text-base sm:text-lg">Más de 100 casos resueltos. Esto es lo
+                    que dicen quienes ya cobraron su indemnización.</p>
+                </div>
+                <div class="testimonios-grid">
+                  <div class="testimonial-card reveal">
+                    <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+                    <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+                    <p class="testimonial-text">"Tuve un accidente grave en la Panamericana. No sabía qué hacer.
+                      MotoReclamo me guió desde el primer día y en 4 meses cobré una indemnización que no esperaba.
+                      Profesionales de verdad."</p>
+                    <div class="testimonial-author">
+                      <img src="img/avatar-marcos.png" alt="Marcos R." class="testimonial-avatar" width="44"
+                        height="44">
+                      <div>
+                        <div class="testimonial-name">Marcos R.</div>
+                        <div class="testimonial-location">Buenos Aires, CABA</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="testimonial-card reveal reveal-delay-1">
+                    <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+                    <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+                    <p class="testimonial-text">"Lo que más me gustó fue que nunca me pidieron plata por adelantado. Me
+                      explicaron todo paso a paso y sentí que realmente estaban de mi lado. Los recomiendo 100%."</p>
+                    <div class="testimonial-author">
+                      <img src="img/avatar-valentina.png" alt="Valentina S." class="testimonial-avatar" width="44"
+                        height="44">
+                      <div>
+                        <div class="testimonial-name">Valentina S.</div>
+                        <div class="testimonial-location">Rosario, Santa Fe</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="testimonial-card reveal reveal-delay-2">
+                    <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+                    <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+                    <p class="testimonial-text">"Se me venció el seguro y estaba convencido que no podía reclamar, pero
+                      me contacté con MotoReclamo, me ayudaron y pude cobrar igualmente. Sin costo adelantado, tal como
+                      prometieron."</p>
+                    <div class="testimonial-author">
+                      <img src="img/avatar-lucas.png" alt="Lucas D." class="testimonial-avatar" width="44" height="44">
+                      <div>
+                        <div class="testimonial-name">Lucas D.</div>
+                        <div class="testimonial-location">Córdoba Capital</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="testimonial-card reveal">
+                    <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+                    <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+                    <p class="testimonial-text">"Después del accidente estaba trabado con el seguro, no me daban
+                      respuesta. Con MotoReclamo lo resolví sin ningun inconveniente. Tenía miedo porque estaba sin un
+                      peso, pero cobré sin adelantarles nada. Excelente Atención!"</p>
+                    <div class="testimonial-author">
+                      <img src="img/avatar-fernando.png" alt="Fernando G." class="testimonial-avatar" width="44"
+                        height="44">
+                      <div>
+                        <div class="testimonial-name">Fernando G.</div>
+                        <div class="testimonial-location">Morón, Buenos Aires</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="testimonial-card reveal reveal-delay-1">
+                    <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+                    <div class="testimonial-stars" aria-label="5 estrellas">★★★★★</div>
+                    <p class="testimonial-text">"Me chocaron por atrás en la rotonda. El tipo quería arreglarlo en mano
+                      pero yo no sabía cuánto valían mis lesiones. Llamé a MotoReclamo y terminé cobrando mucho más de
+                      lo que esperaba."</p>
+                    <div class="testimonial-author">
+                      <img src="img/avatar-daniel.png" alt="Daniel M." class="testimonial-avatar" width="44"
+                        height="44">
+                      <div>
+                        <div class="testimonial-name">Daniel M.</div>
+                        <div class="testimonial-location">La Plata, Buenos Aires</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -733,9 +880,9 @@
                         class="flex items-center gap-4 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 hover:border-amber-400/40 p-5 rounded-xl transition-all group">
                         <div
                           class="w-11 h-11 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-amber-400/20 transition-colors">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="text-amber-400" aria-hidden="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-amber-400" aria-hidden="true">
                             <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
                           </svg>
                         </div>
@@ -750,9 +897,9 @@
                         class="flex items-center gap-4 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 hover:border-amber-400/40 p-5 rounded-xl transition-all group">
                         <div
                           class="w-11 h-11 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-amber-400/20 transition-colors">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="text-amber-400" aria-hidden="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-amber-400" aria-hidden="true">
                             <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                             <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                           </svg>
@@ -767,9 +914,9 @@
                       <div class="flex items-center gap-4 bg-zinc-800 border border-zinc-700 p-5 rounded-xl">
                         <div
                           class="w-11 h-11 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="text-amber-400" aria-hidden="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-amber-400" aria-hidden="true">
                             <path
                               d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
                             </path>
@@ -786,9 +933,9 @@
                       <div class="flex items-center gap-4 bg-zinc-800 border border-zinc-700 p-5 rounded-xl">
                         <div
                           class="w-11 h-11 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="text-amber-400" aria-hidden="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-amber-400" aria-hidden="true">
                             <circle cx="12" cy="12" r="10"></circle>
                             <polyline points="12 6 12 12 16 14"></polyline>
                           </svg>
@@ -865,8 +1012,7 @@
               <div class="max-w-7xl mx-auto px-5 md:px-10 lg:px-16 py-12">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
                   <div class="sm:col-span-2 lg:col-span-1">
-                    <img src="img/logo.webp" alt="MotoReclamo" class="h-20 w-auto object-contain mb-4"
-                      loading="lazy">
+                    <img src="img/logo.webp" alt="MotoReclamo" class="h-20 w-auto object-contain mb-4" loading="lazy">
                     <p class="text-gray-500 text-sm leading-relaxed">Defendemos los derechos de motoqueros y
                       víctimas de accidentes de tránsito en toda Argentina.</p>
                   </div>
@@ -899,9 +1045,9 @@
                       <li>
                         <a href="tel:+5491164677648"
                           class="flex items-center gap-2 text-gray-500 hover:text-amber-400 transition-colors text-sm">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="text-amber-400 flex-shrink-0" aria-hidden="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-amber-400 flex-shrink-0" aria-hidden="true">
                             <path
                               d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
                             </path>
@@ -914,9 +1060,9 @@
                           onclick="return gtagSendEvent('https://wa.me/5491164677648')" target="_blank"
                           rel="noopener noreferrer"
                           class="flex items-center gap-2 text-gray-500 hover:text-amber-400 transition-colors text-sm">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="text-amber-400 flex-shrink-0" aria-hidden="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-amber-400 flex-shrink-0" aria-hidden="true">
                             <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
                           </svg>
                           WhatsApp
@@ -925,9 +1071,9 @@
                       <li>
                         <a href="mailto:contacto@motoreclamo.ar"
                           class="flex items-center gap-2 text-gray-500 hover:text-amber-400 transition-colors text-sm break-all">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="text-amber-400 flex-shrink-0" aria-hidden="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-amber-400 flex-shrink-0" aria-hidden="true">
                             <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                             <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                           </svg>
@@ -937,9 +1083,9 @@
                       <li>
                         <a href="https://www.instagram.com/motoreclamo" target="_blank" rel="noopener noreferrer"
                           class="flex items-center gap-2 text-gray-500 hover:text-amber-400 transition-colors text-sm">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="text-amber-400 flex-shrink-0" aria-hidden="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-amber-400 flex-shrink-0" aria-hidden="true">
                             <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
                             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                             <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
@@ -951,9 +1097,9 @@
                         <a href="https://www.google.com/maps/search/?api=1&query=Almirante+Brown+929+Moron"
                           target="_blank" rel="noopener noreferrer"
                           class="flex items-center gap-2 text-gray-500 hover:text-amber-400 transition-colors text-sm">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="text-amber-400 flex-shrink-0" aria-hidden="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-amber-400 flex-shrink-0" aria-hidden="true">
                             <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
                             <circle cx="12" cy="10" r="3"></circle>
                           </svg>
@@ -986,12 +1132,28 @@
     </div>
   </div>
 
+  <!-- WhatsApp flotante mejorado -->
+  <a href="https://wa.me/5491164677648" onclick="return gtagSendEvent('https://wa.me/5491164677648')" target="_blank"
+    rel="noopener noreferrer" class="btn-wa-float" aria-label="Contactar por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+
   <!-- Botón flotante Calculadora -->
   <a href="https://motoreclamo.ar/calculadora" target="_blank" class="btn-calculadora"
     aria-label="Calcular mi indemnización">CALCULAR INDEMNIZACIÓN</a>
+
+  <!-- Toast de notificación -->
+  <div id="toast" role="alert" aria-live="polite">
+    <span aria-hidden="true">✅</span>
+    <span id="toast-msg">¡Consulta enviada! Te contactaremos pronto.</span>
+  </div>
 
   <!-- Script principal (defer para no bloquear el render) -->
   <script src="script.js" defer></script>
 
 </body>
+
 </html>

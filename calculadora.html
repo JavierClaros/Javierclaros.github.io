@@ -14,6 +14,21 @@
   <meta name="description" content="Calculá tu estimación de indemnización por accidente de tránsito en Argentina. Fórmula Vuoto/Marshall. Sin costo, sin compromiso.">
   <link rel="canonical" href="https://motoreclamo.ar/calculadora">
 
+  <!-- Open Graph / Twitter Card -->
+  <meta property="og:title" content="MotoReclamo – Calculadora de Indemnización">
+  <meta property="og:description" content="Calculá tu estimación de indemnización por accidente de tránsito en Argentina. Fórmula Vuoto/Marshall. Sin costo, sin compromiso.">
+  <meta property="og:image" content="https://motoreclamo.ar/preview.jpg?v=1">
+  <meta property="og:image:secure_url" content="https://motoreclamo.ar/preview.jpg?v=1">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://motoreclamo.ar/calculadora">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MotoReclamo – Calculadora de Indemnización">
+  <meta name="twitter:description" content="Calculá tu estimación de indemnización por accidente de tránsito. Sin costo, sin compromiso.">
+  <meta name="twitter:image" content="https://motoreclamo.ar/preview.jpg">
+
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -372,6 +387,29 @@
 
 <!-- ── FORMULARIO ── -->
 <main class="calc-wrapper" id="formulario">
+
+    <!-- Indicador de pasos / Wizard -->
+    <div class="steps-bar" id="steps-bar" aria-label="Progreso del formulario">
+      <div class="step-item active" id="step-1">
+        <div class="step-circle">1</div>
+        <div class="step-label">Personal</div>
+      </div>
+      <div class="step-connector" id="conn-1"></div>
+      <div class="step-item" id="step-2">
+        <div class="step-circle">2</div>
+        <div class="step-label">Accidente</div>
+      </div>
+      <div class="step-connector" id="conn-2"></div>
+      <div class="step-item" id="step-3">
+        <div class="step-circle">3</div>
+        <div class="step-label">Cálculo</div>
+      </div>
+      <div class="step-connector" id="conn-3"></div>
+      <div class="step-item" id="step-4">
+        <div class="step-circle">4</div>
+        <div class="step-label">Seguro</div>
+      </div>
+    </div>
 
   <form id="calcForm" novalidate>
 
@@ -758,6 +796,48 @@ function validar() {
   });
   return ok;
 }
+
+// ==================== STEPS WIZARD ====================
+(function () {
+  /* Campo representativo de cada sección del formulario */
+  var cardFields = ['nombre', 'fecha', 'tipoLesion', 'aseguradora'];
+  var stepIds    = ['step-1', 'step-2', 'step-3', 'step-4'];
+  var connIds    = ['conn-1', 'conn-2', 'conn-3'];
+
+  function updateSteps() {
+    var filled = 0;
+    cardFields.forEach(function (fId) {
+      var el = document.getElementById(fId);
+      if (!el) return;
+      var val = el.value.trim();
+      /* El select tipoLesion tiene siempre un valor; lo contamos solo si el usuario tocó otros campos primero */
+      if (val !== '' && !(fId === 'tipoLesion' && filled === 0)) filled++;
+    });
+    stepIds.forEach(function (id, i) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.classList.remove('active', 'done');
+      if (i < filled)      el.classList.add('done');
+      else if (i === filled) el.classList.add('active');
+    });
+    connIds.forEach(function (id, i) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.classList.toggle('done', i < filled);
+    });
+  }
+
+  /* Escuchar cambios en todos los campos del formulario */
+  ['nombre','email','telefono','domicilio','fecha','hora','lugar',
+   'tipoLesion','edad','incapacidad','ingreso','aseguradora','poliza'
+  ].forEach(function (fId) {
+    var el = document.getElementById(fId);
+    if (el) el.addEventListener('input',  updateSteps);
+    if (el) el.addEventListener('change', updateSteps);
+  });
+
+  updateSteps();
+})();
 </script>
 
 </body>
