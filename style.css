@@ -1310,14 +1310,53 @@ body,
 }
 
 /* ===============================================================
-   Testimonios — Carrusel scroll-snap (móvil) / Grid (desktop)
+   Testimonios — Ticker auto-scroll (desktop) / Scroll-snap (mobile)
    =============================================================== */
-.testimonios-track {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+
+/* Keyframe del ticker — mueve el doble de contenido (5 orig + 5 dup) */
+@keyframes testimonios-marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
+
+/* Wrapper: oculta el desbordamiento y aplica fade en los bordes */
+.testimonios-outer {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 7%,
+    #000 93%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 7%,
+    #000 93%,
+    transparent 100%
+  );
+}
+
+/* Track: fila flex infinita animada */
+.testimonios-track {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  width: max-content;
+  animation: testimonios-marquee 38s linear infinite;
+}
+
+/* Pausar al pasar el mouse */
+.testimonios-track:hover,
+.testimonios-track:focus-within {
+  animation-play-state: paused;
+}
+
+/* Cards: ancho fijo para ticker uniforme */
 .testimonio-card {
+  flex: 0 0 340px;
+  width: 340px;
   background: #18181b;
   border: 1px solid #27272a;
   border-radius: 0.75rem;
@@ -1325,45 +1364,51 @@ body,
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: border-color 0.3s, transform 0.3s;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 .testimonio-card:hover {
-  border-color: rgba(251,191,36,0.4);
-  transform: translateY(-3px);
+  border-color: rgba(251,191,36,0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.35);
 }
 
-/* Puntos de navegación — ocultos en desktop */
-.testimonios-dots {
-  display: none;
-}
+/* Puntos — ocultos en desktop */
+.testimonios-dots { display: none; }
 
-@media (max-width: 1023px) {
-  .testimonios-track {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
+/* ── MOBILE (≤640px): scroll-snap, sin ticker ── */
 @media (max-width: 640px) {
-  /* Carrusel horizontal con scroll-snap */
+  /* Quitar mask-image fade para que el scroll funcione correctamente */
+  .testimonios-outer {
+    overflow: visible;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  /* Ocultar cards duplicadas */
+  .testimonio-duplicate { display: none; }
+
+  /* Convertir en carrusel scroll-snap */
   .testimonios-track {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;       /* Firefox */
+    scrollbar-width: none;
     padding-bottom: 0.5rem;
+    width: auto;
+    animation: none;
+    gap: 1rem;
   }
   .testimonios-track::-webkit-scrollbar { display: none; }
 
+  /* Cada card ocupa el ancho completo del viewport */
   .testimonio-card {
-    flex: 0 0 calc(100% - 2rem);  /* 1 card visible, con margen lateral */
+    flex: 0 0 calc(100% - 2rem);
+    width: auto;
     scroll-snap-align: center;
     min-width: 0;
   }
 
-  /* Mostrar puntos en móvil */
+  /* Mostrar puntos de navegación */
   .testimonios-dots {
     display: flex;
     justify-content: center;
