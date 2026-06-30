@@ -17,6 +17,7 @@
 /* ---- Scroll suave ---- */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* ---- Tailwind v4 — layer order ---- */
@@ -351,7 +352,9 @@ html {
 
   body {
     background-color: var(--background);
-    color: var(--foreground)
+    color: var(--foreground);
+    overflow-x: hidden;
+    width: 100%;
   }
 
   html {
@@ -799,13 +802,15 @@ html {
 #container .css-uwf2km {
   position: relative;
   flex: 1 0 0px;
-  display: block
+  display: block;
+  overflow-x: hidden;
 }
 
 #container .css-55ua1m {
   min-height: 1px;
   width: 100%;
-  height: var(--full-height-with-banner)
+  height: var(--full-height-with-banner);
+  overflow-x: hidden;
 }
 
 /* ---- Menú Mobile ---- */
@@ -1200,3 +1205,19 @@ a, button, [role="button"], .faq-toggle, .btn-toggle {
   transition: background 0.4s ease;
 }
 .step-connector.done { background: #22c55e; }
+
+/* ---- Corrección global de desbordamiento horizontal ---- */
+html,
+body,
+#container {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+}
+
+/* Evitar desbordamientos en los divs contenedores de Figma export */
+#container > div,
+#container > div > div {
+  overflow-x: hidden !important;
+  width: 100% !important;
+}
