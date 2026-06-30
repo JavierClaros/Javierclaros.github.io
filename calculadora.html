@@ -58,18 +58,45 @@
   .calc-nav {
     position: sticky;
     top: 0;
-    z-index: 40;
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 1.25rem;
-    background: rgba(9,9,11,0.92);
+    padding: 0.75rem 1.25rem;
+    background: rgba(9,9,11,0.97);
     border-bottom: 1px solid rgba(255,184,0,0.15);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    min-height: 64px;
+  }
+  .calc-nav-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 0.5rem;
+    padding: 0.35rem 0.7rem;
+    transition: background 0.2s, color 0.2s;
+  }
+  .btn-back:hover {
+    background: rgba(255,184,0,0.1);
+    color: var(--gold);
+    border-color: rgba(255,184,0,0.3);
   }
   .calc-nav a.logo img {
-    height: 52px;
+    height: 48px;
     width: auto;
     object-fit: contain;
     display: block;
@@ -105,6 +132,8 @@
   .calc-nav .btn-wa:hover { background: #ffd24d; }
   @media (max-width: 640px) {
     .calc-nav .nav-links { display: none; }
+    .btn-back { font-size: 0.72rem; padding: 0.3rem 0.55rem; }
+    .calc-nav a.logo img { height: 42px; }
   }
 
   /* ── Hero ── */
@@ -357,9 +386,20 @@
 
 <!-- ── NAV ── -->
 <header class="calc-nav">
-  <a href="/" class="logo">
-    <img src="img/logo.webp" alt="MotoReclamo">
-  </a>
+  <div class="calc-nav-left">
+    <!-- Botón volver (visible siempre, especialmente en móvil) -->
+    <a href="/" class="btn-back" aria-label="Volver a la página principal">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M19 12H5M12 5l-7 7 7 7"></path>
+      </svg>
+      Volver
+    </a>
+    <!-- Logo -->
+    <a href="/" class="logo">
+      <img src="img/logo.webp" alt="MotoReclamo">
+    </a>
+  </div>
   <div class="nav-links">
     <a href="/#servicios">Servicios</a>
     <a href="/#nosotros">Nosotros</a>
