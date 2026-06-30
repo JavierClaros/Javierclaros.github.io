@@ -43,7 +43,7 @@
   <link rel="preconnect" href="https://www.google-analytics.com">
 
   <!-- Hoja de estilos -->
-  <link rel="stylesheet" href="style.css?v=1.1">
+  <link rel="stylesheet" href="style.css?v=1.2">
 
   <!-- Datos estructurados (Schema.org) -->
   <script type="application/ld+json">
@@ -635,36 +635,76 @@
                     absolutamente nada por adelantado: nuestros honorarios salen únicamente de la indemnización
                     que logremos cobrar.</p>
                 </div>
-                <div class="grid md:grid-cols-2 gap-6">
-                  <div class="bg-zinc-800 border border-zinc-700 rounded-xl p-7 reveal">
-                    <h3 class="text-amber-400 text-xl font-bold mb-3 uppercase"
-                      style='font-family:"Bebas Neue",sans-serif'>Mediación Extrajudicial</h3>
-                    <p class="text-gray-400 mb-4 leading-relaxed">Es la vía más rápida: el reclamo se negocia
-                      directamente con la compañía de seguros o el responsable, sin pasar por un juicio. El proceso
-                      suele resolverse en alrededor de 3 meses. A cambio de la rapidez, el monto de indemnización
-                      que se consigue es considerablemente menor —puede ser hasta 10 veces inferior— al que se
-                      obtendría por la vía judicial, ya que se prioriza un acuerdo rápido entre las partes.</p>
-                    <ul class="text-gray-500 text-sm space-y-2">
-                      <li>• Resolución estimada: 3 meses aproximados</li>
-                      <li>• Indemnización menor a cambio de cobrar antes</li>
-                      <li>• Sin costos adelantados, se cobra solo si hay acuerdo</li>
-                    </ul>
+
+                <!-- Acordeones -->
+                <div class="space-y-4 max-w-3xl mx-auto">
+
+                  <!-- Mediación -->
+                  <div class="proceso-accordion reveal" id="acc-mediacion">
+                    <button class="proceso-toggle" aria-expanded="false" aria-controls="acc-mediacion-body">
+                      <span class="proceso-toggle-title">
+                        <span class="proceso-badge">01</span>
+                        Mediación Extrajudicial
+                      </span>
+                      <span class="proceso-tag">~3 meses</span>
+                      <span class="proceso-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <line x1="12" y1="5" x2="12" y2="19"/>
+                          <line x1="5" y1="12" x2="19" y2="12"/>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="proceso-body" id="acc-mediacion-body" role="region">
+                      <div class="proceso-body-inner">
+                        <p class="text-gray-400 mb-4 leading-relaxed">Es la vía más rápida: el reclamo se negocia
+                          directamente con la compañía de seguros o el responsable, sin pasar por un juicio. El proceso
+                          suele resolverse en alrededor de 3 meses. A cambio de la rapidez, el monto de indemnización
+                          que se consigue es considerablemente menor —puede ser hasta 10 veces inferior— al que se
+                          obtendría por la vía judicial, ya que se prioriza un acuerdo rápido entre las partes.</p>
+                        <ul class="text-gray-500 text-sm space-y-2">
+                          <li>• Resolución estimada: 3 meses aproximados</li>
+                          <li>• Indemnización menor a cambio de cobrar antes</li>
+                          <li>• Sin costos adelantados, se cobra solo si hay acuerdo</li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
-                  <div class="bg-zinc-800 border border-zinc-700 rounded-xl p-7 reveal reveal-delay-1">
-                    <h3 class="text-amber-400 text-xl font-bold mb-3 uppercase"
-                      style='font-family:"Bebas Neue",sans-serif'>Proceso Judicial</h3>
-                    <p class="text-gray-400 mb-4 leading-relaxed">Implica iniciar una demanda y llevar el reclamo
-                      ante la Justicia. Es un proceso más largo, con una duración estimada de alrededor de 3 años,
-                      pero permite reclamar indemnizaciones significativamente más altas que en una mediación
-                      extrajudicial, ya que un juez evalúa en profundidad los daños materiales, físicos y morales
-                      sufridos.</p>
-                    <ul class="text-gray-500 text-sm space-y-2">
-                      <li>• Resolución estimada: 3 años aproximados</li>
-                      <li>• Indemnizaciones notablemente más altas</li>
-                      <li>• Sin costos adelantados, se cobra solo si ganamos</li>
-                    </ul>
+
+                  <!-- Judicial -->
+                  <div class="proceso-accordion reveal reveal-delay-1" id="acc-judicial">
+                    <button class="proceso-toggle" aria-expanded="false" aria-controls="acc-judicial-body">
+                      <span class="proceso-toggle-title">
+                        <span class="proceso-badge">02</span>
+                        Proceso Judicial
+                      </span>
+                      <span class="proceso-tag">~3 años</span>
+                      <span class="proceso-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <line x1="12" y1="5" x2="12" y2="19"/>
+                          <line x1="5" y1="12" x2="19" y2="12"/>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="proceso-body" id="acc-judicial-body" role="region">
+                      <div class="proceso-body-inner">
+                        <p class="text-gray-400 mb-4 leading-relaxed">Implica iniciar una demanda y llevar el reclamo
+                          ante la Justicia. Es un proceso más largo, con una duración estimada de alrededor de 3 años,
+                          pero permite reclamar indemnizaciones significativamente más altas que en una mediación
+                          extrajudicial, ya que un juez evalúa en profundidad los daños materiales, físicos y morales
+                          sufridos.</p>
+                        <ul class="text-gray-500 text-sm space-y-2">
+                          <li>• Resolución estimada: 3 años aproximados</li>
+                          <li>• Indemnizaciones notablemente más altas</li>
+                          <li>• Sin costos adelantados, se cobra solo si ganamos</li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
+
                 </div>
+
                 <p class="text-gray-500 text-sm text-center mt-8 max-w-2xl mx-auto">En tu consulta gratuita te
                   asesoramos sobre cuál de los dos caminos conviene más según las características de tu accidente,
                   tus tiempos y tus necesidades.</p>
@@ -780,15 +820,18 @@
                   <p class="text-gray-400 max-w-2xl mx-auto text-base sm:text-lg">Más de 100 casos resueltos. Esto es lo
                     que dicen quienes ya cobraron su indemnización.</p>
                 </div>
-                <div class="flex flex-wrap justify-center gap-6">
+
+                <!-- Carrusel móvil / Grid desktop -->
+                <div class="testimonios-track" id="testimonios-track" aria-label="Testimonios de clientes">
+
                   <!-- Card 1 -->
-                  <div class="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-zinc-900 p-7 rounded-xl border border-zinc-800 hover:border-amber-400/50 hover:-translate-y-1 transition-all duration-300 group reveal flex flex-col justify-between">
+                  <div class="testimonio-card reveal">
                     <div>
                       <div class="text-amber-400 text-sm mb-4">★★★★★</div>
                       <p class="text-gray-300 leading-relaxed text-sm italic mb-6">"Tuve un accidente grave en la Panamericana. No sabía qué hacer. MotoReclamo me guió desde el primer día y en 4 meses cobré una indemnización que no esperaba. Profesionales de verdad."</p>
                     </div>
                     <div class="flex items-center gap-3 mt-auto">
-                      <img src="img/avatar-marcos.png" alt="Marcos R." class="w-11 h-11 rounded-full object-cover border-2 border-zinc-800 group-hover:border-amber-400 transition-colors" width="44" height="44">
+                      <img src="img/avatar-marcos.png" alt="Marcos R." class="w-11 h-11 rounded-full object-cover border-2 border-zinc-800" width="44" height="44">
                       <div>
                         <div class="text-white font-bold text-sm">Marcos R.</div>
                         <div class="text-gray-500 text-xs mt-0.5">Buenos Aires, CABA</div>
@@ -797,13 +840,13 @@
                   </div>
 
                   <!-- Card 2 -->
-                  <div class="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-zinc-900 p-7 rounded-xl border border-zinc-800 hover:border-amber-400/50 hover:-translate-y-1 transition-all duration-300 group reveal reveal-delay-1 flex flex-col justify-between">
+                  <div class="testimonio-card reveal reveal-delay-1">
                     <div>
                       <div class="text-amber-400 text-sm mb-4">★★★★★</div>
                       <p class="text-gray-300 leading-relaxed text-sm italic mb-6">"Lo que más me gustó fue que nunca me pidieron plata por adelantado. Me explicaron todo paso a paso y sentí que realmente estaban de mi lado. Los recomiendo 100%."</p>
                     </div>
                     <div class="flex items-center gap-3 mt-auto">
-                      <img src="img/avatar-valentina.png" alt="Valentina S." class="w-11 h-11 rounded-full object-cover border-2 border-zinc-800 group-hover:border-amber-400 transition-colors" width="44" height="44">
+                      <img src="img/avatar-valentina.png" alt="Valentina S." class="w-11 h-11 rounded-full object-cover border-2 border-zinc-800" width="44" height="44">
                       <div>
                         <div class="text-white font-bold text-sm">Valentina S.</div>
                         <div class="text-gray-500 text-xs mt-0.5">Rosario, Santa Fe</div>
@@ -812,13 +855,13 @@
                   </div>
 
                   <!-- Card 3 -->
-                  <div class="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-zinc-900 p-7 rounded-xl border border-zinc-800 hover:border-amber-400/50 hover:-translate-y-1 transition-all duration-300 group reveal reveal-delay-2 flex flex-col justify-between">
+                  <div class="testimonio-card reveal reveal-delay-2">
                     <div>
                       <div class="text-amber-400 text-sm mb-4">★★★★★</div>
                       <p class="text-gray-300 leading-relaxed text-sm italic mb-6">"Se me venció el seguro y estaba convencido que no podía reclamar, pero me contacté con MotoReclamo, me ayudaron y pude cobrar igualmente. Sin costo adelantado, tal como prometieron."</p>
                     </div>
                     <div class="flex items-center gap-3 mt-auto">
-                      <img src="img/avatar-lucas.png" alt="Lucas D." class="w-11 h-11 rounded-full object-cover border-2 border-zinc-800 group-hover:border-amber-400 transition-colors" width="44" height="44">
+                      <img src="img/avatar-lucas.png" alt="Lucas D." class="w-11 h-11 rounded-full object-cover border-2 border-zinc-800" width="44" height="44">
                       <div>
                         <div class="text-white font-bold text-sm">Lucas D.</div>
                         <div class="text-gray-500 text-xs mt-0.5">Córdoba Capital</div>
@@ -827,13 +870,13 @@
                   </div>
 
                   <!-- Card 4 -->
-                  <div class="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-zinc-900 p-7 rounded-xl border border-zinc-800 hover:border-amber-400/50 hover:-translate-y-1 transition-all duration-300 group reveal flex flex-col justify-between">
+                  <div class="testimonio-card reveal">
                     <div>
                       <div class="text-amber-400 text-sm mb-4">★★★★★</div>
                       <p class="text-gray-300 leading-relaxed text-sm italic mb-6">"Después del accidente estaba trabado con el seguro, no me daban respuesta. Con MotoReclamo lo resolví sin ningún inconveniente. Tenía miedo porque estaba sin un peso, pero cobré sin adelantarles nada. Excelente Atención!"</p>
                     </div>
                     <div class="flex items-center gap-3 mt-auto">
-                      <img src="img/avatar-fernando.png" alt="Fernando G." class="w-11 h-11 rounded-full object-cover border-2 border-zinc-800 group-hover:border-amber-400 transition-colors" width="44" height="44">
+                      <img src="img/avatar-fernando.png" alt="Fernando G." class="w-11 h-11 rounded-full object-cover border-2 border-zinc-800" width="44" height="44">
                       <div>
                         <div class="text-white font-bold text-sm">Fernando G.</div>
                         <div class="text-gray-500 text-xs mt-0.5">Morón, Buenos Aires</div>
@@ -842,24 +885,35 @@
                   </div>
 
                   <!-- Card 5 -->
-                  <div class="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-zinc-900 p-7 rounded-xl border border-zinc-800 hover:border-amber-400/50 hover:-translate-y-1 transition-all duration-300 group reveal reveal-delay-1 flex flex-col justify-between">
+                  <div class="testimonio-card reveal reveal-delay-1">
                     <div>
                       <div class="text-amber-400 text-sm mb-4">★★★★★</div>
                       <p class="text-gray-300 leading-relaxed text-sm italic mb-6">"Me chocaron por atrás en la rotonda. El tipo quería arreglarlo en mano pero yo no sabía cuánto valían mis lesiones. Llamé a MotoReclamo y terminé cobrando mucho más de lo que esperaba."</p>
                     </div>
                     <div class="flex items-center gap-3 mt-auto">
-                      <img src="img/avatar-daniel.png" alt="Daniel M." class="w-11 h-11 rounded-full object-cover border-2 border-zinc-800 group-hover:border-amber-400 transition-colors" width="44" height="44">
+                      <img src="img/avatar-daniel.png" alt="Daniel M." class="w-11 h-11 rounded-full object-cover border-2 border-zinc-800" width="44" height="44">
                       <div>
                         <div class="text-white font-bold text-sm">Daniel M.</div>
                         <div class="text-gray-500 text-xs mt-0.5">La Plata, Buenos Aires</div>
                       </div>
                     </div>
                   </div>
+
                 </div>
+
+                <!-- Indicadores de puntos (solo móvil) -->
+                <div class="testimonios-dots" id="testimonios-dots" aria-hidden="true">
+                  <button class="testimonios-dot active" data-index="0" aria-label="Testimonio 1"></button>
+                  <button class="testimonios-dot" data-index="1" aria-label="Testimonio 2"></button>
+                  <button class="testimonios-dot" data-index="2" aria-label="Testimonio 3"></button>
+                  <button class="testimonios-dot" data-index="3" aria-label="Testimonio 4"></button>
+                  <button class="testimonios-dot" data-index="4" aria-label="Testimonio 5"></button>
+                </div>
+
               </div>
-            </section>
 
             <!-- CONTACTO -->
+
             <section id="contacto" class="py-20 px-5 md:px-10 lg:px-16 bg-zinc-900">
               <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-14 reveal">

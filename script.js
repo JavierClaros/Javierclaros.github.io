@@ -249,3 +249,53 @@ function showToast(msg, duration) {
   }, duration || 4500);
 }
 
+/* ---- Proceso — Acordeón ---- */
+(function () {
+  document.querySelectorAll('.proceso-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var accordion = btn.closest('.proceso-accordion');
+      var body = document.getElementById(btn.getAttribute('aria-controls'));
+      var isOpen = accordion.classList.contains('open');
+
+      if (isOpen) {
+        accordion.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        body.style.maxHeight = '0';
+      } else {
+        accordion.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        body.style.maxHeight = body.scrollHeight + 'px';
+      }
+    });
+  });
+})();
+
+/* ---- Testimonios — Dots de carrusel ---- */
+(function () {
+  var track = document.getElementById('testimonios-track');
+  var dots  = document.querySelectorAll('.testimonios-dot');
+  if (!track || !dots.length) return;
+
+  /* Actualizar dot activo según la posición del scroll */
+  function updateDots() {
+    var cards = track.querySelectorAll('.testimonio-card');
+    if (!cards.length) return;
+    var cardWidth = cards[0].offsetWidth + parseFloat(getComputedStyle(track).gap || 16);
+    var idx = Math.round(track.scrollLeft / cardWidth);
+    dots.forEach(function (d, i) {
+      d.classList.toggle('active', i === idx);
+    });
+  }
+
+  track.addEventListener('scroll', updateDots, { passive: true });
+
+  /* Click en un dot → scroll suave a esa card */
+  dots.forEach(function (dot, i) {
+    dot.addEventListener('click', function () {
+      var cards = track.querySelectorAll('.testimonio-card');
+      if (cards[i]) {
+        cards[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+    });
+  });
+})();

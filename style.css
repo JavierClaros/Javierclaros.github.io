@@ -1221,3 +1221,167 @@ body,
   overflow-x: hidden !important;
   width: 100% !important;
 }
+
+/* ===============================================================
+   Proceso — Acordeón
+   =============================================================== */
+.proceso-accordion {
+  background: #18181b; /* zinc-900 */
+  border: 1px solid #3f3f46; /* zinc-700 */
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+.proceso-accordion:hover {
+  border-color: rgba(251,191,36,0.35);
+}
+.proceso-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.06em;
+  transition: background 0.2s;
+}
+.proceso-toggle:hover {
+  background: rgba(251,191,36,0.04);
+}
+.proceso-toggle-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  min-width: 0;
+}
+.proceso-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(251,191,36,0.12);
+  border: 1px solid rgba(251,191,36,0.3);
+  color: #FFB800;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  flex-shrink: 0;
+}
+.proceso-tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #FFB800;
+  background: rgba(251,191,36,0.1);
+  border: 1px solid rgba(251,191,36,0.25);
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.proceso-icon {
+  display: flex;
+  flex-shrink: 0;
+  color: #FFB800;
+  transition: transform 0.3s;
+}
+.proceso-accordion.open .proceso-icon {
+  transform: rotate(45deg);
+}
+.proceso-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+.proceso-body-inner {
+  padding: 0 1.5rem 1.5rem;
+  border-top: 1px solid #27272a;
+}
+
+/* ===============================================================
+   Testimonios — Carrusel scroll-snap (móvil) / Grid (desktop)
+   =============================================================== */
+.testimonios-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.testimonio-card {
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 0.75rem;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.testimonio-card:hover {
+  border-color: rgba(251,191,36,0.4);
+  transform: translateY(-3px);
+}
+
+/* Puntos de navegación — ocultos en desktop */
+.testimonios-dots {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .testimonios-track {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  /* Carrusel horizontal con scroll-snap */
+  .testimonios-track {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;       /* Firefox */
+    padding-bottom: 0.5rem;
+  }
+  .testimonios-track::-webkit-scrollbar { display: none; }
+
+  .testimonio-card {
+    flex: 0 0 calc(100% - 2rem);  /* 1 card visible, con margen lateral */
+    scroll-snap-align: center;
+    min-width: 0;
+  }
+
+  /* Mostrar puntos en móvil */
+  .testimonios-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+  }
+  .testimonios-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #3f3f46;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .testimonios-dot.active {
+    background: #FFB800;
+    transform: scale(1.3);
+  }
+}
