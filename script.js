@@ -299,3 +299,37 @@ function showToast(msg, duration) {
     });
   });
 })();
+
+/* ---- Video Presentación — overlay de play ---- */
+(function () {
+  var overlay = document.getElementById('video-play-overlay');
+  var video   = document.getElementById('video-motoreclamo');
+  if (!overlay || !video) return;
+
+  function hideOverlay() {
+    overlay.classList.add('hidden');
+    video.play();
+  }
+
+  /* Click en el overlay */
+  overlay.addEventListener('click', hideOverlay);
+
+  /* Accesibilidad: Enter o Space también reproducen */
+  overlay.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      hideOverlay();
+    }
+  });
+
+  /* Si el usuario pausa, vuelve a mostrar el overlay */
+  video.addEventListener('pause', function () {
+    if (video.ended) return; /* no mostrar si terminó */
+    overlay.classList.remove('hidden');
+  });
+
+  /* Si reanuda desde los controles nativos, ocultar overlay */
+  video.addEventListener('play', function () {
+    overlay.classList.add('hidden');
+  });
+})();

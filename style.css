@@ -1425,8 +1425,133 @@ body,
     padding: 0;
     transition: background 0.2s, transform 0.2s;
   }
-  .testimonios-dot.active {
+    .testimonios-dot.active {
     background: #FFB800;
     transform: scale(1.3);
+  }
+}
+
+/* ============================================================
+   Sección Video Presentación — MotoReclamo
+   ============================================================ */
+
+/* Wrapper externo: limita el ancho en desktop, full en mobile */
+.video-outer-wrap {
+  max-width: 960px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+/* Contenedor con relación de aspecto 16:9 */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.875rem;         /* ligeramente redondeado */
+  overflow: hidden;
+  background: #09090b;
+  box-shadow:
+    0 0 0 1px rgba(255, 184, 0, 0.12),
+    0 32px 64px rgba(0, 0, 0, 0.7);
+  /* Sutil borde ámbar muy tenue */
+  border: 1px solid rgba(255, 184, 0, 0.15);
+}
+
+/* Elemento video en sí */
+.video-element {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;              /* el radius lo maneja el wrapper */
+}
+
+/* Overlay con ícono play (visible hasta que el usuario da play) */
+.video-play-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.video-play-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Botón play circular */
+.video-play-btn {
+  width: 72px;
+  height: 72px;
+  background: var(--color-amber-400);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  box-shadow: 0 0 0 12px rgba(255, 184, 0, 0.2), 0 0 0 24px rgba(255, 184, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.video-play-btn svg {
+  margin-left: 4px; /* compensar visualmente el triángulo */
+}
+
+.video-play-overlay:hover .video-play-btn {
+  transform: scale(1.1);
+  background: var(--color-amber-300, #fcd34d);
+  box-shadow: 0 0 0 16px rgba(255, 184, 0, 0.25), 0 0 0 32px rgba(255, 184, 0, 0.1);
+}
+
+/* Texto debajo del ícono play */
+.video-overlay-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+}
+
+/* Botón CTA debajo del video */
+.video-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  background: var(--color-amber-400);
+  color: #000;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: var(--radius, 0.625rem);
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 20px rgba(255, 184, 0, 0.25);
+}
+
+.video-cta-btn:hover {
+  background: var(--color-amber-300, #fcd34d);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(255, 184, 0, 0.4);
+}
+
+/* Mobile: video ocupa prácticamente todo el ancho */
+@media (max-width: 39.9375rem) {
+  .video-presentacion-section {
+    padding-inline: 0.75rem;
+  }
+  .video-wrapper {
+    border-radius: 0.625rem;
   }
 }

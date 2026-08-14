@@ -241,7 +241,7 @@
                   <div class="flex flex-col sm:flex-row gap-2 text-sm text-gray-400 mb-8">
                     <span>&#x1F3CD;&#xFE0F; Especialistas en accidentes de moto</span>
                     <span class="hidden sm:block text-gray-600">·</span>
-                    <span>&#x1F1E6;&#x1F1F7; Atenci&oacute;n en todo el pa&iacute;s</span>
+                     <span style="display:inline-flex;align-items:center;gap:0.35em"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" role="img" aria-label="Bandera Argentina" style="border-radius:2px;flex-shrink:0"><rect width="20" height="14" fill="#74ACDF"/><rect y="4.67" width="20" height="4.67" fill="#fff"/><circle cx="10" cy="7" r="1.6" fill="#F6B40E" stroke="#85340A" stroke-width="0.3"/></svg> Atenci&oacute;n en todo el pa&iacute;s</span>
                   </div>
 
                   <div class="flex flex-col sm:flex-row gap-3 mb-12">
@@ -263,6 +263,66 @@
                 </div>
               </div>
             </div>
+
+            <!-- VIDEO PRESENTACIÓN -->
+            <section id="video-presentacion" class="py-20 px-5 md:px-10 lg:px-16 bg-zinc-950 video-presentacion-section">
+              <div class="max-w-7xl mx-auto">
+
+                <!-- Encabezado -->
+                <div class="text-center mb-10 reveal">
+                  <span class="text-amber-400 text-sm font-bold tracking-widest uppercase">Conoc&eacute; MotoReclamo</span>
+                  <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white mt-2 mb-4 uppercase"
+                    style='font-family:"Bebas Neue",sans-serif;letter-spacing:0.03em'>Motoqueros defendiendo motoqueros</h2>
+                  <p class="text-gray-400 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+                    Si tuviste un accidente en moto, no ten&eacute;s por qu&eacute; enfrentarte solo a una aseguradora.
+                    Conoc&eacute; c&oacute;mo trabajamos.
+                  </p>
+                </div>
+
+                <!-- Contenedor del video -->
+                <div class="video-outer-wrap reveal">
+                  <div class="video-wrapper" id="video-wrapper">
+
+                    <!-- Overlay play (se oculta al hacer click) -->
+                    <div class="video-play-overlay" id="video-play-overlay" role="button" aria-label="Reproducir video de presentación" tabindex="0">
+                      <div class="video-play-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                      </div>
+                      <div class="video-overlay-text">
+                        <span>Reproducir presentaci&oacute;n</span>
+                      </div>
+                    </div>
+
+                    <video
+                      id="video-motoreclamo"
+                      class="video-element"
+                      poster="img/video-poster.jpg"
+                      preload="metadata"
+                      playsinline
+                      controls>
+                      <source src="videos/motoreclamo-presentacion.mp4" type="video/mp4">
+                      Tu navegador no soporta la reproducción de video.
+                    </video>
+
+                  </div>
+                </div>
+
+                <!-- CTA debajo del video -->
+                <div class="text-center mt-10 reveal">
+                  <a href="#contacto" class="video-cta-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                    </svg>
+                    Quiero analizar mi caso
+                  </a>
+                  <p class="text-gray-500 text-xs mt-4">Consulta inicial sin cargo &middot; Evaluamos tu caso antes de avanzar</p>
+                </div>
+
+              </div>
+            </section>
 
             <!-- POR QUÉ MOTORRECLAMO -->
             <section id="servicios" class="py-20 px-5 md:px-10 lg:px-16 bg-zinc-950">
