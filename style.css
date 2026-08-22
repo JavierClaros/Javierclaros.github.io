@@ -1073,6 +1073,38 @@ a, button, [role="button"], .faq-toggle, .btn-toggle {
   bottom: 78px !important;
 }
 
+/* ---- Botones flotantes en mobile: más compactos ---- */
+@media (max-width: 640px) {
+  /* WA: solo ícono, sin texto */
+  .btn-wa-float {
+    padding: 0.7rem;
+    gap: 0;
+    width: 46px;
+    height: 46px;
+    justify-content: center;
+    bottom: 16px;
+    right: 14px;
+  }
+  .btn-wa-float svg {
+    width: 22px;
+    height: 22px;
+  }
+  /* Ocultar el texto del WA en mobile */
+  .btn-wa-float-text {
+    display: none;
+  }
+  /* Calculadora: más compacta */
+  .btn-calculadora {
+    font-size: 11px !important;
+    padding: 9px 12px !important;
+    bottom: 70px !important;
+    right: 14px !important;
+    max-width: 180px;
+    text-align: center;
+    line-height: 1.3;
+  }
+}
+
 /* ---- FAQ Acordeón ---- */
 .faq-item {
   background: #18181b;
