@@ -1037,45 +1037,40 @@ a, button, [role="button"], .faq-toggle, .btn-toggle {
   transform: translateX(-50%) translateY(0);
 }
 
-/* ---- WhatsApp flotante mejorado ---- */
+/* ---- WhatsApp flotante CTA (pill) ---- */
 .btn-wa-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 58px;
-  height: 58px;
-  background: #25d366;
-  border-radius: 50%;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  z-index: 9997;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
-  text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.btn-wa-float::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
+  gap: 0.55rem;
   background: #25d366;
-  animation: wa-ring-pulse 2.4s ease-out infinite;
-  z-index: -1;
-}
-@keyframes wa-ring-pulse {
-  0%   { transform: scale(1);    opacity: 0.65; }
-  70%  { transform: scale(1.7);  opacity: 0; }
-  100% { transform: scale(1.7);  opacity: 0; }
+  color: #000;
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  z-index: 9997;
+  box-shadow: 0 4px 22px rgba(37, 211, 102, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
 }
 .btn-wa-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.65);
+  background: #20c45e;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.65);
+}
+.btn-wa-float svg {
+  flex-shrink: 0;
 }
 
-/* Ajustar botón calculadora para convivir con WA flotante */
+/* Ajustar botón calculadora para convivir con WA flotante pill */
 .btn-calculadora {
-  bottom: 94px !important;
+  bottom: 78px !important;
 }
 
 /* ---- FAQ Acordeón ---- */
