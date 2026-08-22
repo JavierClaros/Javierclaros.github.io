@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <!-- Favicons -->
@@ -10,14 +10,14 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MotoReclamo â€“ Calculadora de IndemnizaciÃ³n</title>
-  <meta name="description" content="CalculÃ¡ tu estimaciÃ³n de indemnizaciÃ³n por accidente de trÃ¡nsito en Argentina. FÃ³rmula Vuoto/Marshall. Sin costo, sin compromiso.">
+  <title>MotoReclamo – Calculadora de Indemnización</title>
+  <meta name="description" content="Calculá tu estimación de indemnización por accidente de tránsito en Argentina. Fórmula Vuoto/Marshall. Sin costo, sin compromiso.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://motoreclamo.ar/calculadora.html">
 
   <!-- Open Graph / Twitter Card -->
-  <meta property="og:title" content="MotoReclamo â€“ Calculadora de IndemnizaciÃ³n">
-  <meta property="og:description" content="CalculÃ¡ tu estimaciÃ³n de indemnizaciÃ³n por accidente de trÃ¡nsito en Argentina. FÃ³rmula Vuoto/Marshall. Sin costo, sin compromiso.">
+  <meta property="og:title" content="MotoReclamo – Calculadora de Indemnización">
+  <meta property="og:description" content="Calculá tu estimación de indemnización por accidente de tránsito en Argentina. Fórmula Vuoto/Marshall. Sin costo, sin compromiso.">
   <meta property="og:image" content="https://motoreclamo.ar/preview.jpg?v=1">
   <meta property="og:image:secure_url" content="https://motoreclamo.ar/preview.jpg?v=1">
   <meta property="og:image:type" content="image/jpeg">
@@ -26,8 +26,8 @@
   <meta property="og:url" content="https://motoreclamo.ar/calculadora">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="MotoReclamo â€“ Calculadora de IndemnizaciÃ³n">
-  <meta name="twitter:description" content="CalculÃ¡ tu estimaciÃ³n de indemnizaciÃ³n por accidente de trÃ¡nsito. Sin costo, sin compromiso.">
+  <meta name="twitter:title" content="MotoReclamo – Calculadora de Indemnización">
+  <meta name="twitter:description" content="Calculá tu estimación de indemnización por accidente de tránsito. Sin costo, sin compromiso.">
   <meta name="twitter:image" content="https://motoreclamo.ar/preview.jpg">
 
   <!-- Preconnect -->
@@ -39,14 +39,14 @@
   <link rel="stylesheet" href="style.css?v=1.1">
 
 <style>
-  /* â”€â”€ Variables locales â”€â”€ */
+  /* ── Variables locales ── */
   :root {
     --gold: #FFB800;
     --gold-dim: rgba(255,184,0,0.25);
     --gold-glow: rgba(255,184,0,0.12);
   }
 
-  /* â”€â”€ Reset / base â”€â”€ */
+  /* ── Reset / base ── */
   *, *::before, *::after { box-sizing: border-box; }
   body {
     background: #09090b; /* zinc-950 */
@@ -55,7 +55,7 @@
     margin: 0;
   }
 
-  /* â”€â”€ Estilos locales para calc-nav â€” heredados de style.css --
+  /* ── Estilos locales para calc-nav — heredados de style.css --
      El nav ahora usa las mismas clases que index.html (desktop-nav, etc.)
      Solo sobreescribimos lo estrictamente necesario para sticky */
   .calc-site-nav {
@@ -68,12 +68,12 @@
     border-bottom: 1px solid rgba(255,184,0,0.12);
   }
 
-  /* â”€â”€ BotÃ³n hamburguesa mÃ³vil â”€â”€ */
+  /* ── Botón hamburguesa móvil ── */
   @media (max-width: 48rem) {
     .calc-hamburger { display: flex !important; }
   }
 
-  /* â”€â”€ MenÃº mÃ³vil overlay â”€â”€ */
+  /* ── Menú móvil overlay ── */
   #calc-mobile-menu {
     position: fixed;
     inset: 0;
@@ -120,7 +120,7 @@
     line-height: 0;
   }
 
-  /* â”€â”€ Hero â”€â”€ */
+  /* ── Hero ── */
   .hero {
     padding: 3.5rem 1.25rem 2rem;
     text-align: center;
@@ -174,14 +174,14 @@
     line-height: 1.6;
   }
 
-  /* â”€â”€ Layout â”€â”€ */
+  /* ── Layout ── */
   .calc-wrapper {
     max-width: 44rem;
     margin: 0 auto;
     padding: 2.5rem 1.25rem 5rem;
   }
 
-  /* â”€â”€ Card (igual al de index.html: zinc-900 + amber border) â”€â”€ */
+  /* ── Card (igual al de index.html: zinc-900 + amber border) ── */
   .card {
     background: #18181b; /* zinc-900 */
     border: 1px solid #27272a; /* zinc-800 */
@@ -192,7 +192,7 @@
   }
   .card:hover { border-color: rgba(255,184,0,0.35); }
 
-  /* â”€â”€ Section title dentro de cada card â”€â”€ */
+  /* ── Section title dentro de cada card ── */
   .section-title {
     display: flex;
     align-items: center;
@@ -204,11 +204,11 @@
     margin-bottom: 1.25rem;
   }
 
-  /* â”€â”€ Grilla 2 columnas â”€â”€ */
+  /* ── Grilla 2 columnas ── */
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
 
-  /* â”€â”€ Labels â”€â”€ */
+  /* ── Labels ── */
   label {
     display: block;
     font-size: 0.7rem;
@@ -219,7 +219,7 @@
     margin-bottom: 0.4rem;
   }
 
-  /* â”€â”€ Inputs â”€â”€ */
+  /* ── Inputs ── */
   .input-field {
     width: 100%;
     background: #09090b; /* zinc-950 */
@@ -240,7 +240,7 @@
   .input-field option { background: #18181b; }
   input#incapacidad { box-sizing: border-box; }
 
-  /* â”€â”€ Toggle buttons â”€â”€ */
+  /* ── Toggle buttons ── */
   .btn-toggle {
     padding: 0.75rem 1rem;
     border-radius: 0.5rem;
@@ -260,11 +260,11 @@
     box-shadow: 0 0 12px rgba(255,184,0,0.15);
   }
 
-  /* â”€â”€ Error messages â”€â”€ */
+  /* ── Error messages ── */
   .error-msg { color: #ef4444; font-size: 0.72rem; margin-top: 0.25rem; display: none; }
   .error-msg.show { display: block; }
 
-  /* â”€â”€ Submit button â”€â”€ */
+  /* ── Submit button ── */
   .btn-submit {
     width: 100%;
     padding: 1rem 1.5rem;
@@ -291,7 +291,7 @@
   }
   .btn-submit:active { transform: translateY(0); }
 
-  /* â”€â”€ Resultado â”€â”€ */
+  /* ── Resultado ── */
   .result-card { display: none; }
   .result-card.show { display: block; }
 
@@ -318,7 +318,7 @@
     line-height: 1.9;
   }
 
-  /* â”€â”€ WhatsApp button â”€â”€ */
+  /* ── WhatsApp button ── */
   .wa-btn {
     display: flex;
     align-items: center;
@@ -338,10 +338,10 @@
   }
   .wa-btn:hover { background: #16a34a; transform: translateY(-1px); }
 
-  /* â”€â”€ Rango incapacidad â”€â”€ */
+  /* ── Rango incapacidad ── */
   #rangoIncapacidad { font-size: 0.75rem; color: var(--gold); margin-top: 0.375rem; }
 
-  /* â”€â”€ Disclaimer â”€â”€ */
+  /* ── Disclaimer ── */
   .disclaimer {
     font-size: 0.72rem;
     color: #52525b;
@@ -353,7 +353,7 @@
     line-height: 1.6;
   }
 
-  /* â”€â”€ Footer â”€â”€ */
+  /* ── Footer ── */
   .calc-footer {
     background: #000;
     border-top: 1px solid #27272a;
@@ -369,10 +369,10 @@
 <body>
 
 <!-- ============================================================
-     MENÃš MOBILE (mismo que index.html)
+     MENÚ MOBILE (mismo que index.html)
      ============================================================ -->
-<nav id="calc-mobile-menu" aria-label="MenÃº de navegaciÃ³n mÃ³vil" aria-hidden="true">
-  <button id="btn-calc-menu-close" aria-label="Cerrar menÃº">
+<nav id="calc-mobile-menu" aria-label="Menú de navegación móvil" aria-hidden="true">
+  <button id="btn-calc-menu-close" aria-label="Cerrar menú">
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -382,7 +382,7 @@
   <a href="/#servicios">Servicios</a>
   <a href="/#video-presentacion">Nosotros</a>
   <a href="/#contacto">Contacto</a>
-  <a href="https://www.instagram.com/motoreclamo" target="_blank" rel="noopener noreferrer">ðŸ“¸ Instagram</a>
+  <a href="https://www.instagram.com/motoreclamo" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
   <a href="https://wa.me/5491164677648?text=Hola%2C%20quiero%20consultar%20por%20un%20siniestro"
     target="_blank" rel="noopener noreferrer">WhatsApp</a>
 </nav>
@@ -391,7 +391,7 @@
      NAV DESKTOP (mismo que index.html)
      ============================================================ -->
 <nav class="calc-site-nav relative z-20 flex items-center justify-between px-5 md:px-10 lg:px-16 py-5"
-  aria-label="NavegaciÃ³n principal">
+  aria-label="Navegación principal">
   <a href="/" class="flex-shrink-0">
     <img src="img/logo-transparent.webp" alt="MotoReclamo" class="h-16 w-auto object-contain">
   </a>
@@ -418,9 +418,9 @@
     </a>
   </div>
 
-  <!-- BotÃ³n hamburguesa -->
+  <!-- Botón hamburguesa -->
   <button id="btn-calc-menu-open" class="md:hidden text-white p-2 z-30 relative calc-hamburger"
-    style="display:none" aria-label="Abrir menÃº"
+    style="display:none" aria-label="Abrir menú"
     aria-controls="calc-mobile-menu" aria-expanded="false">
     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -432,18 +432,18 @@
   </button>
 </nav>
 
-<!-- â”€â”€ HERO â”€â”€ -->
+<!-- ── HERO ── -->
 <section class="hero">
   <div class="badge">
     <span></span>
-    Herramienta gratuita Â· Sin compromiso
+    Herramienta gratuita · Sin compromiso
   </div>
   <h1>Calculadora</h1>
-  <h2>de IndemnizaciÃ³n Vial</h2>
-  <p>CompletÃ¡ el formulario y calculamos el estimado de tu reclamo al instante, usando la fÃ³rmula Vuoto/Marshall (art. 1746 CC y CN).</p>
+  <h2>de Indemnización Vial</h2>
+  <p>Completá el formulario y calculamos el estimado de tu reclamo al instante, usando la fórmula Vuoto/Marshall (art. 1746 CC y CN).</p>
 </section>
 
-<!-- â”€â”€ FORMULARIO â”€â”€ -->
+<!-- ── FORMULARIO ── -->
 <main class="calc-wrapper" id="formulario">
 
     <!-- Indicador de pasos / Wizard -->
@@ -460,7 +460,7 @@
       <div class="step-connector" id="conn-2"></div>
       <div class="step-item" id="step-3">
         <div class="step-circle">3</div>
-        <div class="step-label">CÃ¡lculo</div>
+        <div class="step-label">Cálculo</div>
       </div>
       <div class="step-connector" id="conn-3"></div>
       <div class="step-item" id="step-4">
@@ -485,16 +485,16 @@
       <div class="grid-2">
         <div>
           <label for="nombre">Nombre y Apellido *</label>
-          <input class="input-field" id="nombre" type="text" required placeholder="Juan GarcÃ­a" autocomplete="name">
+          <input class="input-field" id="nombre" type="text" required placeholder="Juan García" autocomplete="name">
           <div class="error-msg" id="err-nombre">Requerido</div>
         </div>
         <div>
           <label for="email">Email *</label>
           <input class="input-field" id="email" required type="email" placeholder="email@ejemplo.com" autocomplete="email">
-          <div class="error-msg" id="err-email">Email invÃ¡lido</div>
+          <div class="error-msg" id="err-email">Email inválido</div>
         </div>
         <div>
-          <label for="telefono">TelÃ©fono *</label>
+          <label for="telefono">Teléfono *</label>
           <input class="input-field" id="telefono" required placeholder="11 1234-5678" autocomplete="tel">
           <div class="error-msg" id="err-telefono">Requerido</div>
         </div>
@@ -504,11 +504,11 @@
           <div class="error-msg" id="err-domicilio">Requerido</div>
         </div>
         <div>
-          <label for="tipoVehiculo">Tipo de VehÃ­culo *</label>
+          <label for="tipoVehiculo">Tipo de Vehículo *</label>
           <select class="input-field" id="tipoVehiculo" required>
             <option value="moto">Motocicleta</option>
-            <option value="auto">AutomÃ³vil</option>
-            <option value="peaton">PeatÃ³n</option>
+            <option value="auto">Automóvil</option>
+            <option value="peaton">Peatón</option>
           </select>
         </div>
         <div>
@@ -546,7 +546,7 @@
           <div class="error-msg" id="err-lugar">Requerido</div>
         </div>
         <div>
-          <label for="tipoVia">Tipo de VÃ­a *</label>
+          <label for="tipoVia">Tipo de Vía *</label>
           <select class="input-field" id="tipoVia" required>
             <option value="calle">Calle</option>
             <option value="avenida">Avenida</option>
@@ -555,14 +555,14 @@
         </div>
       </div>
       <div style="margin-top:1rem;">
-        <label for="descripcion">DescripciÃ³n del Accidente *</label>
+        <label for="descripcion">Descripción del Accidente *</label>
         <textarea class="input-field" id="descripcion" required rows="3"
-          placeholder="DescribÃ­ brevemente quÃ© ocurriÃ³..." style="resize:vertical;"></textarea>
+          placeholder="Describí brevemente qué ocurrió..." style="resize:vertical;"></textarea>
         <div class="error-msg" id="err-descripcion">Requerido</div>
       </div>
     </div>
 
-    <!-- DATOS PARA EL CÃLCULO -->
+    <!-- DATOS PARA EL CÁLCULO -->
     <div class="card">
       <div class="section-title">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
@@ -570,20 +570,20 @@
           style="color:var(--gold)" aria-hidden="true">
           <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
         </svg>
-        Datos para el CÃ¡lculo
+        Datos para el Cálculo
       </div>
       <div class="grid-2">
         <div>
-          <label for="tipoLesion">Tipo de LesiÃ³n *</label>
+          <label for="tipoLesion">Tipo de Lesión *</label>
           <select class="input-field" id="tipoLesion" required onchange="actualizarRango()">
-            <option value="sin_atencion">Sin atenciÃ³n mÃ©dica</option>
-            <option value="con_atencion">Con atenciÃ³n mÃ©dica (sin internaciÃ³n)</option>
+            <option value="sin_atencion">Sin atención médica</option>
+            <option value="con_atencion">Con atención médica (sin internación)</option>
             <option value="fractura">Fractura</option>
-            <option value="internacion">InternaciÃ³n</option>
-            <option value="cirugia">CirugÃ­a / OperaciÃ³n</option>
+            <option value="internacion">Internación</option>
+            <option value="cirugia">Cirugía / Operación</option>
             <option value="incapacidad_permanente">Incapacidad permanente</option>
           </select>
-          <p id="rangoIncapacidad">Rango estimado de incapacidad: <strong>5â€“15%</strong></p>
+          <p id="rangoIncapacidad">Rango estimado de incapacidad: <strong>5–15%</strong></p>
         </div>
         <div>
           <label for="edad">Edad al momento del accidente *</label>
@@ -597,7 +597,7 @@
         </div>
         <div>
           <label for="ingreso">Ingreso Mensual Bruto (ARS)
-            <span style="color:#52525b; font-weight:400; text-transform:none; letter-spacing:0;">(vacÃ­o = SMVM)</span>
+            <span style="color:#52525b; font-weight:400; text-transform:none; letter-spacing:0;">(vacío = SMVM)</span>
           </label>
           <input class="input-field" id="ingreso" type="number" min="0" placeholder="Ej: 800000">
         </div>
@@ -605,14 +605,14 @@
 
       <!-- Circulaba -->
       <div style="margin-top:1.25rem;">
-        <label>La vÃ­ctima circulaba por la *</label>
+        <label>La víctima circulaba por la *</label>
         <div class="grid-2" style="margin-top:0.5rem;">
           <button type="button" class="btn-toggle active" id="btnDerecha" onclick="selCirculaba('derecha')">
-            <p style="font-weight:700; font-size:0.875rem; margin:0;">âœ… DERECHA</p>
-            <p style="font-size:0.75rem; color:#9ca3af; margin:0.2rem 0 0;">CirculaciÃ³n correcta</p>
+            <p style="font-weight:700; font-size:0.875rem; margin:0;">✅ DERECHA</p>
+            <p style="font-size:0.75rem; color:#9ca3af; margin:0.2rem 0 0;">Circulación correcta</p>
           </button>
           <button type="button" class="btn-toggle" id="btnIzquierda" onclick="selCirculaba('izquierda')">
-            <p style="font-weight:700; font-size:0.875rem; margin:0;">âš ï¸ IZQUIERDA</p>
+            <p style="font-weight:700; font-size:0.875rem; margin:0;">⚠️ IZQUIERDA</p>
             <p style="font-size:0.75rem; color:#9ca3af; margin:0.2rem 0 0;">Reduce el reclamo</p>
           </button>
         </div>
@@ -632,19 +632,19 @@
       </div>
       <div class="grid-2">
         <div>
-          <label for="aseguradora">CompaÃ±Ã­a Aseguradora</label>
+          <label for="aseguradora">Compañía Aseguradora</label>
           <select class="input-field" id="aseguradora">
-            <option value="">â€” Seleccionar compaÃ±Ã­a â€”</option>
+            <option value="">— Seleccionar compañía —</option>
             <option>Sancor Seguros</option><option>Zurich</option><option>La Segunda</option>
-            <option>SMG Seguros</option><option>Galeno</option><option>FederaciÃ³n Patronal</option>
+            <option>SMG Seguros</option><option>Galeno</option><option>Federación Patronal</option>
             <option>Allianz</option><option>Mapfre</option><option>Rivadavia</option>
-            <option>Provincia Seguros</option><option>NACIÃ“N SEGUROS</option><option>El Comercio</option>
+            <option>Provincia Seguros</option><option>NACIÓN SEGUROS</option><option>El Comercio</option>
             <option>HDI Seguros</option><option>Integrity Seguros</option><option>Mercantil Andina</option>
             <option>Otra</option>
           </select>
         </div>
         <div>
-          <label for="poliza">NÂ° de PÃ³liza</label>
+          <label for="poliza">N° de Póliza</label>
           <input class="input-field" id="poliza" placeholder="Opcional">
         </div>
       </div>
@@ -652,7 +652,7 @@
 
     <!-- SUBMIT -->
     <button type="submit" class="btn-submit">
-      Calcular IndemnizaciÃ³n
+      Calcular Indemnización
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
         stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="m9 18 6-6-6-6"/>
@@ -664,15 +664,15 @@
   <!-- RESULTADO -->
   <div class="result-card card" id="resultCard" style="margin-top:1.5rem; border-color:rgba(255,184,0,0.4);">
     <div class="section-title" style="justify-content:center; font-size:1.75rem; margin-bottom:1.5rem;">
-      ðŸ† Resultado del CÃ¡lculo
+      🏆 Resultado del Cálculo
     </div>
 
     <div style="text-align:center; margin-bottom:1.5rem;">
-      <p style="color:#9ca3af; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.25rem;">EstimaciÃ³n de IndemnizaciÃ³n</p>
+      <p style="color:#9ca3af; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.25rem;">Estimación de Indemnización</p>
       <p id="montoMin" class="result-range"></p>
       <p id="montoMed" class="result-amount"></p>
       <p id="montoMax" class="result-range"></p>
-      <p style="font-size:0.72rem; color:#52525b; margin-top:0.5rem;">(*) EstimaciÃ³n orientativa. El monto final depende de factores jurÃ­dicos y judiciales.</p>
+      <p style="font-size:0.72rem; color:#52525b; margin-top:0.5rem;">(*) Estimación orientativa. El monto final depende de factores jurídicos y judiciales.</p>
     </div>
 
     <div id="detalleCalculo" class="detail-box"></div>
@@ -685,32 +685,32 @@
     </a>
 
     <div class="disclaimer">
-      âš ï¸ <strong>Aviso:</strong> Este cÃ¡lculo es una estimaciÃ³n orientativa basada en la fÃ³rmula Vuoto/Marshall (art. 1746 CC y CN) y valores de referencia actualizados. No constituye asesoramiento legal. MotoReclamo analizarÃ¡ tu caso en detalle y sin cargo.
+      ⚠️ <strong>Aviso:</strong> Este cálculo es una estimación orientativa basada en la fórmula Vuoto/Marshall (art. 1746 CC y CN) y valores de referencia actualizados. No constituye asesoramiento legal. MotoReclamo analizará tu caso en detalle y sin cargo.
     </div>
   </div>
 
 </main>
 
-<!-- â”€â”€ FOOTER â”€â”€ -->
+<!-- ── FOOTER ── -->
 <footer class="calc-footer">
-  <p>Â© 2026 MotoReclamo Â· <a href="/">motoreclamo.ar</a> Â·
-    <a href="/terminos-y-condiciones.html">TÃ©rminos</a> Â·
+  <p>© 2026 MotoReclamo · <a href="/">motoreclamo.ar</a> ·
+    <a href="/terminos-y-condiciones.html">Términos</a> ·
     <a href="/politica-de-privacidad.html">Privacidad</a>
   </p>
 </footer>
 
 <script>
-// ==================== CONFIGURACIÃ“N ====================
+// ==================== CONFIGURACIÓN ====================
 const WA_NUMBER = "5491164677648";
 const SMVM_REF = 271571;
 
 const RANGOS = {
-  sin_atencion:           { min: 1,  med: 3,  max: 5,  label: "1â€“5%" },
-  con_atencion:           { min: 3,  med: 8,  max: 12, label: "3â€“12%" },
-  fractura:               { min: 8,  med: 15, max: 25, label: "8â€“25%" },
-  internacion:            { min: 10, med: 20, max: 35, label: "10â€“35%" },
-  cirugia:                { min: 15, med: 25, max: 40, label: "15â€“40%" },
-  incapacidad_permanente: { min: 20, med: 35, max: 60, label: "20â€“60%" },
+  sin_atencion:           { min: 1,  med: 3,  max: 5,  label: "1–5%" },
+  con_atencion:           { min: 3,  med: 8,  max: 12, label: "3–12%" },
+  fractura:               { min: 8,  med: 15, max: 25, label: "8–25%" },
+  internacion:            { min: 10, med: 20, max: 35, label: "10–35%" },
+  cirugia:                { min: 15, med: 25, max: 40, label: "15–40%" },
+  incapacidad_permanente: { min: 20, med: 35, max: 60, label: "20–60%" },
 };
 
 function actualizarRango() {
@@ -728,7 +728,7 @@ function selCirculaba(val) {
   document.getElementById('btnIzquierda').classList.toggle('active', val === 'izquierda');
 }
 
-// ==================== CÃLCULO ====================
+// ==================== CÁLCULO ====================
 function calcularIndemnizacion(ingreso, porcIncap, edad, circulaba) {
   const i = 0.06;
   const n = Math.max(0, (65 - edad) * 12);
@@ -743,7 +743,7 @@ function formatPesos(n) {
   return '$ ' + n.toLocaleString('es-AR', { maximumFractionDigits: 0 });
 }
 
-// ==================== VALIDACIÃ“N Y SUBMIT ====================
+// ==================== VALIDACIÓN Y SUBMIT ====================
 document.getElementById('calcForm').addEventListener('submit', function(e) {
   e.preventDefault();
   if (!validar()) return;
@@ -773,53 +773,53 @@ document.getElementById('calcForm').addEventListener('submit', function(e) {
   const montoMin = Math.round(montoMed * 0.70);
   const montoMax = Math.round(montoMed * 1.45);
 
-  document.getElementById('montoMin').textContent = `MÃ­nimo estimado: ${formatPesos(montoMin)}`;
+  document.getElementById('montoMin').textContent = `Mínimo estimado: ${formatPesos(montoMin)}`;
   document.getElementById('montoMed').textContent = formatPesos(montoMed);
-  document.getElementById('montoMax').textContent = `MÃ¡ximo estimado: ${formatPesos(montoMax)}`;
+  document.getElementById('montoMax').textContent = `Máximo estimado: ${formatPesos(montoMax)}`;
 
   const detalles = [
-    `ðŸ“‹ FÃ³rmula: Vuoto/Marshall (art. 1746 CC y CN)`,
-    `ðŸ‘¤ Edad: ${edad} aÃ±os`,
-    `ðŸ’° Ingreso mensual: ${usaSmvm ? `SMVM (${formatPesos(SMVM_REF)})` : formatPesos(ingreso)}`,
-    `ðŸ©º Tipo de lesiÃ³n: ${tipoLesion.replace(/_/g,' ')} | Incapacidad: ${incapacidad}%`,
-    `ðŸ›£ï¸ Circulaba: ${circulaba === 'derecha' ? 'Por la derecha âœ…' : 'Por la izquierda âš ï¸ (âˆ’50%)'}`
+    `📋 Fórmula: Vuoto/Marshall (art. 1746 CC y CN)`,
+    `👤 Edad: ${edad} años`,
+    `💰 Ingreso mensual: ${usaSmvm ? `SMVM (${formatPesos(SMVM_REF)})` : formatPesos(ingreso)}`,
+    `🩺 Tipo de lesión: ${tipoLesion.replace(/_/g,' ')} | Incapacidad: ${incapacidad}%`,
+    `🛣️ Circulaba: ${circulaba === 'derecha' ? 'Por la derecha ✅' : 'Por la izquierda ⚠️ (−50%)'}`
   ].join('<br>');
   document.getElementById('detalleCalculo').innerHTML = detalles;
 
   const msg = [
-    `ðŸï¸ *NUEVO RECLAMO - MOTORECLAMO*`,
+    `🏍️ *NUEVO RECLAMO - MOTORECLAMO*`,
     ``,
-    `ðŸ‘¤ *Datos Personales*`,
-    `â€¢ Nombre: ${nombre}`,
-    `â€¢ Email: ${email}`,
-    `â€¢ TelÃ©fono: ${telefono}`,
-    `â€¢ Domicilio: ${domicilio}`,
+    `👤 *Datos Personales*`,
+    `• Nombre: ${nombre}`,
+    `• Email: ${email}`,
+    `• Teléfono: ${telefono}`,
+    `• Domicilio: ${domicilio}`,
     ``,
-    `ðŸš— *VehÃ­culo*`,
-    `â€¢ Tipo: ${tipoVehiculo}`,
-    patente ? `â€¢ Patente: ${patente}` : '',
+    `🚗 *Vehículo*`,
+    `• Tipo: ${tipoVehiculo}`,
+    patente ? `• Patente: ${patente}` : '',
     ``,
-    `ðŸ“ *Accidente*`,
-    `â€¢ Fecha: ${fecha}${hora ? ' - Hora: ' + hora : ''}`,
-    `â€¢ Lugar: ${lugar} (${tipoVia})`,
-    `â€¢ DescripciÃ³n: ${descripcion}`,
+    `📍 *Accidente*`,
+    `• Fecha: ${fecha}${hora ? ' - Hora: ' + hora : ''}`,
+    `• Lugar: ${lugar} (${tipoVia})`,
+    `• Descripción: ${descripcion}`,
     ``,
-    `ðŸ©º *Lesiones*`,
-    `â€¢ Tipo: ${tipoLesion.replace(/_/g,' ')}`,
-    `â€¢ Edad: ${edad} aÃ±os`,
-    `â€¢ % Incapacidad: ${incapacidad}%`,
-    `â€¢ Circulaba: ${circulaba === 'derecha' ? 'Por la derecha' : 'Por la izquierda'}`,
+    `🩺 *Lesiones*`,
+    `• Tipo: ${tipoLesion.replace(/_/g,' ')}`,
+    `• Edad: ${edad} años`,
+    `• % Incapacidad: ${incapacidad}%`,
+    `• Circulaba: ${circulaba === 'derecha' ? 'Por la derecha' : 'Por la izquierda'}`,
     ``,
-    `ðŸ’° *Ingresos*`,
-    `â€¢ Ingreso mensual: ${usaSmvm ? 'SMVM' : formatPesos(ingreso)}`,
+    `💰 *Ingresos*`,
+    `• Ingreso mensual: ${usaSmvm ? 'SMVM' : formatPesos(ingreso)}`,
     ``,
-    aseguradora ? `ðŸ›¡ï¸ *Seguro*\nâ€¢ Aseguradora: ${aseguradora}${poliza ? '\nâ€¢ PÃ³liza: ' + poliza : ''}\n` : '',
-    `ðŸ’µ *ESTIMACIÃ“N DE INDEMNIZACIÃ“N*`,
-    `â€¢ MÃ­nimo: ${formatPesos(montoMin)}`,
-    `â€¢ *Medio: ${formatPesos(montoMed)}*`,
-    `â€¢ MÃ¡ximo: ${formatPesos(montoMax)}`,
+    aseguradora ? `🛡️ *Seguro*\n• Aseguradora: ${aseguradora}${poliza ? '\n• Póliza: ' + poliza : ''}\n` : '',
+    `💵 *ESTIMACIÓN DE INDEMNIZACIÓN*`,
+    `• Mínimo: ${formatPesos(montoMin)}`,
+    `• *Medio: ${formatPesos(montoMed)}*`,
+    `• Máximo: ${formatPesos(montoMax)}`,
     ``,
-    `_(EstimaciÃ³n orientativa - FÃ³rmula Vuoto/Marshall, tasa 6% anual)_`,
+    `_(Estimación orientativa - Fórmula Vuoto/Marshall, tasa 6% anual)_`,
   ].filter(l => l !== '').join('\n');
 
   document.getElementById('waLink').href =
@@ -857,7 +857,7 @@ function validar() {
 
 // ==================== STEPS WIZARD ====================
 (function () {
-  /* Campo representativo de cada secciÃ³n del formulario */
+  /* Campo representativo de cada sección del formulario */
   var cardFields = ['nombre', 'fecha', 'tipoLesion', 'aseguradora'];
   var stepIds    = ['step-1', 'step-2', 'step-3', 'step-4'];
   var connIds    = ['conn-1', 'conn-2', 'conn-3'];
@@ -868,7 +868,7 @@ function validar() {
       var el = document.getElementById(fId);
       if (!el) return;
       var val = el.value.trim();
-      /* El select tipoLesion tiene siempre un valor; lo contamos solo si el usuario tocÃ³ otros campos primero */
+      /* El select tipoLesion tiene siempre un valor; lo contamos solo si el usuario tocó otros campos primero */
       if (val !== '' && !(fId === 'tipoLesion' && filled === 0)) filled++;
     });
     stepIds.forEach(function (id, i) {
@@ -899,7 +899,7 @@ function validar() {
 </script>
 
 <script>
-/* â”€â”€ MenÃº hamburguesa calculadora â”€â”€ */
+/* ── Menú hamburguesa calculadora ── */
 (function () {
   var btnOpen  = document.getElementById('btn-calc-menu-open');
   var btnClose = document.getElementById('btn-calc-menu-close');
@@ -921,7 +921,7 @@ function validar() {
 
   btnOpen.addEventListener('click', openMenu);
   btnClose.addEventListener('click', closeMenu);
-  /* Cerrar al tocar un enlace del menÃº */
+  /* Cerrar al tocar un enlace del menú */
   menu.querySelectorAll('a').forEach(function (a) {
     a.addEventListener('click', closeMenu);
   });
@@ -935,12 +935,12 @@ function validar() {
 <!-- WhatsApp flotante CTA pill -->
 <a href="https://wa.me/5491164677648?text=Hola%2C%20quiero%20consultar%20por%20un%20siniestro"
   target="_blank" rel="noopener noreferrer"
-  class="btn-wa-float" aria-label="HacÃ© tu consulta gratis por WhatsApp">
+  class="btn-wa-float" aria-label="Hacé tu consulta gratis por WhatsApp">
   <svg width="20" height="20" viewBox="0 0 24 24" fill="#000" aria-hidden="true">
     <path
       d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
   </svg>
-  HacÃ© tu consulta gratis
+  Hacé tu consulta gratis
 </a>
 
 </body>
