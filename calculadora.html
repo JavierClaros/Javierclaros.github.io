@@ -450,244 +450,276 @@
     <div class="steps-bar" id="steps-bar" aria-label="Progreso del formulario">
       <div class="step-item active" id="step-1">
         <div class="step-circle">1</div>
-        <div class="step-label">Personal</div>
+        <div class="step-label">Tu caso</div>
       </div>
       <div class="step-connector" id="conn-1"></div>
       <div class="step-item" id="step-2">
         <div class="step-circle">2</div>
-        <div class="step-label">Accidente</div>
+        <div class="step-label">Resultado</div>
       </div>
       <div class="step-connector" id="conn-2"></div>
       <div class="step-item" id="step-3">
         <div class="step-circle">3</div>
-        <div class="step-label">Cálculo</div>
-      </div>
-      <div class="step-connector" id="conn-3"></div>
-      <div class="step-item" id="step-4">
-        <div class="step-circle">4</div>
-        <div class="step-label">Seguro</div>
+        <div class="step-label">Contacto</div>
       </div>
     </div>
 
   <form id="calcForm" novalidate>
 
-    <!-- DATOS PERSONALES -->
-    <div class="card">
-      <div class="section-title">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          style="color:var(--gold)" aria-hidden="true">
-          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
-          <circle cx="12" cy="7" r="4"/>
-        </svg>
-        Datos Personales
+    <!-- PASO 1: DATOS DEL ACCIDENTE Y CÁLCULO -->
+    <div id="wizard-step-1">
+
+      <!-- DATOS DEL ACCIDENTE -->
+      <div class="card">
+        <div class="section-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            style="color:var(--gold)" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          Datos del Accidente
+        </div>
+        <div class="grid-2">
+          <div>
+            <label for="fecha">Fecha del Accidente *</label>
+            <input class="input-field" id="fecha" required type="date">
+            <div class="error-msg" id="err-fecha">Requerido</div>
+          </div>
+          <div>
+            <label for="hora">Hora</label>
+            <input class="input-field" id="hora" type="time">
+          </div>
+          <div>
+            <label for="lugar">Lugar del Accidente *</label>
+            <input class="input-field" id="lugar" required placeholder="Av. Rivadavia y Medrano">
+            <div class="error-msg" id="err-lugar">Requerido</div>
+          </div>
+          <div>
+            <label for="tipoVia">Tipo de Vía *</label>
+            <select class="input-field" id="tipoVia" required>
+              <option value="calle">Calle</option>
+              <option value="avenida">Avenida</option>
+              <option value="autopista">Autopista / Ruta</option>
+            </select>
+          </div>
+        </div>
+        <div style="margin-top:1rem;">
+          <label for="descripcion">Descripción del Accidente *</label>
+          <textarea class="input-field" id="descripcion" required rows="3"
+            placeholder="Ej.: Un auto no respetó el semáforo y me golpeó de costado..." style="resize:vertical;"></textarea>
+          <div class="error-msg" id="err-descripcion">Requerido</div>
+        </div>
       </div>
-      <div class="grid-2">
-        <div>
-          <label for="nombre">Nombre y Apellido *</label>
-          <input class="input-field" id="nombre" type="text" required placeholder="Juan García" autocomplete="name">
-          <div class="error-msg" id="err-nombre">Requerido</div>
+
+      <!-- DATOS PARA EL CÁLCULO -->
+      <div class="card">
+        <div class="section-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            style="color:var(--gold)" aria-hidden="true">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+          Datos para el Cálculo
         </div>
-        <div>
-          <label for="email">Email *</label>
-          <input class="input-field" id="email" required type="email" placeholder="email@ejemplo.com" autocomplete="email">
-          <div class="error-msg" id="err-email">Email inválido</div>
+        <div class="grid-2">
+          <div>
+            <label for="tipoLesion">Tipo de Lesión *</label>
+            <select class="input-field" id="tipoLesion" required onchange="actualizarRango()">
+              <option value="sin_atencion">Sin atención médica</option>
+              <option value="con_atencion">Con atención médica (sin internación)</option>
+              <option value="fractura">Fractura</option>
+              <option value="internacion">Internación</option>
+              <option value="cirugia">Cirugía / Operación</option>
+              <option value="incapacidad_permanente">Incapacidad permanente</option>
+            </select>
+            <p id="rangoIncapacidad">Rango estimado de incapacidad: <strong>5–15%</strong></p>
+          </div>
+          <div>
+            <label for="edad">Edad al momento del accidente *</label>
+            <input class="input-field" id="edad" required type="number" min="1" max="80" placeholder="Ej: 35">
+            <div class="error-msg" id="err-edad">Debe ser entre 1 y 80</div>
+          </div>
+          <div>
+            <label for="incapacidad">% Incapacidad estimado *</label>
+            <input class="input-field" id="incapacidad" required type="number" min="1" max="100" placeholder="Ej: 10">
+            <div class="error-msg" id="err-incapacidad">Debe ser entre 1 y 100</div>
+          </div>
+          <div>
+            <label for="ingreso">Ingreso Mensual Bruto (ARS)
+              <span style="color:#52525b; font-weight:400; text-transform:none; letter-spacing:0;">(vacío = SMVM)</span>
+            </label>
+            <input class="input-field" id="ingreso" type="number" min="0" placeholder="Ej: 800000">
+          </div>
         </div>
-        <div>
-          <label for="telefono">Teléfono *</label>
-          <input class="input-field" id="telefono" required placeholder="11 1234-5678" autocomplete="tel">
-          <div class="error-msg" id="err-telefono">Requerido</div>
+
+        <!-- Circulaba -->
+        <div style="margin-top:1.25rem;">
+          <label>La víctima circulaba por la *</label>
+          <div class="grid-2" style="margin-top:0.5rem;">
+            <button type="button" class="btn-toggle active" id="btnDerecha" onclick="selCirculaba('derecha')">
+              <p style="font-weight:700; font-size:0.875rem; margin:0;">✅ DERECHA</p>
+              <p style="font-size:0.75rem; color:#9ca3af; margin:0.2rem 0 0;">Circulación correcta</p>
+            </button>
+            <button type="button" class="btn-toggle" id="btnIzquierda" onclick="selCirculaba('izquierda')">
+              <p style="font-weight:700; font-size:0.875rem; margin:0;">⚠️ IZQUIERDA</p>
+              <p style="font-size:0.75rem; color:#9ca3af; margin:0.2rem 0 0;">Reduce el reclamo</p>
+            </button>
+          </div>
+          <input type="hidden" id="circulaba" value="derecha">
         </div>
-        <div>
-          <label for="domicilio">Domicilio *</label>
-          <input class="input-field" id="domicilio" required placeholder="Av. Corrientes 1234, CABA" autocomplete="street-address">
-          <div class="error-msg" id="err-domicilio">Requerido</div>
+      </div>
+
+      <!-- DATOS DEL SEGURO -->
+      <div class="card">
+        <div class="section-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            style="color:var(--gold)" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          Datos del Seguro
         </div>
-        <div>
-          <label for="tipoVehiculo">Tipo de Vehículo *</label>
-          <select class="input-field" id="tipoVehiculo" required>
-            <option value="moto">Motocicleta</option>
-            <option value="auto">Automóvil</option>
-            <option value="peaton">Peatón</option>
-          </select>
+        <div class="grid-2">
+          <div>
+            <label for="aseguradora">Compañía Aseguradora</label>
+            <select class="input-field" id="aseguradora">
+              <option value="">— Seleccionar compañía —</option>
+              <option>Sancor Seguros</option><option>Zurich</option><option>La Segunda</option>
+              <option>SMG Seguros</option><option>Galeno</option><option>Federación Patronal</option>
+              <option>Allianz</option><option>Mapfre</option><option>Rivadavia</option>
+              <option>Provincia Seguros</option><option>NACIÓN SEGUROS</option><option>El Comercio</option>
+              <option>HDI Seguros</option><option>Integrity Seguros</option><option>Mercantil Andina</option>
+              <option>Otra</option>
+            </select>
+          </div>
+          <div>
+            <label for="poliza">N° de Póliza</label>
+            <input class="input-field" id="poliza" placeholder="Opcional">
+          </div>
         </div>
-        <div>
-          <label for="patente">Patente</label>
-          <input class="input-field" id="patente" placeholder="ABC 123">
+      </div>
+
+      <!-- Botón calcular -->
+      <button type="button" id="btn-calcular" class="btn-submit" onclick="calcularYMostrar()">
+        Ver mi estimación
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m9 18 6-6-6-6"/>
+        </svg>
+      </button>
+    </div>
+    <!-- /wizard-step-1 -->
+
+    <!-- PASO 2: RESULTADO -->
+    <div id="wizard-step-2" style="display:none;">
+
+      <!-- RESULTADO -->
+      <div class="result-card card" id="resultCard" style="border-color:rgba(255,184,0,0.4);">
+        <div class="section-title" style="justify-content:center; font-size:1.75rem; margin-bottom:1.5rem;">
+          🏆 Resultado del Cálculo
         </div>
+
+        <div style="text-align:center; margin-bottom:1.5rem;">
+          <p style="color:#9ca3af; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.25rem;">Estimación de Indemnización</p>
+          <p id="montoMin" class="result-range"></p>
+          <p id="montoMed" class="result-amount"></p>
+          <p id="montoMax" class="result-range"></p>
+          <p style="font-size:0.72rem; color:#52525b; margin-top:0.5rem;">(*) Estimación orientativa. El monto final depende de factores jurídicos y judiciales.</p>
+        </div>
+
+        <div id="detalleCalculo" class="detail-box"></div>
+
+        <div class="disclaimer">
+          ⚠️ <strong>Aviso:</strong> Este cálculo es una estimación orientativa basada en la fórmula Vuoto/Marshall (art. 1746 CC y CN) y valores de referencia actualizados. No constituye asesoramiento legal. MotoReclamo analizará tu caso en detalle y sin cargo.
+        </div>
+      </div>
+
+      <!-- Navegación paso 2 -->
+      <div style="display:flex; gap:1rem; margin-top:1rem;">
+        <button type="button" class="btn-submit" style="background:#27272a; color:#fff; flex:1;" onclick="irPaso(1)">
+          ← Volver y modificar
+        </button>
+        <button type="button" class="btn-submit" style="flex:2;" onclick="irPaso(3)">
+          Analizar mi caso →
+        </button>
       </div>
     </div>
+    <!-- /wizard-step-2 -->
 
-    <!-- DATOS DEL ACCIDENTE -->
-    <div class="card">
-      <div class="section-title">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          style="color:var(--gold)" aria-hidden="true">
-          <circle cx="12" cy="12" r="10"/>
-          <line x1="12" y1="8" x2="12" y2="12"/>
-          <line x1="12" y1="16" x2="12.01" y2="16"/>
+    <!-- PASO 3: CONTACTO -->
+    <div id="wizard-step-3" style="display:none;">
+      <div class="card">
+        <div class="section-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            style="color:var(--gold)" aria-hidden="true">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          Tus datos de contacto
+        </div>
+        <p style="color:#9ca3af; font-size:0.85rem; margin-bottom:1.25rem; line-height:1.5;">
+          Para que MotoReclamo pueda contactarte y analizar tu caso en detalle, completá los siguientes datos.
+        </p>
+        <div class="grid-2">
+          <div>
+            <label for="nombre">Nombre y Apellido *</label>
+            <input class="input-field" id="nombre" type="text" required placeholder="Juan García" autocomplete="name">
+            <div class="error-msg" id="err-nombre">Requerido</div>
+          </div>
+          <div>
+            <label for="telefono">Teléfono *</label>
+            <input class="input-field" id="telefono" required placeholder="11 1234-5678" autocomplete="tel">
+            <div class="error-msg" id="err-telefono">Requerido</div>
+          </div>
+          <div>
+            <label for="email">Email
+              <span style="color:#52525b; font-weight:400; text-transform:none;">(opcional)</span>
+            </label>
+            <input class="input-field" id="email" type="email" placeholder="email@ejemplo.com" autocomplete="email">
+            <div class="error-msg" id="err-email">Email inválido</div>
+          </div>
+          <div>
+            <label for="tipoVehiculo">Tipo de Vehículo</label>
+            <select class="input-field" id="tipoVehiculo">
+              <option value="moto">Motocicleta</option>
+              <option value="auto">Automóvil</option>
+              <option value="peaton">Peatón</option>
+            </select>
+          </div>
+          <div style="grid-column:1/-1;">
+            <label for="domicilio">Domicilio
+              <span style="color:#52525b; font-weight:400; text-transform:none;">(opcional)</span>
+            </label>
+            <input class="input-field" id="domicilio" placeholder="Av. Corrientes 1234, CABA" autocomplete="street-address">
+          </div>
+        </div>
+      </div>
+
+      <!-- Botón enviar + link WA -->
+      <a id="waLink" href="#" class="wa-btn" target="_blank" rel="noopener noreferrer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
-        Datos del Accidente
+        Quiero que analicen mi caso
+      </a>
+
+      <div style="display:flex; gap:1rem; margin-top:0.75rem;">
+        <button type="button" class="btn-submit" style="background:#27272a; color:#fff; width:100%;" onclick="irPaso(2)">
+          ← Ver mi estimación
+        </button>
       </div>
-      <div class="grid-2">
-        <div>
-          <label for="fecha">Fecha del Accidente *</label>
-          <input class="input-field" id="fecha" required type="date">
-          <div class="error-msg" id="err-fecha">Requerido</div>
-        </div>
-        <div>
-          <label for="hora">Hora</label>
-          <input class="input-field" id="hora" type="time">
-        </div>
-        <div>
-          <label for="lugar">Lugar del Accidente *</label>
-          <input class="input-field" id="lugar" required placeholder="Av. Rivadavia y Medrano">
-          <div class="error-msg" id="err-lugar">Requerido</div>
-        </div>
-        <div>
-          <label for="tipoVia">Tipo de Vía *</label>
-          <select class="input-field" id="tipoVia" required>
-            <option value="calle">Calle</option>
-            <option value="avenida">Avenida</option>
-            <option value="autopista">Autopista / Ruta</option>
-          </select>
-        </div>
-      </div>
-      <div style="margin-top:1rem;">
-        <label for="descripcion">Descripción del Accidente *</label>
-        <textarea class="input-field" id="descripcion" required rows="3"
-          placeholder="Describí brevemente qué ocurrió..." style="resize:vertical;"></textarea>
-        <div class="error-msg" id="err-descripcion">Requerido</div>
-      </div>
+
+      <p style="text-align:center; color:#52525b; font-size:0.72rem; margin-top:1rem; line-height:1.5;">
+        Al continuar aceptás nuestra <a href="/politica-de-privacidad.html" style="color:#FFB800;">Pol&iacute;tica de Privacidad</a>.
+        Tus datos se usan exclusivamente para gestionar tu consulta.
+      </p>
     </div>
-
-    <!-- DATOS PARA EL CÁLCULO -->
-    <div class="card">
-      <div class="section-title">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          style="color:var(--gold)" aria-hidden="true">
-          <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-        </svg>
-        Datos para el Cálculo
-      </div>
-      <div class="grid-2">
-        <div>
-          <label for="tipoLesion">Tipo de Lesión *</label>
-          <select class="input-field" id="tipoLesion" required onchange="actualizarRango()">
-            <option value="sin_atencion">Sin atención médica</option>
-            <option value="con_atencion">Con atención médica (sin internación)</option>
-            <option value="fractura">Fractura</option>
-            <option value="internacion">Internación</option>
-            <option value="cirugia">Cirugía / Operación</option>
-            <option value="incapacidad_permanente">Incapacidad permanente</option>
-          </select>
-          <p id="rangoIncapacidad">Rango estimado de incapacidad: <strong>5–15%</strong></p>
-        </div>
-        <div>
-          <label for="edad">Edad al momento del accidente *</label>
-          <input class="input-field" id="edad" required type="number" min="1" max="80" placeholder="Ej: 35">
-          <div class="error-msg" id="err-edad">Debe ser entre 1 y 80</div>
-        </div>
-        <div>
-          <label for="incapacidad">% Incapacidad estimado *</label>
-          <input class="input-field" id="incapacidad" required type="number" min="1" max="100" placeholder="Ej: 10">
-          <div class="error-msg" id="err-incapacidad">Debe ser entre 1 y 100</div>
-        </div>
-        <div>
-          <label for="ingreso">Ingreso Mensual Bruto (ARS)
-            <span style="color:#52525b; font-weight:400; text-transform:none; letter-spacing:0;">(vacío = SMVM)</span>
-          </label>
-          <input class="input-field" id="ingreso" type="number" min="0" placeholder="Ej: 800000">
-        </div>
-      </div>
-
-      <!-- Circulaba -->
-      <div style="margin-top:1.25rem;">
-        <label>La víctima circulaba por la *</label>
-        <div class="grid-2" style="margin-top:0.5rem;">
-          <button type="button" class="btn-toggle active" id="btnDerecha" onclick="selCirculaba('derecha')">
-            <p style="font-weight:700; font-size:0.875rem; margin:0;">✅ DERECHA</p>
-            <p style="font-size:0.75rem; color:#9ca3af; margin:0.2rem 0 0;">Circulación correcta</p>
-          </button>
-          <button type="button" class="btn-toggle" id="btnIzquierda" onclick="selCirculaba('izquierda')">
-            <p style="font-weight:700; font-size:0.875rem; margin:0;">⚠️ IZQUIERDA</p>
-            <p style="font-size:0.75rem; color:#9ca3af; margin:0.2rem 0 0;">Reduce el reclamo</p>
-          </button>
-        </div>
-        <input type="hidden" id="circulaba" value="derecha">
-      </div>
-    </div>
-
-    <!-- DATOS DEL SEGURO -->
-    <div class="card">
-      <div class="section-title">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          style="color:var(--gold)" aria-hidden="true">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-        </svg>
-        Datos del Seguro
-      </div>
-      <div class="grid-2">
-        <div>
-          <label for="aseguradora">Compañía Aseguradora</label>
-          <select class="input-field" id="aseguradora">
-            <option value="">— Seleccionar compañía —</option>
-            <option>Sancor Seguros</option><option>Zurich</option><option>La Segunda</option>
-            <option>SMG Seguros</option><option>Galeno</option><option>Federación Patronal</option>
-            <option>Allianz</option><option>Mapfre</option><option>Rivadavia</option>
-            <option>Provincia Seguros</option><option>NACIÓN SEGUROS</option><option>El Comercio</option>
-            <option>HDI Seguros</option><option>Integrity Seguros</option><option>Mercantil Andina</option>
-            <option>Otra</option>
-          </select>
-        </div>
-        <div>
-          <label for="poliza">N° de Póliza</label>
-          <input class="input-field" id="poliza" placeholder="Opcional">
-        </div>
-      </div>
-    </div>
-
-    <!-- SUBMIT -->
-    <button type="submit" class="btn-submit">
-      Calcular Indemnización
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="m9 18 6-6-6-6"/>
-      </svg>
-    </button>
+    <!-- /wizard-step-3 -->
 
   </form>
-
-  <!-- RESULTADO -->
-  <div class="result-card card" id="resultCard" style="margin-top:1.5rem; border-color:rgba(255,184,0,0.4);">
-    <div class="section-title" style="justify-content:center; font-size:1.75rem; margin-bottom:1.5rem;">
-      🏆 Resultado del Cálculo
-    </div>
-
-    <div style="text-align:center; margin-bottom:1.5rem;">
-      <p style="color:#9ca3af; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.25rem;">Estimación de Indemnización</p>
-      <p id="montoMin" class="result-range"></p>
-      <p id="montoMed" class="result-amount"></p>
-      <p id="montoMax" class="result-range"></p>
-      <p style="font-size:0.72rem; color:#52525b; margin-top:0.5rem;">(*) Estimación orientativa. El monto final depende de factores jurídicos y judiciales.</p>
-    </div>
-
-    <div id="detalleCalculo" class="detail-box"></div>
-
-    <a id="waLink" href="#" class="wa-btn" target="_blank">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-      </svg>
-      Enviar a MotoReclamo por WhatsApp
-    </a>
-
-    <div class="disclaimer">
-      ⚠️ <strong>Aviso:</strong> Este cálculo es una estimación orientativa basada en la fórmula Vuoto/Marshall (art. 1746 CC y CN) y valores de referencia actualizados. No constituye asesoramiento legal. MotoReclamo analizará tu caso en detalle y sin cargo.
-    </div>
-  </div>
 
 </main>
 
@@ -702,7 +734,7 @@
 <script>
 // ==================== CONFIGURACIÓN ====================
 const WA_NUMBER = "5491164677648";
-const SMVM_REF = 271571;
+const SMVM_REF = 383800; /* SMVM septiembre 2026 — actualizar cuando cambie */
 
 const RANGOS = {
   sin_atencion:           { min: 1,  med: 3,  max: 5,  label: "1–5%" },
@@ -728,6 +760,32 @@ function selCirculaba(val) {
   document.getElementById('btnIzquierda').classList.toggle('active', val === 'izquierda');
 }
 
+// ==================== WIZARD DE PASOS ====================
+var pasoActual = 1;
+
+function irPaso(n) {
+  [1,2,3].forEach(function(i) {
+    var el = document.getElementById('wizard-step-' + i);
+    if (el) el.style.display = (i === n) ? '' : 'none';
+  });
+
+  /* Actualizar steps bar */
+  ['step-1','step-2','step-3'].forEach(function(id, i) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.classList.remove('active','done');
+    if (i + 1 < n)      el.classList.add('done');
+    else if (i + 1 === n) el.classList.add('active');
+  });
+  ['conn-1','conn-2'].forEach(function(id, i) {
+    var el = document.getElementById(id);
+    if (el) el.classList.toggle('done', i + 1 < n);
+  });
+
+  pasoActual = n;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 // ==================== CÁLCULO ====================
 function calcularIndemnizacion(ingreso, porcIncap, edad, circulaba) {
   const i = 0.06;
@@ -743,17 +801,10 @@ function formatPesos(n) {
   return '$ ' + n.toLocaleString('es-AR', { maximumFractionDigits: 0 });
 }
 
-// ==================== VALIDACIÓN Y SUBMIT ====================
-document.getElementById('calcForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  if (!validar()) return;
+function calcularYMostrar() {
+  /* Validar campos del paso 1 */
+  if (!validarPaso1()) return;
 
-  const nombre      = document.getElementById('nombre').value.trim();
-  const email       = document.getElementById('email').value.trim();
-  const telefono    = document.getElementById('telefono').value.trim();
-  const domicilio   = document.getElementById('domicilio').value.trim();
-  const tipoVehiculo = document.getElementById('tipoVehiculo').value;
-  const patente     = document.getElementById('patente').value.trim();
   const fecha       = document.getElementById('fecha').value;
   const hora        = document.getElementById('hora').value;
   const lugar       = document.getElementById('lugar').value.trim();
@@ -786,34 +837,58 @@ document.getElementById('calcForm').addEventListener('submit', function(e) {
   ].join('<br>');
   document.getElementById('detalleCalculo').innerHTML = detalles;
 
+  /* Construir mensaje WA (datos de contacto aún no disponibles en paso 1) */
+  actualizarWaLink();
+
+  irPaso(2);
+}
+
+function actualizarWaLink() {
+  const nombre      = (document.getElementById('nombre')    || {}).value || '';
+  const telefono    = (document.getElementById('telefono')  || {}).value || '';
+  const email       = (document.getElementById('email')     || {}).value || '';
+  const domicilio   = (document.getElementById('domicilio') || {}).value || '';
+  const tipoVehiculo = (document.getElementById('tipoVehiculo') || {}).value || '';
+
+  const fecha       = document.getElementById('fecha').value;
+  const lugar       = document.getElementById('lugar').value.trim();
+  const tipoVia     = document.getElementById('tipoVia').value;
+  const descripcion = document.getElementById('descripcion').value.trim();
+  const tipoLesion  = document.getElementById('tipoLesion').value;
+  const edad        = parseInt(document.getElementById('edad').value) || '';
+  const incapacidad = parseFloat(document.getElementById('incapacidad').value) || '';
+  const ingresoRaw  = document.getElementById('ingreso').value;
+  const ingreso     = ingresoRaw ? parseFloat(ingresoRaw) : SMVM_REF;
+  const usaSmvm     = !ingresoRaw;
+  const circulaba   = document.getElementById('circulaba').value;
+  const aseguradora = document.getElementById('aseguradora').value;
+  const poliza      = document.getElementById('poliza').value.trim();
+
+  const montoMed = calcularIndemnizacion(ingreso, incapacidad, edad, circulaba);
+  const montoMin = Math.round(montoMed * 0.70);
+  const montoMax = Math.round(montoMed * 1.45);
+
   const msg = [
     `🏍️ *NUEVO RECLAMO - MOTORECLAMO*`,
     ``,
-    `👤 *Datos Personales*`,
-    `• Nombre: ${nombre}`,
-    `• Email: ${email}`,
-    `• Teléfono: ${telefono}`,
-    `• Domicilio: ${domicilio}`,
-    ``,
-    `🚗 *Vehículo*`,
-    `• Tipo: ${tipoVehiculo}`,
-    patente ? `• Patente: ${patente}` : '',
+    nombre    ? `👤 *Nombre:* ${nombre}` : '',
+    telefono  ? `📱 *Teléfono:* ${telefono}` : '',
+    email     ? `📧 *Email:* ${email}` : '',
     ``,
     `📍 *Accidente*`,
-    `• Fecha: ${fecha}${hora ? ' - Hora: ' + hora : ''}`,
+    `• Fecha: ${fecha}`,
     `• Lugar: ${lugar} (${tipoVia})`,
-    `• Descripción: ${descripcion}`,
+    descripcion ? `• Descripción: ${descripcion}` : '',
     ``,
-    `🩺 *Lesiones*`,
+    `🩺 *Lesión y cálculo*`,
     `• Tipo: ${tipoLesion.replace(/_/g,' ')}`,
     `• Edad: ${edad} años`,
     `• % Incapacidad: ${incapacidad}%`,
     `• Circulaba: ${circulaba === 'derecha' ? 'Por la derecha' : 'Por la izquierda'}`,
+    `• Ingreso: ${usaSmvm ? 'SMVM' : formatPesos(ingreso)}`,
     ``,
-    `💰 *Ingresos*`,
-    `• Ingreso mensual: ${usaSmvm ? 'SMVM' : formatPesos(ingreso)}`,
+    aseguradora ? `🛡️ *Aseguradora:* ${aseguradora}${poliza ? ' — Póliza: ' + poliza : ''}` : '',
     ``,
-    aseguradora ? `🛡️ *Seguro*\n• Aseguradora: ${aseguradora}${poliza ? '\n• Póliza: ' + poliza : ''}\n` : '',
     `💵 *ESTIMACIÓN DE INDEMNIZACIÓN*`,
     `• Mínimo: ${formatPesos(montoMin)}`,
     `• *Medio: ${formatPesos(montoMed)}*`,
@@ -824,19 +899,18 @@ document.getElementById('calcForm').addEventListener('submit', function(e) {
 
   document.getElementById('waLink').href =
     `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+}
 
-  const resultCard = document.getElementById('resultCard');
-  resultCard.classList.add('show');
-  setTimeout(() => resultCard.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+/* Actualizar el link WA cuando cambian datos de contacto en paso 3 */
+['nombre','telefono','email','domicilio'].forEach(function(id) {
+  var el = document.getElementById(id);
+  if (el) el.addEventListener('input', actualizarWaLink);
 });
 
-function validar() {
+// ==================== VALIDACIÓN PASO 1 ====================
+function validarPaso1() {
   let ok = true;
   const campos = [
-    { id: 'nombre',      errId: 'err-nombre',      test: v => v.trim().length > 1 },
-    { id: 'email',       errId: 'err-email',        test: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
-    { id: 'telefono',    errId: 'err-telefono',     test: v => v.trim().length > 5 },
-    { id: 'domicilio',   errId: 'err-domicilio',    test: v => v.trim().length > 3 },
     { id: 'fecha',       errId: 'err-fecha',        test: v => v.length > 0 },
     { id: 'lugar',       errId: 'err-lugar',        test: v => v.trim().length > 2 },
     { id: 'descripcion', errId: 'err-descripcion',  test: v => v.trim().length > 5 },
@@ -855,47 +929,11 @@ function validar() {
   return ok;
 }
 
-// ==================== STEPS WIZARD ====================
-(function () {
-  /* Campo representativo de cada sección del formulario */
-  var cardFields = ['nombre', 'fecha', 'tipoLesion', 'aseguradora'];
-  var stepIds    = ['step-1', 'step-2', 'step-3', 'step-4'];
-  var connIds    = ['conn-1', 'conn-2', 'conn-3'];
+// Evitar submit HTML del form (el flujo es ahora por botones)
+document.getElementById('calcForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+});
 
-  function updateSteps() {
-    var filled = 0;
-    cardFields.forEach(function (fId) {
-      var el = document.getElementById(fId);
-      if (!el) return;
-      var val = el.value.trim();
-      /* El select tipoLesion tiene siempre un valor; lo contamos solo si el usuario tocó otros campos primero */
-      if (val !== '' && !(fId === 'tipoLesion' && filled === 0)) filled++;
-    });
-    stepIds.forEach(function (id, i) {
-      var el = document.getElementById(id);
-      if (!el) return;
-      el.classList.remove('active', 'done');
-      if (i < filled)      el.classList.add('done');
-      else if (i === filled) el.classList.add('active');
-    });
-    connIds.forEach(function (id, i) {
-      var el = document.getElementById(id);
-      if (!el) return;
-      el.classList.toggle('done', i < filled);
-    });
-  }
-
-  /* Escuchar cambios en todos los campos del formulario */
-  ['nombre','email','telefono','domicilio','fecha','hora','lugar',
-   'tipoLesion','edad','incapacidad','ingreso','aseguradora','poliza'
-  ].forEach(function (fId) {
-    var el = document.getElementById(fId);
-    if (el) el.addEventListener('input',  updateSteps);
-    if (el) el.addEventListener('change', updateSteps);
-  });
-
-  updateSteps();
-})();
 </script>
 
 <script>

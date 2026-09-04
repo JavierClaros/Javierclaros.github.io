@@ -1026,16 +1026,23 @@ a, button, [role="button"], .faq-toggle, .btn-toggle {
   opacity: 0;
   transition: opacity 0.35s ease, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.6rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 184, 0, 0.12);
-  white-space: nowrap;
+  max-width: min(90vw, 28rem);
+  white-space: normal;
+  line-height: 1.5;
   pointer-events: none;
 }
 #toast.show {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+  pointer-events: auto; /* permite clics en el link de fallback */
 }
+#toast small { font-weight: 400; color: #9ca3af; display: block; margin-top: 0.2rem; }
+#toast.toast-warning { border-color: rgba(251, 191, 36, 0.7); background: #1c1910; }
+#toast.toast-error   { border-color: rgba(239, 68, 68, 0.6);  background: #1c1010; }
+
 
 /* ---- WhatsApp flotante CTA (pill) ---- */
 .btn-wa-float {
