@@ -37,6 +37,7 @@
   <meta name="twitter:title" content="MotoReclamo - Accidentes de tránsito">
   <meta name="twitter:description" content="Reclamos e indemnizaciones para motoqueros. Consulta gratis.">
   <meta name="twitter:image" content="https://motoreclamo.ar/preview.jpg">
+  <meta property="og:locale" content="es_AR">
 
   <!-- Preconnect para recursos externos -->
   <link rel="preconnect" href="https://www.googletagmanager.com">
@@ -115,17 +116,31 @@
   }
   </script>
 
-  <!-- Google Tag Manager -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18244923747"></script>
+
+  <!-- Google Tag Manager — carga GA4 (G-V9NVT7367) y Google Ads (AW-18244923747) -->
+  <!-- GTM Container: GTM-NVXLX7KD -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NVXLX7KD');</script>
+  <!-- Shim de gtag() para eventos de Ads disparados desde script.js -->
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'AW-18244923747');
+    /* GA4 G-V9NVT7367 se gestiona exclusivamente a través de GTM.
+       No agregar gtag('config','G-V9NVT7367') aquí para evitar duplicación. */
   </script>
 </head>
 
 <body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVXLX7KD"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- PRELOADER -->
   <div id="preloader" role="status" aria-label="Cargando MotoReclamo">
@@ -1051,10 +1066,9 @@
                       <div class="bg-amber-400 text-black p-7 rounded-xl">
                         <h4 class="font-black mb-2 uppercase"
                           style='font-family:"Bebas Neue",sans-serif;letter-spacing:0.02em;font-size:1.5rem'>Consulta
-                          Gratis</h4>
-                        <p class="text-sm text-black/80 mb-3 leading-relaxed">Analizamos tu caso sin compromiso y
-                          te asesoramos sobre tus derechos.</p>
-                        <p class="font-bold text-sm">No necesitás adelantar honorarios.<br>Antes de avanzar te explicamos cómo funciona el reclamo y cuáles serían los honorarios.</p>
+                          Inicial Gratis</h4>
+                        <p class="text-sm text-black/80 mb-3 leading-relaxed">Analizamos tu caso sin compromiso. Antes de avanzar te explicamos cómo funciona el proceso y qué se espera en tu situación particular.</p>
+                        <p class="font-black text-base">Sin costos adelantados.<br>Solo cobramos si obtenés una indemnización.</p>
                       </div>
                     </div>
 
@@ -1094,6 +1108,21 @@
                             class="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 text-white rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent outline-none transition-all resize-none placeholder-gray-600"
                             placeholder="Ej.: Choqué el 15/8 en Av. Corrientes. Un auto no respetó el semáforo, me golpeé la rodilla y la moto quedó destruida."
                             required></textarea>
+                        </div>
+                        <!-- Trust pills antes del submit -->
+                        <div class="flex flex-wrap gap-2 justify-center">
+                          <span class="inline-flex items-center gap-1.5 bg-zinc-800 border border-zinc-700 rounded-full px-3 py-1 text-xs text-gray-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#FFB800" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Consulta sin cargo
+                          </span>
+                          <span class="inline-flex items-center gap-1.5 bg-zinc-800 border border-zinc-700 rounded-full px-3 py-1 text-xs text-gray-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#FFB800" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Sin adelantos
+                          </span>
+                          <span class="inline-flex items-center gap-1.5 bg-zinc-800 border border-zinc-700 rounded-full px-3 py-1 text-xs text-gray-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#FFB800" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Solo cobramos si ganás
+                          </span>
                         </div>
                         <button type="submit"
                           class="w-full bg-amber-400 text-black px-8 py-4 rounded-lg font-bold hover:bg-amber-300 transition-colors text-base">Enviar
