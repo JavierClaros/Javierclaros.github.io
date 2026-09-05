@@ -2,7 +2,9 @@
 <html lang="es">
 <head>
   <!-- Favicons -->
-  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -23,7 +25,7 @@
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:url" content="https://motoreclamo.ar/calculadora">
+  <meta property="og:url" content="https://motoreclamo.ar/calculadora.html">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="MotoReclamo – Calculadora de Indemnización">
@@ -692,8 +694,10 @@
           </div>
           <div>
             <label for="telefono">Teléfono *</label>
-            <input class="input-field" id="telefono" required placeholder="11 1234-5678" autocomplete="tel">
-            <div class="error-msg" id="err-telefono">Requerido</div>
+            <input class="input-field" id="telefono" type="tel" required
+              placeholder="11 1234-5678" autocomplete="tel"
+              inputmode="numeric">
+            <div class="error-msg" id="err-telefono">Ingresá un teléfono válido (ej: 11 1234-5678)</div>
           </div>
           <div>
             <label for="email">Email
@@ -953,6 +957,58 @@ function validarPaso1() {
 // Evitar submit HTML del form (el flujo es ahora por botones)
 document.getElementById('calcForm').addEventListener('submit', function(e) {
   e.preventDefault();
+});
+
+// ==================== VALIDACIÓN PASO 3 ====================
+function validarPaso3() {
+  let ok = true;
+
+  /* Nombre */
+  var nombreEl   = document.getElementById('nombre');
+  var errNombre  = document.getElementById('err-nombre');
+  var nombreOk   = nombreEl && nombreEl.value.trim().length >= 2;
+  if (errNombre) errNombre.classList.toggle('show', !nombreOk);
+  if (nombreEl)  nombreEl.style.borderColor = nombreOk ? '#3f3f46' : '#ef4444';
+  if (!nombreOk) ok = false;
+
+  /* Teléfono — mínimo 8 dígitos, solo números, espacios y guiones */
+  var telEl  = document.getElementById('telefono');
+  var errTel = document.getElementById('err-telefono');
+  var telVal = telEl ? telEl.value.replace(/[\s\-\.\(\)]/g, '') : '';
+  var telOk  = /^[0-9]{8,15}$/.test(telVal);
+  if (errTel) errTel.classList.toggle('show', !telOk);
+  if (telEl)  telEl.style.borderColor = telOk ? '#3f3f46' : '#ef4444';
+  if (!telOk) ok = false;
+
+  /* Email opcional — si se completó, debe ser válido */
+  var emailEl  = document.getElementById('email');
+  var errEmail = document.getElementById('err-email');
+  if (emailEl && emailEl.value.trim().length > 0) {
+    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value.trim());
+    if (errEmail) errEmail.classList.toggle('show', !emailOk);
+    if (emailEl)  emailEl.style.borderColor = emailOk ? '#3f3f46' : '#ef4444';
+    if (!emailOk) ok = false;
+  } else {
+    if (errEmail) errEmail.classList.remove('show');
+    if (emailEl)  emailEl.style.borderColor = '#3f3f46';
+  }
+
+  return ok;
+}
+
+/* Conectar boton WA con validación de paso 3 */
+document.addEventListener('DOMContentLoaded', function() {
+  var waLink = document.getElementById('waLink');
+  if (waLink) {
+    waLink.addEventListener('click', function(e) {
+      if (!validarPaso3()) {
+        e.preventDefault();
+        /* Scroll al primer error */
+        var errVisible = document.querySelector('#wizard-step-3 .error-msg.show');
+        if (errVisible) errVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  }
 });
 
 </script>
