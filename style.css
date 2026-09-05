@@ -1114,16 +1114,21 @@ a, button, [role="button"], .faq-toggle, .btn-toggle {
   }
 }
 
-/* ---- FAQ Acordeón ---- */
+/* ---- FAQ Acordeón (Asphalt & Trust) ---- */
 .faq-item {
-  background: #18181b;
-  border: 1px solid #27272a;
+  background: var(--surface-deep);
+  border: 1px solid var(--surface-border);
   border-radius: 0.75rem;
   overflow: hidden;
-  transition: border-color 0.3s ease;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 .faq-item:hover {
-  border-color: rgba(255, 184, 0, 0.35);
+  border-color: rgba(251, 191, 36, 0.35);
+}
+.faq-item.open {
+  border-color: rgba(251, 191, 36, 0.5);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 .faq-toggle {
   width: 100%;
@@ -1135,30 +1140,36 @@ a, button, [role="button"], .faq-toggle, .btn-toggle {
   justify-content: space-between;
   gap: 1rem;
   text-align: left;
+  cursor: pointer;
 }
 .faq-toggle h3 {
-  font-size: 0.9375rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.2rem;
   font-weight: 700;
-  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--text-primary);
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.3;
   flex: 1;
 }
 .faq-icon {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   flex-shrink: 0;
-  border: 1.5px solid rgba(255, 184, 0, 0.5);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  background: rgba(251, 191, 36, 0.08);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.35s ease, background 0.3s ease;
-  color: #FFB800;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease, border-color 0.3s ease;
+  color: var(--amber-highvis);
 }
 .faq-item.open .faq-icon {
   transform: rotate(45deg);
-  background: rgba(255, 184, 0, 0.15);
+  background: rgba(251, 191, 36, 0.2);
+  border-color: var(--amber-highvis);
 }
 .faq-body {
   max-height: 0;
@@ -1167,9 +1178,12 @@ a, button, [role="button"], .faq-toggle, .btn-toggle {
 }
 .faq-body-inner {
   padding: 0 1.5rem 1.25rem;
-  color: #9ca3af;
+  border-top: 1px solid rgba(40, 50, 69, 0.4);
+  padding-top: 1rem;
+  color: var(--text-secondary);
+  font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
-  line-height: 1.75;
+  line-height: 1.7;
 }
 .faq-item.open .faq-body {
   max-height: 500px;
@@ -1591,3 +1605,179 @@ body,
     border-radius: 0.625rem;
   }
 }
+
+/* ============================================================
+   ASPHALT & TRUST DESIGN SYSTEM (STITCH 2026 ELEVATION)
+   ============================================================ */
+:root {
+  --void-base: #0A0E17;
+  --surface-deep: #111622;
+  --surface-asphalt: #181F2C;
+  --surface-border: #283245;
+  --surface-border-subtle: rgba(40, 50, 69, 0.5);
+  --amber-vivid: #F59E0B;
+  --amber-highvis: #FBBF24;
+  --amber-glow: #FFC107;
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+  --whatsapp-brand: #25D366;
+  --secondary: #22C55E;
+  --danger-red: #EF4444;
+}
+
+/* Background utilities */
+.bg-void-base { background-color: var(--void-base); }
+.bg-surface-deep { background-color: var(--surface-deep); }
+.bg-surface-asphalt { background-color: var(--surface-asphalt); }
+
+/* Border utilities */
+.border-surface-border { border-color: var(--surface-border); }
+.border-surface-border\/50 { border-color: var(--surface-border-subtle); }
+.border-surface-border\/40 { border-color: rgba(40, 50, 69, 0.4); }
+
+/* Text utilities */
+.text-text-primary { color: var(--text-primary); }
+.text-text-secondary { color: var(--text-secondary); }
+.text-text-muted { color: var(--text-muted); }
+.text-amber-highvis { color: var(--amber-highvis); }
+.text-amber-vivid { color: var(--amber-vivid); }
+
+/* Typography */
+.font-headline { font-family: 'Barlow Condensed', sans-serif; }
+.font-body { font-family: 'Inter', sans-serif; }
+.font-badge-label, .font-code-numeral { font-family: 'Space Grotesk', sans-serif; }
+
+/* Micro-borders & Rim Highlights */
+.tactical-card {
+  background-color: var(--surface-deep);
+  border: 1px solid var(--surface-border);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.tactical-card:hover {
+  border-color: rgba(251, 191, 36, 0.35);
+}
+
+.tactical-card-asphalt {
+  background-color: var(--surface-asphalt);
+  border: 1px solid var(--surface-border);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.tactical-card-asphalt:hover {
+  border-color: rgba(251, 191, 36, 0.35);
+}
+
+/* Tactical Primary Button */
+.btn-tactical-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  background-color: var(--amber-vivid);
+  color: #0A0E17;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-tactical-primary:hover {
+  background-color: var(--amber-highvis);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(245, 158, 11, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+.btn-tactical-primary:active {
+  transform: translateY(0);
+}
+
+/* Tactical Secondary Button */
+.btn-tactical-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--surface-asphalt);
+  color: var(--text-primary);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--surface-border);
+  border-radius: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-tactical-secondary:hover {
+  background-color: #262E3D;
+  border-color: rgba(251, 191, 36, 0.4);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* Tactical Eyebrow Badge */
+.eyebrow-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.875rem;
+  border-radius: 9999px;
+  background: rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  color: var(--amber-highvis);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Progress bar inside Stepper cards */
+.step-progress-bar {
+  width: 100%;
+  height: 4px;
+  background: var(--surface-border);
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-top: 1.25rem;
+}
+.step-progress-fill {
+  height: 100%;
+  background: var(--amber-highvis);
+}
+
+/* Enhanced Floating buttons */
+.btn-wa-float {
+  background: #25d366 !important;
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45) !important;
+  font-family: 'Space Grotesk', sans-serif !important;
+  letter-spacing: 0.03em !important;
+}
+.btn-wa-float:hover {
+  background: #20c45e !important;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6) !important;
+  transform: translateY(-3px) !important;
+}
+
+.btn-calculadora {
+  background: #F59E0B !important;
+  color: #0A0E17 !important;
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-weight: 700 !important;
+  box-shadow: 0 6px 24px rgba(245, 158, 11, 0.4) !important;
+  border: none !important;
+}
+.btn-calculadora:hover {
+  background: #FBBF24 !important;
+  box-shadow: 0 8px 30px rgba(245, 158, 11, 0.55) !important;
+  transform: translateY(-3px) !important;
+}
+

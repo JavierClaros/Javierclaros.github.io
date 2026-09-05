@@ -42,11 +42,14 @@
   <meta property="og:locale" content="es_AR">
 
   <!-- Preconnect para recursos externos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://www.googletagmanager.com">
   <link rel="preconnect" href="https://www.google-analytics.com">
 
   <!-- Hoja de estilos -->
-  <link rel="stylesheet" href="style.css?v=1.3">
+  <link rel="stylesheet" href="style.css?v=1.4">
 
   <!-- Datos estructurados (Schema.org) -->
   <script type="application/ld+json">
@@ -164,7 +167,7 @@
     <div>
       <div>
         <div class="css-uwf2km css-55ua1m tailwind">
-          <div class="size-full bg-zinc-950">
+          <div class="size-full bg-void-base">
 
             <!-- HERO -->
             <div class="relative min-h-screen">
@@ -176,22 +179,22 @@
               </div>
 
               <!-- NAV DESKTOP -->
-              <nav class="relative z-20 flex items-center justify-between px-5 md:px-10 lg:px-16 py-5"
+              <nav class="relative z-20 flex items-center justify-between px-5 md:px-10 lg:px-16 py-5 border-b border-surface-border/50 bg-[#0A0E17]/85 backdrop-blur-md"
                 aria-label="Navegación principal">
-                <a href="#" class="flex-shrink-0">
-                  <img src="img/logo-transparent.webp" alt="MotoReclamo" class="h-16 w-auto object-contain">
+                <a href="#" class="flex-shrink-0 group">
+                  <img src="img/logo-transparent.webp" alt="MotoReclamo" class="h-16 w-auto object-contain transition-transform group-hover:scale-105">
                 </a>
 
                 <!-- Links desktop -->
                 <div class="hidden md:flex items-center gap-8 desktop-nav">
                   <a href="#servicios"
-                    class="text-white/80 hover:text-amber-400 transition-colors text-sm font-semibold tracking-wider uppercase">Servicios</a>
+                    class="text-text-secondary hover:text-amber-highvis transition-colors text-base font-bold font-headline tracking-wider uppercase">Servicios</a>
                   <a href="#nosotros"
-                    class="text-white/80 hover:text-amber-400 transition-colors text-sm font-semibold tracking-wider uppercase">Nosotros</a>
+                    class="text-text-secondary hover:text-amber-highvis transition-colors text-base font-bold font-headline tracking-wider uppercase">Nosotros</a>
                   <a href="#contacto"
-                    class="text-white/80 hover:text-amber-400 transition-colors text-sm font-semibold tracking-wider uppercase">Contacto</a>
+                    class="text-text-secondary hover:text-amber-highvis transition-colors text-base font-bold font-headline tracking-wider uppercase">Contacto</a>
                   <a href="https://www.instagram.com/motoreclamo" target="_blank" rel="noopener noreferrer"
-                    class="text-white/80 hover:text-pink-400 transition-colors text-sm font-semibold tracking-wider uppercase flex items-center gap-1.5"
+                    class="text-text-secondary hover:text-amber-highvis transition-colors text-base font-bold font-headline tracking-wider uppercase flex items-center gap-1.5"
                     aria-label="Instagram @motoreclamo">
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -221,60 +224,61 @@
               <!-- HERO CONTENT -->
               <div class="relative z-10 min-h-[calc(100vh-90px)] flex items-center px-5 md:px-10 lg:px-16 pb-16">
                 <div class="max-w-2xl w-full">
-                  <div
-                    class="inline-flex items-center gap-2 bg-amber-400/20 border border-amber-400/40 text-amber-400 px-4 py-2 rounded-full mb-6 text-sm font-semibold tracking-wide">
-                    <span class="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span>
-                    Especialistas en Accidentes de Moto &middot; Todo el Pa&iacute;s
+                  <div class="eyebrow-badge mb-6">
+                    <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+                    <span>Especialistas en Accidentes de Moto &middot; Todo el Pa&iacute;s</span>
                   </div>
 
-                  <h1
-                    class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white mb-4 leading-[0.95] uppercase"
-                    style='font-family:"Bebas Neue",sans-serif;letter-spacing:0.02em'>
-                    &iquest;Tuviste un<br><span class="text-amber-400">Accidente en Moto?</span>
+                  <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-text-primary mb-4 leading-[0.98] uppercase font-headline tracking-tight">
+                    &iquest;Tuviste un<br><span class="text-amber-highvis drop-shadow-[0_4px_24px_rgba(251,191,36,0.35)]">Accidente en Moto?</span>
                   </h1>
 
-                  <p class="text-base sm:text-lg text-gray-300 mb-4 leading-relaxed max-w-xl">
+                  <p class="text-base sm:text-lg text-text-secondary mb-5 leading-relaxed max-w-xl font-body">
                     Antes de aceptar cualquier oferta de la aseguradora, conocé qué te corresponde reclamar.
                     Analizamos tu caso sin cargo.
                   </p>
 
                   <!-- Badge "Solo cobramos si obtenés una indemnización" -->
-                  <div class="inline-flex items-center gap-2 bg-white/5 border border-white/15 rounded-full px-4 py-2 mb-6 text-sm text-gray-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFB800" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    Sin costos adelantados &middot; <strong class="text-amber-400">Solo cobramos si obtenés una indemnización</strong>
+                  <div class="inline-flex items-center gap-2.5 bg-surface-deep/90 border border-surface-border rounded-xl px-4 py-2.5 mb-6 text-sm text-text-secondary shadow-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Sin costos adelantados &middot; <strong class="text-amber-highvis font-bold">Solo cobramos si obtenés una indemnización</strong></span>
                   </div>
 
-                  <div class="flex flex-col sm:flex-row gap-3 mb-10">
+                  <div class="flex flex-col sm:flex-row gap-4 mb-8">
                     <a href="https://wa.me/5491164677648?text=Hola%2C%20quiero%20consultar%20por%20un%20siniestro" onclick="return gtagSendEvent('https://wa.me/5491164677648')"
                       target="_blank" rel="noopener noreferrer"
-                      class="bg-amber-400 text-black px-7 py-4 rounded-lg text-base font-bold hover:bg-amber-300 transition-colors flex items-center justify-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#000"
-                        aria-hidden="true">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                      class="btn-tactical-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#0A0E17" aria-hidden="true">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                       </svg>
-                      Contanos qu&eacute; pas&oacute;
+                      <span>Contanos qu&eacute; pas&oacute;</span>
                     </a>
                     <a href="#como-funciona"
-                      class="bg-white/10 backdrop-blur-sm text-white px-7 py-4 rounded-lg text-base font-semibold hover:bg-white/20 transition-colors flex items-center justify-center gap-2 border border-white/20">
-                      Conocé cómo funciona
+                      class="btn-tactical-secondary">
+                      <span>Conocé cómo funciona</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-amber-highvis"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                     </a>
                   </div>
 
-                  <p class="text-xs text-gray-500">Consulta inicial sin cargo &middot; Evaluamos tu caso antes de avanzar</p>
+                  <p class="text-xs text-text-muted flex items-center gap-2 pt-1 font-body">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-highvis"></span>
+                    <span>Consulta inicial sin cargo &middot; Evaluamos tu caso antes de avanzar</span>
+                  </p>
                 </div>
               </div>
             </div>
 
             <!-- VIDEO PRESENTACIÓN -->
-            <section id="video-presentacion" class="py-20 px-5 md:px-10 lg:px-16 bg-zinc-950 video-presentacion-section">
+            <section id="video-presentacion" class="py-20 px-5 md:px-10 lg:px-16 bg-surface-deep border-b border-surface-border/40 video-presentacion-section">
               <div class="max-w-7xl mx-auto">
 
                 <!-- Encabezado -->
                 <div class="text-center mb-10 reveal">
-                  <span class="text-amber-400 text-sm font-bold tracking-widest uppercase">Conoc&eacute; MotoReclamo</span>
-                  <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white mt-2 mb-4 uppercase"
-                    style='font-family:"Bebas Neue",sans-serif;letter-spacing:0.03em'>Motoqueros defendiendo motoqueros</h2>
-                  <p class="text-gray-400 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+                  <span class="eyebrow-badge mb-3">Conoc&eacute; MotoReclamo</span>
+                  <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-text-primary mt-3 mb-4 uppercase font-headline leading-tight">
+                    Motoqueros defendiendo <span class="text-amber-highvis">motoqueros</span>
+                  </h2>
+                  <p class="text-text-secondary max-w-2xl mx-auto text-base sm:text-lg leading-relaxed font-body">
                     MotoReclamo nació de este lado: arriba de una moto.<br><br>
                     Sabemos lo que pasa después de un accidente. La moto rota, las dudas, el silencio de la aseguradora y opiniones de todo el mundo que no te llevan a ningún lado.<br><br>
                     Por eso creamos MotoReclamo: para que tengas un equipo que entiende de motos <em>y</em> de reclamos.
@@ -282,7 +286,7 @@
                 </div>
 
                 <!-- Contenedor del video -->
-                <div class="video-outer-wrap reveal">
+                <div class="video-outer-wrap reveal max-w-4xl mx-auto rounded-2xl overflow-hidden bg-surface-asphalt border border-surface-border shadow-2xl p-2 sm:p-3">
                   <div class="video-wrapper" id="video-wrapper">
 
                     <!-- Overlay play (se oculta al hacer click) -->
@@ -315,13 +319,14 @@
             </section>
 
             <!-- ¿CÓMO FUNCIONA MOTORECLAMO? -->
-            <section id="como-funciona" class="py-20 px-5 md:px-10 lg:px-16 bg-zinc-900">
+            <section id="como-funciona" class="py-20 px-5 md:px-10 lg:px-16 bg-void-base border-b border-surface-border/40">
               <div class="max-w-5xl mx-auto">
                 <div class="text-center mb-14 reveal">
-                  <span class="text-amber-400 text-sm font-bold tracking-widest uppercase">El proceso</span>
-                  <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white mt-2 mb-4 uppercase"
-                    style='font-family:"Bebas Neue",sans-serif;letter-spacing:0.03em'>&iquest;C&oacute;mo funciona MotoReclamo?</h2>
-                  <p class="text-gray-400 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+                  <span class="eyebrow-badge mb-3">El proceso</span>
+                  <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-text-primary mt-3 mb-4 uppercase font-headline">
+                    &iquest;C&oacute;mo funciona MotoReclamo?
+                  </h2>
+                  <p class="text-text-secondary max-w-2xl mx-auto text-base sm:text-lg leading-relaxed font-body">
                     Somos el primer punto de contacto para motociclistas que sufrieron un accidente.
                     Recibimos tu caso, lo analizamos y, cuando corresponde, te conectamos con el profesional matriculado adecuado.
                   </p>
@@ -330,31 +335,55 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
                   <!-- Paso 1 -->
-                  <div class="bg-zinc-950 border border-zinc-800 hover:border-amber-400/40 rounded-xl p-6 transition-all duration-300 reveal">
-                    <div class="w-10 h-10 bg-amber-400 rounded-full flex items-center justify-center mb-4 font-black text-black text-lg" style='font-family:"Bebas Neue",sans-serif'>1</div>
-                    <h3 class="font-bold text-white mb-2 text-base">Nos cont&aacute;s qu&eacute; pas&oacute;</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Recibimos tu consulta por WhatsApp o por el formulario. Sin cargo y sin compromiso.</p>
+                  <div class="tactical-card rounded-2xl p-6 flex flex-col justify-between hover:border-amber-highvis/40 transition-all duration-300 reveal">
+                    <div>
+                      <div class="flex items-center justify-between mb-4">
+                        <span class="font-code-numeral text-3xl font-black text-amber-highvis">01</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-highvis" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                      </div>
+                      <h3 class="font-headline text-2xl uppercase font-bold text-text-primary mb-2">Nos cont&aacute;s qu&eacute; pas&oacute;</h3>
+                      <p class="text-text-secondary text-sm leading-relaxed font-body">Recibimos tu consulta por WhatsApp o por el formulario. Sin cargo y sin compromiso.</p>
+                    </div>
+                    <div class="step-progress-bar"><div class="step-progress-fill" style="width: 25%;"></div></div>
                   </div>
 
                   <!-- Paso 2 -->
-                  <div class="bg-zinc-950 border border-zinc-800 hover:border-amber-400/40 rounded-xl p-6 transition-all duration-300 reveal reveal-delay-1">
-                    <div class="w-10 h-10 bg-amber-400 rounded-full flex items-center justify-center mb-4 font-black text-black text-lg" style='font-family:"Bebas Neue",sans-serif'>2</div>
-                    <h3 class="font-bold text-white mb-2 text-base">Analizamos tu situaci&oacute;n</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Revisamos los datos b&aacute;sicos del accidente: circunstancias, lesiones, veh&iacute;culo y jurisdicci&oacute;n.</p>
+                  <div class="tactical-card rounded-2xl p-6 flex flex-col justify-between hover:border-amber-highvis/40 transition-all duration-300 reveal reveal-delay-1">
+                    <div>
+                      <div class="flex items-center justify-between mb-4">
+                        <span class="font-code-numeral text-3xl font-black text-amber-highvis">02</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-highvis" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                      </div>
+                      <h3 class="font-headline text-2xl uppercase font-bold text-text-primary mb-2">Analizamos tu situaci&oacute;n</h3>
+                      <p class="text-text-secondary text-sm leading-relaxed font-body">Revisamos los datos b&aacute;sicos del accidente: circunstancias, lesiones, veh&iacute;culo y jurisdicci&oacute;n.</p>
+                    </div>
+                    <div class="step-progress-bar"><div class="step-progress-fill" style="width: 50%;"></div></div>
                   </div>
 
                   <!-- Paso 3 -->
-                  <div class="bg-zinc-950 border border-zinc-800 hover:border-amber-400/40 rounded-xl p-6 transition-all duration-300 reveal reveal-delay-2">
-                    <div class="w-10 h-10 bg-amber-400 rounded-full flex items-center justify-center mb-4 font-black text-black text-lg" style='font-family:"Bebas Neue",sans-serif'>3</div>
-                    <h3 class="font-bold text-white mb-2 text-base">Evaluamos c&oacute;mo avanzar</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Seg&uacute;n las caracter&iacute;sticas del caso, evaluamos junto a vos las alternativas disponibles para avanzar con tu reclamo.</p>
+                  <div class="tactical-card rounded-2xl p-6 flex flex-col justify-between hover:border-amber-highvis/40 transition-all duration-300 reveal reveal-delay-2">
+                    <div>
+                      <div class="flex items-center justify-between mb-4">
+                        <span class="font-code-numeral text-3xl font-black text-amber-highvis">03</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-highvis" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                      </div>
+                      <h3 class="font-headline text-2xl uppercase font-bold text-text-primary mb-2">Evaluamos c&oacute;mo avanzar</h3>
+                      <p class="text-text-secondary text-sm leading-relaxed font-body">Seg&uacute;n las caracter&iacute;sticas del caso, evaluamos junto a vos las alternativas disponibles para avanzar con tu reclamo.</p>
+                    </div>
+                    <div class="step-progress-bar"><div class="step-progress-fill" style="width: 75%;"></div></div>
                   </div>
 
                   <!-- Paso 4 -->
-                  <div class="bg-zinc-950 border border-zinc-800 hover:border-amber-400/40 rounded-xl p-6 transition-all duration-300 reveal reveal-delay-3">
-                    <div class="w-10 h-10 bg-amber-400 rounded-full flex items-center justify-center mb-4 font-black text-black text-lg" style='font-family:"Bebas Neue",sans-serif'>4</div>
-                    <h3 class="font-bold text-white mb-2 text-base">Te conectamos con el profesional</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Cuando corresponde intervenci&oacute;n jur&iacute;dica, derivamos tu caso al profesional matriculado adecuado seg&uacute;n la jurisdicci&oacute;n.</p>
+                  <div class="tactical-card rounded-2xl p-6 flex flex-col justify-between hover:border-amber-highvis/40 transition-all duration-300 reveal reveal-delay-3">
+                    <div>
+                      <div class="flex items-center justify-between mb-4">
+                        <span class="font-code-numeral text-3xl font-black text-amber-highvis">04</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-highvis" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
+                      </div>
+                      <h3 class="font-headline text-2xl uppercase font-bold text-text-primary mb-2">Te conectamos con el profesional</h3>
+                      <p class="text-text-secondary text-sm leading-relaxed font-body">Cuando corresponde intervenci&oacute;n jur&iacute;dica, derivamos tu caso al profesional matriculado adecuado seg&uacute;n la jurisdicci&oacute;n.</p>
+                    </div>
+                    <div class="step-progress-bar"><div class="step-progress-fill" style="width: 100%;"></div></div>
                   </div>
 
                 </div>
@@ -362,24 +391,25 @@
             </section>
 
             <!-- POR QUÉ MOTORRECLAMO -->
-            <section id="servicios" class="py-20 px-5 md:px-10 lg:px-16 bg-zinc-950">
+            <section id="servicios" class="py-20 px-5 md:px-10 lg:px-16 bg-surface-deep border-b border-surface-border/40">
               <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-14">
-                  <span class="text-amber-400 text-sm font-bold tracking-widest uppercase">Nuestra identidad</span>
-                  <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white mt-2 mb-6 uppercase"
-                    style='font-family:"Bebas Neue",sans-serif;letter-spacing:0.03em'>Nos especializamos en una sola cosa: accidentes de moto.</h2>
-                  <p class="text-gray-300 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
+                  <span class="eyebrow-badge mb-3">Nuestra identidad</span>
+                  <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-text-primary mt-3 mb-6 uppercase font-headline leading-tight">
+                    Nos especializamos en una sola cosa: <span class="text-amber-highvis">accidentes de moto.</span>
+                  </h2>
+                  <p class="text-text-secondary max-w-3xl mx-auto text-base sm:text-lg leading-relaxed font-body">
                     MotoReclamo naci&oacute; para defender a quienes andamos en dos ruedas.
                     Conocemos las motos, conocemos lo que pasa despu&eacute;s de un accidente
                     y sabemos que muchas veces el motociclista arranca el reclamo en desventaja.
                   </p>
-                  <p class="text-amber-400 font-bold mt-4 text-base sm:text-lg">Motoqueros defendiendo motoqueros.</p>
+                  <p class="text-amber-highvis font-bold mt-4 text-base sm:text-lg font-headline tracking-wide uppercase">Motoqueros defendiendo motoqueros.</p>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   <!-- Card 1 -->
-                  <div class="bg-zinc-900 p-7 rounded-xl border border-zinc-800 hover:border-amber-400/50 hover:-translate-y-1 transition-all duration-300 group reveal">
-                    <div class="w-12 h-12 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center mb-5 group-hover:bg-amber-400/20 transition-colors">
+                  <div class="tactical-card-asphalt p-7 rounded-2xl transition-all duration-300 group reveal">
+                    <div class="w-12 h-12 bg-amber-400/15 border border-amber-400/30 rounded-xl flex items-center justify-center mb-5 group-hover:bg-amber-400/25 transition-colors">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="text-amber-400" aria-hidden="true">
@@ -389,26 +419,26 @@
                         <path d="M12 17.5V14l-3-3 4-3 2 3h2"></path>
                       </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-white mb-3">Especializados en motociclistas</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">No somos un estudio jur&iacute;dico generalista. Somos un servicio especializado en motociclistas que trabaja junto a profesionales matriculados seg&uacute;n la jurisdicci&oacute;n de cada caso.</p>
+                    <h3 class="font-headline text-2xl uppercase font-bold text-text-primary mb-3">Especializados en motociclistas</h3>
+                    <p class="text-text-secondary leading-relaxed text-sm font-body">No somos un estudio jur&iacute;dico generalista. Somos un servicio especializado en motociclistas que trabaja junto a profesionales matriculados seg&uacute;n la jurisdicci&oacute;n de cada caso.</p>
                   </div>
 
                   <!-- Card 2 -->
-                  <div class="bg-zinc-900 p-7 rounded-xl border border-zinc-800 hover:border-amber-400/50 hover:-translate-y-1 transition-all duration-300 group reveal reveal-delay-1">
-                    <div class="w-12 h-12 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center mb-5 group-hover:bg-amber-400/20 transition-colors">
+                  <div class="tactical-card-asphalt p-7 rounded-2xl transition-all duration-300 group reveal reveal-delay-1">
+                    <div class="w-12 h-12 bg-amber-400/15 border border-amber-400/30 rounded-xl flex items-center justify-center mb-5 group-hover:bg-amber-400/25 transition-colors">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="text-amber-400" aria-hidden="true">
                         <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
                       </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-white mb-3">Profesionales del derecho</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">Recibimos y evaluamos inicialmente cada caso y trabajamos junto a abogados matriculados en la jurisdicci&oacute;n correspondiente.</p>
+                    <h3 class="font-headline text-2xl uppercase font-bold text-text-primary mb-3">Profesionales del derecho</h3>
+                    <p class="text-text-secondary leading-relaxed text-sm font-body">Recibimos y evaluamos inicialmente cada caso y trabajamos junto a abogados matriculados en la jurisdicci&oacute;n correspondiente.</p>
                   </div>
 
                   <!-- Card 3 -->
-                  <div class="bg-zinc-900 p-7 rounded-xl border border-zinc-800 hover:border-amber-400/50 hover:-translate-y-1 transition-all duration-300 group reveal reveal-delay-2">
-                    <div class="w-12 h-12 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center mb-5 group-hover:bg-amber-400/20 transition-colors">
+                  <div class="tactical-card-asphalt p-7 rounded-2xl transition-all duration-300 group reveal reveal-delay-2">
+                    <div class="w-12 h-12 bg-amber-400/15 border border-amber-400/30 rounded-xl flex items-center justify-center mb-5 group-hover:bg-amber-400/25 transition-colors">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="text-amber-400" aria-hidden="true">
@@ -418,46 +448,47 @@
                         <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                       </svg>
                     </div>
-                    <h3 class="text-lg font-bold text-white mb-3">Sin costos adelantados</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">La evaluaci&oacute;n inicial de tu caso no tiene costo. Antes de comenzar te explicamos claramente c&oacute;mo funciona el reclamo y cu&aacute;les ser&iacute;an los honorarios correspondientes.</p>
+                    <h3 class="font-headline text-2xl uppercase font-bold text-text-primary mb-3">Sin costos adelantados</h3>
+                    <p class="text-text-secondary leading-relaxed text-sm font-body">La evaluaci&oacute;n inicial de tu caso no tiene costo. Antes de comenzar te explicamos claramente c&oacute;mo funciona el reclamo y cu&aacute;les ser&iacute;an los honorarios correspondientes.</p>
                   </div>
                 </div>
               </div>
             </section>
 
-                        <!-- NOSOTROS -->
-            <section id="nosotros" class="py-20 px-5 md:px-10 lg:px-16 bg-zinc-900">
+            <!-- NOSOTROS -->
+            <section id="nosotros" class="py-20 px-5 md:px-10 lg:px-16 bg-void-base border-b border-surface-border/40">
               <div class="max-w-7xl mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                   <div class="relative reveal">
-                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
-                      <img src="img/nosotros.jpg" alt="Motociclista en la ruta" class="w-full h-[440px] object-cover"
-                        loading="lazy" width="800" height="440">
-                      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-surface-border">
+                      <img src="img/nosotros.jpg" alt="Motociclista en la ruta" class="w-full h-[460px] object-cover"
+                        loading="lazy" width="800" height="460">
+                      <div class="absolute inset-0 bg-gradient-to-t from-[#0A0E17]/80 via-transparent to-transparent"></div>
                     </div>
-
                   </div>
 
                   <div class="reveal reveal-delay-1">
-                    <span class="text-amber-400 text-sm font-bold tracking-widest uppercase">Qui&eacute;nes somos</span>
-                    <h2 class="text-4xl sm:text-5xl font-black text-white mt-2 mb-6 uppercase leading-tight"
-                      style='font-family:"Bebas Neue",sans-serif;letter-spacing:0.02em'>Primero fuimos<br>motoqueros</h2>
-                    <p class="text-gray-400 mb-4 leading-relaxed">Antes de MotoReclamo, ya &eacute;ramos motoqueros.
+                    <span class="eyebrow-badge mb-3">Qui&eacute;nes somos</span>
+                    <h2 class="text-4xl sm:text-5xl font-black text-text-primary mt-3 mb-6 uppercase leading-tight font-headline">
+                      Primero fuimos<br><span class="text-amber-highvis">motoqueros</span>
+                    </h2>
+                    <p class="text-text-secondary mb-4 leading-relaxed font-body">
+                      Antes de MotoReclamo, ya &eacute;ramos motoqueros.
                       Sabemos lo que significa tener la moto parada despu&eacute;s de un accidente, enfrentarse a
                       una aseguradora sin saber cu&aacute;nto corresponde reclamar y escuchar opiniones distintas de
-                      todo el mundo.</p>
-                    <p class="text-gray-400 mb-6 leading-relaxed">Por eso naci&oacute; MotoReclamo: para combinar nuestra pasi&oacute;n
+                      todo el mundo.
+                    </p>
+                    <p class="text-text-secondary mb-6 leading-relaxed font-body">
+                      Por eso naci&oacute; MotoReclamo: para combinar nuestra pasi&oacute;n
                       por las dos ruedas con el conocimiento necesario para acompa&ntilde;ar a otros motociclistas
                       durante su reclamo. Trabajamos junto a profesionales del derecho para evaluar inicialmente cada caso
-                      y buscar la mejor alternativa disponible.</p>
+                      y buscar la mejor alternativa disponible.
+                    </p>
 
-
-
-                    <div class="space-y-5">
-                      <div class="flex items-start gap-4">
-                        <div
-                          class="w-11 h-11 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                      <div class="tactical-card p-4 rounded-xl flex items-start gap-3.5">
+                        <div class="w-10 h-10 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="text-amber-400" aria-hidden="true">
                             <circle cx="18.5" cy="17.5" r="3.5"></circle>
@@ -467,14 +498,14 @@
                           </svg>
                         </div>
                         <div>
-                          <h3 class="font-bold text-white mb-1">Motoqueros de Corazón</h3>
-                          <p class="text-gray-400 text-sm leading-relaxed">No somos ajenos al mundo de las motos: somos parte de la comunidad. Entendemos la cultura y los desaf&iacute;os de la ruta.</p>
+                          <h3 class="font-headline text-lg uppercase font-bold text-text-primary mb-0.5">Motoqueros de Corazón</h3>
+                          <p class="text-text-secondary text-xs leading-relaxed font-body">No somos ajenos al mundo de las motos: somos parte de la comunidad.</p>
                         </div>
                       </div>
-                      <div class="flex items-start gap-4">
-                        <div
-                          class="w-11 h-11 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+
+                      <div class="tactical-card p-4 rounded-xl flex items-start gap-3.5">
+                        <div class="w-10 h-10 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="text-amber-400" aria-hidden="true">
                             <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path>
@@ -485,72 +516,62 @@
                           </svg>
                         </div>
                         <div>
-                          <h3 class="font-bold text-white mb-1">Profesionales del derecho</h3>
-                          <p class="text-gray-400 text-sm leading-relaxed">Cuando el caso requiere intervenci&oacute;n jur&iacute;dica, trabajamos con profesionales matriculados en la jurisdicci&oacute;n correspondiente.</p>
+                          <h3 class="font-headline text-lg uppercase font-bold text-text-primary mb-0.5">Profesionales del derecho</h3>
+                          <p class="text-text-secondary text-xs leading-relaxed font-body">Cuando el caso requiere intervenci&oacute;n jur&iacute;dica, trabajamos con profesionales matriculados.</p>
                         </div>
                       </div>
-                      <div class="flex items-start gap-4">
-                        <div
-                          class="w-11 h-11 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+
+                      <div class="tactical-card p-4 rounded-xl flex items-start gap-3.5">
+                        <div class="w-10 h-10 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="text-amber-400" aria-hidden="true">
                             <path d="m11 17 2 2a1 1 0 1 0 3-3"></path>
-                            <path
-                              d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4">
-                            </path>
+                            <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"></path>
                             <path d="m21 3 1 11h-2"></path>
                             <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"></path>
                             <path d="M3 4h8"></path>
                           </svg>
                         </div>
                         <div>
-                          <h3 class="font-bold text-white mb-1">Sin costos adelantados</h3>
-                          <p class="text-gray-400 text-sm leading-relaxed">La evaluaci&oacute;n inicial es sin cargo.
-                            Te explicamos c&oacute;mo funciona antes de comenzar.</p>
+                          <h3 class="font-headline text-lg uppercase font-bold text-text-primary mb-0.5">Sin costos adelantados</h3>
+                          <p class="text-text-secondary text-xs leading-relaxed font-body">La evaluaci&oacute;n inicial es sin cargo. Te explicamos c&oacute;mo funciona antes de comenzar.</p>
                         </div>
                       </div>
-                      <div class="flex items-start gap-4">
-                        <div
-                          class="w-11 h-11 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+
+                      <div class="tactical-card p-4 rounded-xl flex items-start gap-3.5">
+                        <div class="w-10 h-10 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="text-amber-400" aria-hidden="true">
-                            <path
-                              d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
-                            </path>
+                            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
                             <circle cx="12" cy="10" r="3"></circle>
                           </svg>
                         </div>
                         <div>
-                          <h3 class="font-bold text-white mb-1">Todo Argentina</h3>
-                          <p class="text-gray-400 text-sm leading-relaxed">Trabajamos con profesionales del derecho en distintas jurisdicciones del pa&iacute;s.</p>
+                          <h3 class="font-headline text-lg uppercase font-bold text-text-primary mb-0.5">Todo Argentina</h3>
+                          <p class="text-text-secondary text-xs leading-relaxed font-body">Trabajamos con profesionales del derecho en distintas jurisdicciones del pa&iacute;s.</p>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- QUÉ SE PUEDE RECLAMAR -->
-            <section class="py-20 px-5 md:px-10 lg:px-16 bg-zinc-950 relative overflow-hidden">
+                    <!-- QUÉ SE PUEDE RECLAMAR -->
+            <section class="py-20 px-5 md:px-10 lg:px-16 bg-surface-deep border-b border-surface-border/40 relative overflow-hidden">
               <div class="absolute inset-0 opacity-[0.03] pointer-events-none">
                 <div class="absolute -right-24 top-10 w-96 h-96 border-2 border-amber-400 rounded-full"></div>
                 <div class="absolute -left-24 bottom-10 w-80 h-80 border-2 border-amber-400 rounded-full"></div>
               </div>
               <div class="max-w-7xl mx-auto relative z-10">
                 <div class="text-center mb-14">
-                  <span class="text-amber-400 text-sm font-bold tracking-widest uppercase">Lo que pod&eacute;s reclamar</span>
-                  <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white mt-2 mb-4 uppercase"
-                    style='font-family:"Bebas Neue",sans-serif;letter-spacing:0.03em'>No es solamente<br>el arreglo de tu moto</h2>
-                  <p class="text-gray-400 max-w-2xl mx-auto text-base sm:text-lg">
+                  <span class="text-amber-400 text-xs font-mono font-semibold tracking-widest uppercase px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 inline-block mb-3">Lo que pod&eacute;s reclamar</span>
+                  <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-text-primary mb-4 uppercase font-headline tracking-tight">No es solamente<br><span class="text-amber-400">el arreglo de tu moto</span></h2>
+                  <p class="text-text-secondary max-w-2xl mx-auto text-base sm:text-lg font-body">
                     Después de un accidente, el daño no siempre termina en la moto. Según cada caso, puede haber otros conceptos para reclamar.
                   </p>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
-                  <div class="bg-zinc-900 border border-zinc-800 hover:border-amber-400/40 p-7 rounded-xl transition-all duration-300 hover:-translate-y-1 group reveal">
+                  <div class="tactical-card-asphalt p-7 rounded-xl transition-all duration-300 hover:-translate-y-1 group reveal">
                     <div class="w-12 h-12 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center mb-5 group-hover:bg-amber-400/20 transition-colors">
                       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -561,10 +582,14 @@
                         <path d="M12 17.5V14l-3-3 4-3 2 3h2"></path>
                       </svg>
                     </div>
-                    <h3 class="text-base font-bold text-white mb-2">Da&ntilde;os Materiales</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Reparaci&oacute;n o p&eacute;rdida total de la moto, casco, indumentaria y otros elementos da&ntilde;ados en el accidente, cuando corresponda y pueda acreditarse.</p>
+                    <div class="flex items-center justify-between gap-2 mb-2">
+                      <h3 class="font-headline text-xl uppercase font-bold text-text-primary">Da&ntilde;os Materiales</h3>
+                      <span class="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-surface-deep border border-surface-border text-text-muted">Documentación respaldatoria</span>
+                    </div>
+                    <p class="text-text-secondary text-sm leading-relaxed font-body">Reparaci&oacute;n o p&eacute;rdida total de la moto, casco, indumentaria y otros elementos da&ntilde;ados en el accidente, cuando corresponda y pueda acreditarse.</p>
                   </div>
-                  <div class="bg-zinc-900 border border-zinc-800 hover:border-amber-400/40 p-7 rounded-xl transition-all duration-300 hover:-translate-y-1 group reveal reveal-delay-1">
+
+                  <div class="tactical-card-asphalt p-7 rounded-xl transition-all duration-300 hover:-translate-y-1 group reveal reveal-delay-1">
                     <div class="w-12 h-12 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center mb-5 group-hover:bg-amber-400/20 transition-colors">
                       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -572,10 +597,14 @@
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                       </svg>
                     </div>
-                    <h3 class="text-base font-bold text-white mb-2">Lesiones</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Las consecuencias f&iacute;sicas que haya provocado el accidente, seg&uacute;n su gravedad y el impacto en la vida diaria.</p>
+                    <div class="flex items-center justify-between gap-2 mb-2">
+                      <h3 class="font-headline text-xl uppercase font-bold text-text-primary">Lesiones</h3>
+                      <span class="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-surface-deep border border-surface-border text-text-muted">Evaluación inicial</span>
+                    </div>
+                    <p class="text-text-secondary text-sm leading-relaxed font-body">Las consecuencias f&iacute;sicas que haya provocado el accidente, seg&uacute;n su gravedad y el impacto en la vida diaria.</p>
                   </div>
-                  <div class="bg-zinc-900 border border-zinc-800 hover:border-amber-400/40 p-7 rounded-xl transition-all duration-300 hover:-translate-y-1 group reveal reveal-delay-2">
+
+                  <div class="tactical-card-asphalt p-7 rounded-xl transition-all duration-300 hover:-translate-y-1 group reveal reveal-delay-2">
                     <div class="w-12 h-12 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center mb-5 group-hover:bg-amber-400/20 transition-colors">
                       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -584,10 +613,14 @@
                         <line x1="2" x2="22" y1="10" y2="10"></line>
                       </svg>
                     </div>
-                    <h3 class="text-base font-bold text-white mb-2">P&eacute;rdida de Ingresos</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Cuando el accidente te impide trabajar y existen ingresos que pueden acreditarse y respaldarse.</p>
+                    <div class="flex items-center justify-between gap-2 mb-2">
+                      <h3 class="font-headline text-xl uppercase font-bold text-text-primary">P&eacute;rdida de Ingresos</h3>
+                      <span class="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-surface-deep border border-surface-border text-text-muted">Cuando corresponda</span>
+                    </div>
+                    <p class="text-text-secondary text-sm leading-relaxed font-body">Cuando el accidente te impide trabajar y existen ingresos que pueden acreditarse y respaldarse.</p>
                   </div>
-                  <div class="bg-zinc-900 border border-zinc-800 hover:border-amber-400/40 p-7 rounded-xl transition-all duration-300 hover:-translate-y-1 group reveal reveal-delay-3">
+
+                  <div class="tactical-card-asphalt p-7 rounded-xl transition-all duration-300 hover:-translate-y-1 group reveal reveal-delay-3">
                     <div class="w-12 h-12 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center mb-5 group-hover:bg-amber-400/20 transition-colors">
                       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -599,15 +632,17 @@
                         <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"></path>
                       </svg>
                     </div>
-                    <h3 class="text-base font-bold text-white mb-2">Otros Da&ntilde;os</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Dependiendo del caso, pueden corresponder otros conceptos indemnizatorios seg&uacute;n las circunstancias del hecho.</p>
+                    <div class="flex items-center justify-between gap-2 mb-2">
+                      <h3 class="font-headline text-xl uppercase font-bold text-text-primary">Otros Da&ntilde;os</h3>
+                      <span class="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-surface-deep border border-surface-border text-text-muted">Según el caso</span>
+                    </div>
+                    <p class="text-text-secondary text-sm leading-relaxed font-body">Dependiendo del caso, pueden corresponder otros conceptos indemnizatorios seg&uacute;n las circunstancias del hecho.</p>
                   </div>
                 </div>
 
-                <div class="bg-amber-400 rounded-2xl p-8 sm:p-12 text-center reveal">
-                  <h3 class="text-3xl sm:text-4xl md:text-5xl font-black text-black mb-4 uppercase"
-                    style='font-family:"Bebas Neue",sans-serif;letter-spacing:0.02em'>Cada accidente es distinto</h3>
-                  <p class="text-black/70 text-base sm:text-lg max-w-2xl mx-auto">
+                <div class="bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-black rounded-2xl p-8 sm:p-12 text-center shadow-xl reveal">
+                  <h3 class="text-3xl sm:text-4xl md:text-5xl font-black text-black mb-3 uppercase font-headline tracking-tight">Cada accidente es distinto</h3>
+                  <p class="text-black/85 text-base sm:text-lg max-w-2xl mx-auto font-body font-medium">
                     Por eso analizamos tu caso antes de estimar cu&aacute;nto puede corresponderte.
                     Cont&aacute;nos qu&eacute; pas&oacute; y te damos una orientaci&oacute;n inicial sin cargo.
                   </p>
@@ -615,134 +650,166 @@
               </div>
             </section>
 
-                        <!-- PROCESO -->
-            <section id="proceso" class="py-20 px-5 md:px-10 lg:px-16 bg-zinc-950">
+            <!-- PROCESO -->
+            <section id="proceso" class="py-20 px-5 md:px-10 lg:px-16 bg-void-base border-b border-surface-border/40">
               <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-14 reveal">
-                  <span class="text-amber-400 text-sm font-bold tracking-widest uppercase">C&oacute;mo trabajamos</span>
-                  <h2 class="text-4xl sm:text-5xl font-black text-white mt-2 mb-4 uppercase leading-tight"
-                    style='font-family:"Bebas Neue",sans-serif'>Qu&eacute; pasa despu&eacute;s de tu consulta</h2>
-                  <p class="text-gray-400 max-w-2xl mx-auto">Del accidente al reclamo, te acompa&ntilde;amos en cada paso.</p>
+                  <span class="text-amber-400 text-xs font-mono font-semibold tracking-widest uppercase px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 inline-block mb-3">C&oacute;mo trabajamos</span>
+                  <h2 class="text-4xl sm:text-5xl font-black text-text-primary mb-4 uppercase font-headline tracking-tight">Qu&eacute; pasa despu&eacute;s de tu consulta</h2>
+                  <p class="text-text-secondary max-w-2xl mx-auto font-body text-base sm:text-lg">Del accidente al reclamo, te acompa&ntilde;amos en cada paso.</p>
                 </div>
 
                 <!-- 4 pasos -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
-                  <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 reveal">
-                    <div class="text-amber-400 font-black text-3xl mb-3" style='font-family:"Bebas Neue",sans-serif'>01</div>
-                    <h3 class="font-bold text-white mb-2">Cont&aacute;nos qu&eacute; pas&oacute;</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Nos mand&aacute;s los datos del accidente, fotos, documentaci&oacute;n y todo lo que ten&eacute;s.</p>
+                  <div class="tactical-card p-6 rounded-xl reveal flex flex-col justify-between">
+                    <div>
+                      <div class="flex items-center justify-between mb-4">
+                        <span class="text-amber-400 font-mono font-bold text-3xl">01</span>
+                        <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-surface-asphalt text-amber-400 border border-amber-400/30">MotoReclamo</span>
+                      </div>
+                      <h3 class="font-headline text-xl uppercase font-bold text-text-primary mb-2">Cont&aacute;nos qu&eacute; pas&oacute;</h3>
+                      <p class="text-text-secondary text-sm leading-relaxed font-body">Nos mand&aacute;s los datos del accidente, fotos, documentaci&oacute;n y todo lo que ten&eacute;s.</p>
+                    </div>
+                    <div class="step-progress-bar mt-6">
+                      <div class="step-progress-fill" style="width: 25%;"></div>
+                    </div>
                   </div>
-                  <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 reveal reveal-delay-1">
-                    <div class="text-amber-400 font-black text-3xl mb-3" style='font-family:"Bebas Neue",sans-serif'>02</div>
-                    <h3 class="font-bold text-white mb-2">Analizamos tu caso</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Revisamos c&oacute;mo ocurri&oacute; el accidente, los da&ntilde;os, las lesiones y la informaci&oacute;n disponible para orientar el reclamo.</p>
+
+                  <div class="tactical-card p-6 rounded-xl reveal reveal-delay-1 flex flex-col justify-between">
+                    <div>
+                      <div class="flex items-center justify-between mb-4">
+                        <span class="text-amber-400 font-mono font-bold text-3xl">02</span>
+                        <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-surface-asphalt text-amber-400 border border-amber-400/30">MotoReclamo</span>
+                      </div>
+                      <h3 class="font-headline text-xl uppercase font-bold text-text-primary mb-2">Analizamos tu caso</h3>
+                      <p class="text-text-secondary text-sm leading-relaxed font-body">Revisamos c&oacute;mo ocurri&oacute; el accidente, los da&ntilde;os, las lesiones y la informaci&oacute;n disponible para orientar el reclamo.</p>
+                    </div>
+                    <div class="step-progress-bar mt-6">
+                      <div class="step-progress-fill" style="width: 50%;"></div>
+                    </div>
                   </div>
-                  <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 reveal reveal-delay-2">
-                    <div class="text-amber-400 font-black text-3xl mb-3" style='font-family:"Bebas Neue",sans-serif'>03</div>
-                    <h3 class="font-bold text-white mb-2">Se inicia el reclamo</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">A trav&eacute;s del profesional matriculado que interviene en tu caso, se presenta el reclamo y se negocia con la compa&ntilde;&iacute;a de seguros buscando obtener la reparaci&oacute;n que corresponda seg&uacute;n el caso.</p>
+
+                  <div class="tactical-card p-6 rounded-xl reveal reveal-delay-2 flex flex-col justify-between">
+                    <div>
+                      <div class="flex items-center justify-between mb-4">
+                        <span class="text-amber-400 font-mono font-bold text-3xl">03</span>
+                        <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-surface-asphalt text-text-muted border border-surface-border">Profesional Jurídico</span>
+                      </div>
+                      <h3 class="font-headline text-xl uppercase font-bold text-text-primary mb-2">Se inicia el reclamo</h3>
+                      <p class="text-text-secondary text-sm leading-relaxed font-body">A trav&eacute;s del profesional matriculado que interviene en tu caso, se presenta el reclamo y se negocia con la compa&ntilde;&iacute;a de seguros buscando obtener la reparaci&oacute;n que corresponda seg&uacute;n el caso.</p>
+                    </div>
+                    <div class="step-progress-bar mt-6">
+                      <div class="step-progress-fill" style="width: 75%;"></div>
+                    </div>
                   </div>
-                  <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 reveal reveal-delay-3">
-                    <div class="text-amber-400 font-black text-3xl mb-3" style='font-family:"Bebas Neue",sans-serif'>04</div>
-                    <h3 class="font-bold text-white mb-2">Si no hay propuesta razonable</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Se eval&uacute;an junto con vos las alternativas para continuar el reclamo, incluida la v&iacute;a judicial cuando corresponda.</p>
+
+                  <div class="tactical-card p-6 rounded-xl reveal reveal-delay-3 flex flex-col justify-between">
+                    <div>
+                      <div class="flex items-center justify-between mb-4">
+                        <span class="text-amber-400 font-mono font-bold text-3xl">04</span>
+                        <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-surface-asphalt text-text-muted border border-surface-border">Profesional Jurídico</span>
+                      </div>
+                      <h3 class="font-headline text-xl uppercase font-bold text-text-primary mb-2">Si no hay propuesta razonable</h3>
+                      <p class="text-text-secondary text-sm leading-relaxed font-body">Se eval&uacute;an junto con vos las alternativas para continuar el reclamo, incluida la v&iacute;a judicial cuando corresponda.</p>
+                    </div>
+                    <div class="step-progress-bar mt-6">
+                      <div class="step-progress-fill" style="width: 100%;"></div>
+                    </div>
                   </div>
                 </div>
 
                 <div class="text-center mb-10">
-                  <h3 class="text-3xl sm:text-4xl font-black text-white uppercase" style='font-family:"Bebas Neue",sans-serif'>Dos Caminos Posibles</h3>
-                  <p class="text-gray-400 mt-2 max-w-2xl mx-auto">Te explicamos las diferencias para que puedas entender cu&aacute;l se adapta mejor a tu situaci&oacute;n.</p>
+                  <h3 class="text-3xl sm:text-4xl font-black text-text-primary uppercase font-headline tracking-tight">Dos Caminos Posibles</h3>
+                  <p class="text-text-secondary mt-2 max-w-2xl mx-auto font-body text-base">Te explicamos las diferencias para que puedas entender cu&aacute;l se adapta mejor a tu situaci&oacute;n.</p>
                 </div>
 
-                <!-- Acordeones -->
-                <div class="space-y-4 max-w-3xl mx-auto">
+                <!-- Comparativa 2 Caminos Posibles: Equilibrada y Técnica -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
 
-                  <!-- Mediación -->
-                  <div class="proceso-accordion reveal" id="acc-mediacion">
-                    <button class="proceso-toggle" aria-expanded="false" aria-controls="acc-mediacion-body">
-                      <span class="proceso-toggle-title">
-                        <span class="proceso-badge">01</span>
-                        Acuerdo Extrajudicial
-                      </span>
-                      <span class="proceso-tag hidden sm:inline-flex">Plazo variable</span>
-                      <span class="proceso-icon" aria-hidden="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                          <line x1="12" y1="5" x2="12" y2="19" />
-                          <line x1="5" y1="12" x2="19" y2="12" />
-                        </svg>
-                      </span>
-                    </button>
-                    <div class="proceso-body" id="acc-mediacion-body" role="region">
-                      <div class="proceso-body-inner">
-                        <p class="text-gray-400 mb-4 leading-relaxed">Una alternativa que puede ser m&aacute;s r&aacute;pida. Buscamos alcanzar
-                          un acuerdo con la compa&ntilde;&iacute;a de seguros sin necesidad de iniciar un juicio.
-                          Cuando existe una propuesta razonable, el reclamo puede resolverse en un plazo
-                          considerablemente menor al judicial.*</p>
-                        <ul class="text-gray-500 text-sm space-y-2">
-                          <li>&#10003; Menor tiempo de resoluci&oacute;n</li>
-                          <li>&#10003; Evita un proceso judicial</li>
-                          <li>&#10003; Negociaci&oacute;n directa con la aseguradora</li>
-                        </ul>
-                        <p class="text-gray-600 text-xs mt-4">*Los plazos dependen de la aseguradora, las caracter&iacute;sticas del caso y la jurisdicci&oacute;n.</p>
+                  <!-- Extrajudicial -->
+                  <div class="tactical-card-asphalt p-7 rounded-xl reveal flex flex-col justify-between">
+                    <div>
+                      <div class="flex items-center justify-between gap-3 mb-4">
+                        <div class="flex items-center gap-2">
+                          <span class="font-mono text-amber-400 font-bold text-xl">01</span>
+                          <h4 class="font-headline text-2xl uppercase font-bold text-text-primary">Acuerdo Extrajudicial</h4>
+                        </div>
+                        <span class="text-xs font-mono uppercase px-2.5 py-1 rounded bg-surface-deep border border-surface-border text-text-secondary">Plazo variable</span>
                       </div>
+                      <p class="text-text-secondary text-sm leading-relaxed font-body mb-5">
+                        Una alternativa enfocada en alcanzar un acuerdo con la compa&ntilde;&iacute;a de seguros sin necesidad de iniciar un juicio. Cuando existe una propuesta razonable, se prioriza resolver el reclamo por v&iacute;a directa.
+                      </p>
+                      <ul class="text-text-secondary text-sm space-y-2.5 mb-5 font-body">
+                        <li class="flex items-start gap-2">
+                          <span class="text-emerald-400 font-bold">&#10003;</span>
+                          <span>Negociaci&oacute;n directa con la compa&ntilde;&iacute;a aseguradora</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="text-emerald-400 font-bold">&#10003;</span>
+                          <span>Evita la apertura formal de un proceso judicial</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="text-emerald-400 font-bold">&#10003;</span>
+                          <span>Sujeto a la obtenci&oacute;n de una propuesta satisfactoria</span>
+                        </li>
+                      </ul>
                     </div>
+                    <p class="text-text-muted text-xs pt-4 border-t border-surface-border/40 font-body">
+                      *Los plazos dependen de la aseguradora, las caracter&iacute;sticas del caso y la jurisdicci&oacute;n.
+                    </p>
                   </div>
 
                   <!-- Judicial -->
-                  <div class="proceso-accordion reveal reveal-delay-1" id="acc-judicial">
-                    <button class="proceso-toggle" aria-expanded="false" aria-controls="acc-judicial-body">
-                      <span class="proceso-toggle-title">
-                        <span class="proceso-badge">02</span>
-                        V&iacute;a Judicial
-                      </span>
-                      <span class="proceso-tag hidden sm:inline-flex">Variable seg&uacute;n jurisdicci&oacute;n</span>
-                      <span class="proceso-icon" aria-hidden="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                          <line x1="12" y1="5" x2="12" y2="19" />
-                          <line x1="5" y1="12" x2="19" y2="12" />
-                        </svg>
-                      </span>
-                    </button>
-                    <div class="proceso-body" id="acc-judicial-body" role="region">
-                      <div class="proceso-body-inner">
-                        <p class="text-gray-400 mb-4 leading-relaxed">Cuando no existe una propuesta adecuada,
-                          se puede evaluar continuar el reclamo judicialmente. Dependiendo de la jurisdicci&oacute;n,
-                          antes de iniciar la demanda puede ser obligatorio atravesar una instancia de mediaci&oacute;n
-                          prejudicial. La duraci&oacute;n del proceso var&iacute;a seg&uacute;n el caso, la jurisdicci&oacute;n
-                          y la complejidad de los hechos.</p>
-                        <ul class="text-gray-500 text-sm space-y-2">
-                          <li>&#10003; Permite continuar el reclamo ante la falta de acuerdo</li>
-                          <li>&#10003; Intervenci&oacute;n judicial</li>
-                          <li>&#10003; Se reclaman los da&ntilde;os que correspondan seg&uacute;n cada caso</li>
-                        </ul>
-                        <p class="text-gray-600 text-xs mt-4">La duraci&oacute;n del proceso judicial es variable seg&uacute;n jurisdicci&oacute;n y complejidad del caso.</p>
+                  <div class="tactical-card-asphalt p-7 rounded-xl reveal reveal-delay-1 flex flex-col justify-between">
+                    <div>
+                      <div class="flex items-center justify-between gap-3 mb-4">
+                        <div class="flex items-center gap-2">
+                          <span class="font-mono text-amber-400 font-bold text-xl">02</span>
+                          <h4 class="font-headline text-2xl uppercase font-bold text-text-primary">V&iacute;a Judicial</h4>
+                        </div>
+                        <span class="text-xs font-mono uppercase px-2.5 py-1 rounded bg-surface-deep border border-surface-border text-text-secondary">Variable por jurisdicci&oacute;n</span>
                       </div>
+                      <p class="text-text-secondary text-sm leading-relaxed font-body mb-5">
+                        Cuando no existe una propuesta adecuada o la aseguradora no responde con una oferta justa, se eval&uacute;a continuar el reclamo en sede judicial ante los tribunales competentes.
+                      </p>
+                      <ul class="text-text-secondary text-sm space-y-2.5 mb-5 font-body">
+                        <li class="flex items-start gap-2">
+                          <span class="text-amber-400 font-bold">&#10003;</span>
+                          <span>Permite continuar el reclamo ante la falta de acuerdo</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="text-amber-400 font-bold">&#10003;</span>
+                          <span>Intervenci&oacute;n de mediaci&oacute;n prejudicial y sede judicial</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                          <span class="text-amber-400 font-bold">&#10003;</span>
+                          <span>Se reclaman integralmente los da&ntilde;os que correspondan seg&uacute;n cada caso</span>
+                        </li>
+                      </ul>
                     </div>
+                    <p class="text-text-muted text-xs pt-4 border-t border-surface-border/40 font-body">
+                      *La duraci&oacute;n del proceso judicial es variable seg&uacute;n jurisdicci&oacute;n, fueros y complejidad del hecho.
+                    </p>
                   </div>
 
                 </div>
 
-                <p class="text-gray-500 text-sm text-center mt-8 max-w-2xl mx-auto">En tu consulta inicial te
-                  explicamos qu&eacute; alternativas existen seg&uacute;n las caracter&iacute;sticas de tu caso,
-                  tus tiempos y la jurisdicci&oacute;n que corresponda.</p>
+                <p class="text-text-muted text-sm text-center mt-8 max-w-2xl mx-auto font-body">En tu consulta inicial te explicamos qu&eacute; alternativas existen seg&uacute;n las caracter&iacute;sticas de tu caso, tus tiempos y la jurisdicci&oacute;n que corresponda.</p>
               </div>
             </section>
 
             <!-- FAQ -->
-            <section id="faq" class="py-20 px-5 md:px-10 lg:px-16 bg-zinc-900">
+            <section id="faq" class="py-20 px-5 md:px-10 lg:px-16 bg-surface-deep border-b border-surface-border/40">
               <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-14 reveal">
-                  <span class="text-amber-400 text-sm font-bold tracking-widest uppercase">Resolvé tus dudas</span>
-                  <h2 class="text-4xl sm:text-5xl font-black text-white mt-2 mb-4 uppercase leading-tight"
-                    style='font-family:"Bebas Neue",sans-serif'>Preguntas Frecuentes</h2>
+                  <span class="text-amber-400 text-xs font-mono font-semibold tracking-widest uppercase px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 inline-block mb-3">Resolvé tus dudas</span>
+                  <h2 class="text-4xl sm:text-5xl font-black text-text-primary mb-4 uppercase font-headline tracking-tight">Preguntas Frecuentes</h2>
                 </div>
                 <div class="space-y-4" id="faq-list">
-                  <div class="faq-item reveal">
+                  <div class="faq-item tactical-card rounded-xl reveal">
                     <button class="faq-toggle" aria-expanded="false">
-                      <h3>&iquest;Puedo reclamar si no ten&iacute;a registro?</h3>
-                      <span class="faq-icon" aria-hidden="true">
+                      <h3 class="font-headline text-lg sm:text-xl font-bold uppercase tracking-wide text-text-primary text-left">&iquest;Puedo reclamar si no ten&iacute;a registro?</h3>
+                      <span class="faq-icon text-amber-400" aria-hidden="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
                           stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                           <line x1="12" y1="5" x2="12" y2="19" />
@@ -751,13 +818,13 @@
                       </span>
                     </button>
                     <div class="faq-body">
-                      <div class="faq-body-inner">No necesariamente perd&eacute;s el derecho a reclamar. La responsabilidad por el accidente se analiza seg&uacute;n c&oacute;mo ocurri&oacute; el hecho y las circunstancias particulares del caso. La falta de documentaci&oacute;n puede tener otras consecuencias, pero no descart&eacute;s tu reclamo sin analizarlo primero.</div>
+                      <div class="faq-body-inner text-text-secondary font-body">No necesariamente perd&eacute;s el derecho a reclamar. La responsabilidad por el accidente se analiza seg&uacute;n c&oacute;mo ocurri&oacute; el hecho y las circunstancias particulares del caso. La falta de documentaci&oacute;n puede tener otras consecuencias, pero no descart&eacute;s tu reclamo sin analizarlo primero.</div>
                     </div>
                   </div>
-                  <div class="faq-item reveal">
+                  <div class="faq-item tactical-card rounded-xl reveal">
                     <button class="faq-toggle" aria-expanded="false">
-                      <h3>&iquest;Puedo reclamar si mi moto no ten&iacute;a seguro?</h3>
-                      <span class="faq-icon" aria-hidden="true">
+                      <h3 class="font-headline text-lg sm:text-xl font-bold uppercase tracking-wide text-text-primary text-left">&iquest;Puedo reclamar si mi moto no ten&iacute;a seguro?</h3>
+                      <span class="faq-icon text-amber-400" aria-hidden="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
                           stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                           <line x1="12" y1="5" x2="12" y2="19" />
@@ -766,13 +833,13 @@
                       </span>
                     </button>
                     <div class="faq-body">
-                      <div class="faq-body-inner">La falta de seguro propio no determina por s&iacute; sola la responsabilidad por el accidente. El caso debe analizarse individualmente. Cont&aacute;nos tu situaci&oacute;n y evaluamos las alternativas disponibles.</div>
+                      <div class="faq-body-inner text-text-secondary font-body">La falta de seguro propio no determina por s&iacute; sola la responsabilidad por el accidente. El caso debe analizarse individualmente. Cont&aacute;nos tu situaci&oacute;n y evaluamos las alternativas disponibles.</div>
                     </div>
                   </div>
-                  <div class="faq-item reveal">
+                  <div class="faq-item tactical-card rounded-xl reveal">
                     <button class="faq-toggle" aria-expanded="false">
-                      <h3>&iquest;Qu&eacute; pasa si el otro conductor no ten&iacute;a seguro?</h3>
-                      <span class="faq-icon" aria-hidden="true">
+                      <h3 class="font-headline text-lg sm:text-xl font-bold uppercase tracking-wide text-text-primary text-left">&iquest;Qu&eacute; pasa si el otro conductor no ten&iacute;a seguro?</h3>
+                      <span class="faq-icon text-amber-400" aria-hidden="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
                           stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                           <line x1="12" y1="5" x2="12" y2="19" />
@@ -781,13 +848,13 @@
                       </span>
                     </button>
                     <div class="faq-body">
-                      <div class="faq-body-inner">Puede cambiar la forma de reclamar y contra qui&eacute;n. Que el otro no tuviera seguro no significa autom&aacute;ticamente que no existe reclamo. Analizamos qu&eacute; alternativas existen seg&uacute;n el caso.</div>
+                      <div class="faq-body-inner text-text-secondary font-body">Puede cambiar la forma de reclamar y contra qui&eacute;n. Que el otro no tuviera seguro no significa autom&aacute;ticamente que no existe reclamo. Analizamos qu&eacute; alternativas existen seg&uacute;n el caso.</div>
                     </div>
                   </div>
-                  <div class="faq-item reveal">
+                  <div class="faq-item tactical-card rounded-xl reveal">
                     <button class="faq-toggle" aria-expanded="false">
-                      <h3>&iquest;Cu&aacute;nto tarda un reclamo?</h3>
-                      <span class="faq-icon" aria-hidden="true">
+                      <h3 class="font-headline text-lg sm:text-xl font-bold uppercase tracking-wide text-text-primary text-left">&iquest;Cu&aacute;nto tarda un reclamo?</h3>
+                      <span class="faq-icon text-amber-400" aria-hidden="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
                           stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                           <line x1="12" y1="5" x2="12" y2="19" />
@@ -796,13 +863,13 @@
                       </span>
                     </button>
                     <div class="faq-body">
-                      <div class="faq-body-inner">Depende de la aseguradora, la documentaci&oacute;n disponible, la jurisdicci&oacute;n y de si puede alcanzarse un acuerdo o resulta necesario avanzar por otras v&iacute;as. No existe un plazo &uacute;nico: te orientamos seg&uacute;n tu caso concreto.</div>
+                      <div class="faq-body-inner text-text-secondary font-body">Depende de la aseguradora, la documentaci&oacute;n disponible, la jurisdicci&oacute;n y de si puede alcanzarse un acuerdo o resulta necesario avanzar por otras v&iacute;as. No existe un plazo &uacute;nico: te orientamos seg&uacute;n tu caso concreto.</div>
                     </div>
                   </div>
-                  <div class="faq-item reveal">
+                  <div class="faq-item tactical-card rounded-xl reveal">
                     <button class="faq-toggle" aria-expanded="false">
-                      <h3>&iquest;Tengo que ir a juicio?</h3>
-                      <span class="faq-icon" aria-hidden="true">
+                      <h3 class="font-headline text-lg sm:text-xl font-bold uppercase tracking-wide text-text-primary text-left">&iquest;Tengo que ir a juicio?</h3>
+                      <span class="faq-icon text-amber-400" aria-hidden="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
                           stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                           <line x1="12" y1="5" x2="12" y2="19" />
@@ -811,13 +878,13 @@
                       </span>
                     </button>
                     <div class="faq-body">
-                      <div class="faq-body-inner">No necesariamente. Muchos reclamos pueden resolverse mediante un acuerdo sin iniciar un proceso judicial. Si no existe una propuesta adecuada, evaluamos junto con vos las alternativas disponibles para continuar el reclamo.</div>
+                      <div class="faq-body-inner text-text-secondary font-body">No necesariamente. Muchos reclamos pueden resolverse mediante un acuerdo sin iniciar un proceso judicial. Si no existe una propuesta adecuada, evaluamos junto con vos las alternativas disponibles para continuar el reclamo.</div>
                     </div>
                   </div>
-                  <div class="faq-item reveal">
+                  <div class="faq-item tactical-card rounded-xl reveal">
                     <button class="faq-toggle" aria-expanded="false">
-                      <h3>&iquest;Existe mediaci&oacute;n obligatoria antes del juicio?</h3>
-                      <span class="faq-icon" aria-hidden="true">
+                      <h3 class="font-headline text-lg sm:text-xl font-bold uppercase tracking-wide text-text-primary text-left">&iquest;Existe mediaci&oacute;n obligatoria antes del juicio?</h3>
+                      <span class="faq-icon text-amber-400" aria-hidden="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
                           stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                           <line x1="12" y1="5" x2="12" y2="19" />
@@ -826,13 +893,13 @@
                       </span>
                     </button>
                     <div class="faq-body">
-                      <div class="faq-body-inner">Depende de la jurisdicci&oacute;n. En determinadas provincias o jurisdicciones puede ser necesario cumplir una instancia de mediaci&oacute;n prejudicial antes de iniciar una demanda civil. Te informamos lo que corresponde seg&uacute;n d&oacute;nde ocurri&oacute; el accidente.</div>
+                      <div class="faq-body-inner text-text-secondary font-body">Depende de la jurisdicci&oacute;n. En determinadas provincias o jurisdicciones puede ser necesario cumplir una instancia de mediaci&oacute;n prejudicial antes de iniciar una demanda civil. Te informamos lo que corresponde seg&uacute;n d&oacute;nde ocurri&oacute; el accidente.</div>
                     </div>
                   </div>
-                  <div class="faq-item reveal">
+                  <div class="faq-item tactical-card rounded-xl reveal">
                     <button class="faq-toggle" aria-expanded="false">
-                      <h3>&iquest;Atienden en todo el pa&iacute;s?</h3>
-                      <span class="faq-icon" aria-hidden="true">
+                      <h3 class="font-headline text-lg sm:text-xl font-bold uppercase tracking-wide text-text-primary text-left">&iquest;Atienden en todo el pa&iacute;s?</h3>
+                      <span class="faq-icon text-amber-400" aria-hidden="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
                           stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                           <line x1="12" y1="5" x2="12" y2="19" />
@@ -841,13 +908,13 @@
                       </span>
                     </button>
                     <div class="faq-body">
-                      <div class="faq-body-inner">S&iacute;. MotoReclamo recibe consultas de motociclistas de todo el pa&iacute;s. Trabajamos con profesionales del derecho en distintas jurisdicciones para gestionar cada caso donde corresponda.</div>
+                      <div class="faq-body-inner text-text-secondary font-body">S&iacute;. MotoReclamo recibe consultas de motociclistas de todo el pa&iacute;s. Trabajamos con profesionales del derecho en distintas jurisdicciones para gestionar cada caso donde corresponda.</div>
                     </div>
                   </div>
-                  <div class="faq-item reveal">
+                  <div class="faq-item tactical-card rounded-xl reveal">
                     <button class="faq-toggle" aria-expanded="false">
-                      <h3>&iquest;Cu&aacute;nto vale mi reclamo?</h3>
-                      <span class="faq-icon" aria-hidden="true">
+                      <h3 class="font-headline text-lg sm:text-xl font-bold uppercase tracking-wide text-text-primary text-left">&iquest;Cu&aacute;nto vale mi reclamo?</h3>
+                      <span class="faq-icon text-amber-400" aria-hidden="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
                           stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                           <line x1="12" y1="5" x2="12" y2="19" />
@@ -856,103 +923,99 @@
                       </span>
                     </button>
                     <div class="faq-body">
-                      <div class="faq-body-inner">No existe una cifra &uacute;nica. Depende de las lesiones, da&ntilde;os materiales, edad, ingresos, incapacidad y dem&aacute;s circunstancias del accidente. Pod&eacute;s usar nuestra calculadora para una estimaci&oacute;n inicial orientativa, o contarnos tu caso directamente.</div>
+                      <div class="faq-body-inner text-text-secondary font-body">No existe una cifra &uacute;nica. Depende de las lesiones, da&ntilde;os materiales, edad, ingresos, incapacidad y dem&aacute;s circunstancias del accidente. Pod&eacute;s usar nuestra calculadora para una estimaci&oacute;n inicial orientativa, o contarnos tu caso directamente.</div>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
 
-              <!-- OFERTA ASEGURADORA -->
-              <section class="py-20 px-5 md:px-10 lg:px-16 bg-zinc-900">
-                <div class="max-w-4xl mx-auto">
-                  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div class="reveal">
-                      <span class="text-amber-400 text-sm font-bold tracking-widest uppercase">Antes de firmar</span>
-                      <h2 class="text-4xl sm:text-5xl font-black text-white mt-2 mb-6 uppercase leading-tight"
-                        style='font-family:"Bebas Neue",sans-serif;letter-spacing:0.02em'>
-                        &iquest;La aseguradora ya<br><span class="text-amber-400">te hizo una oferta?</span>
-                      </h2>
-                      <p class="text-gray-400 mb-4 leading-relaxed">
-                        No ten&eacute;s obligaci&oacute;n de aceptarla inmediatamente.
-                        Antes de firmar un acuerdo, conviene analizar qu&eacute; da&ntilde;os est&aacute;s reclamando,
-                        qu&eacute; documentaci&oacute;n existe y si la propuesta contempla adecuadamente
-                        las consecuencias del accidente.
-                      </p>
-                      <p class="text-gray-400 mb-8 leading-relaxed">
-                        Una vez que acept&aacute;s y cerr&aacute;s un acuerdo, puede resultar dif&iacute;cil o imposible
-                        reclamar nuevamente por los mismos conceptos.
-                      </p>
-                      <a href="#contacto"
-                        class="inline-block bg-amber-400 text-black px-8 py-4 rounded-lg text-base font-bold hover:bg-amber-300 transition-colors">
-                        Quiero revisar la oferta
-                      </a>
-                    </div>
-                    <div class="bg-zinc-800 border border-zinc-700 rounded-2xl p-8 reveal reveal-delay-1">
-                      <h3 class="font-bold text-white mb-6 text-lg">Antes de aceptar cualquier propuesta, cheque&aacute; esto:</h3>
-                      <ul class="space-y-4">
-                        <li class="flex items-start gap-3">
-                          <span class="text-amber-400 font-bold mt-0.5">&#10003;</span>
-                          <span class="text-gray-400 text-sm leading-relaxed">&iquest;La oferta contempla todos los da&ntilde;os, no solo la moto?</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                          <span class="text-amber-400 font-bold mt-0.5">&#10003;</span>
-                          <span class="text-gray-400 text-sm leading-relaxed">&iquest;La oferta incluye las lesiones, incluso las que puedan manifestarse despu&eacute;s?</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                          <span class="text-amber-400 font-bold mt-0.5">&#10003;</span>
-                          <span class="text-gray-400 text-sm leading-relaxed">&iquest;Se tienen en cuenta los d&iacute;as que no pudiste trabajar?</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                          <span class="text-amber-400 font-bold mt-0.5">&#10003;</span>
-                          <span class="text-gray-400 text-sm leading-relaxed">&iquest;El monto es proporcional a la gravedad del accidente?</span>
-                        </li>
-                      </ul>
-                    </div>
+            <!-- OFERTA ASEGURADORA -->
+            <section class="py-20 px-5 md:px-10 lg:px-16 bg-void-base border-b border-surface-border/40">
+              <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                  <div class="reveal">
+                    <span class="text-amber-400 text-xs font-mono font-semibold tracking-widest uppercase px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 inline-block mb-3">Antes de firmar</span>
+                    <h2 class="text-4xl sm:text-5xl font-black text-text-primary mb-6 uppercase leading-tight font-headline tracking-tight">
+                      &iquest;La aseguradora ya<br><span class="text-amber-400">te hizo una oferta?</span>
+                    </h2>
+                    <p class="text-text-secondary mb-4 leading-relaxed font-body">
+                      No ten&eacute;s obligaci&oacute;n de aceptarla inmediatamente.
+                      Antes de firmar un acuerdo, conviene analizar qu&eacute; da&ntilde;os est&aacute;s reclamando,
+                      qu&eacute; documentaci&oacute;n existe y si la propuesta contempla adecuadamente
+                      las consecuencias del accidente.
+                    </p>
+                    <p class="text-text-secondary mb-8 leading-relaxed font-body">
+                      Una vez que acept&aacute;s y cerr&aacute;s un acuerdo, puede resultar dif&iacute;cil o imposible
+                      reclamar nuevamente por los mismos conceptos.
+                    </p>
+                    <a href="#contacto"
+                      class="btn-tactical-primary inline-flex items-center justify-center text-black px-8 py-4 rounded-xl text-base font-bold font-headline uppercase tracking-wider">
+                      Quiero revisar la oferta
+                    </a>
+                  </div>
+                  <div class="tactical-card-asphalt p-8 rounded-2xl reveal reveal-delay-1">
+                    <h3 class="font-headline text-xl uppercase font-bold text-text-primary mb-6">Antes de aceptar cualquier propuesta, cheque&aacute; esto:</h3>
+                    <ul class="space-y-4 font-body">
+                      <li class="flex items-start gap-3">
+                        <span class="text-amber-400 font-bold mt-0.5">&#10003;</span>
+                        <span class="text-text-secondary text-sm leading-relaxed">&iquest;La oferta contempla todos los da&ntilde;os, no solo la moto?</span>
+                      </li>
+                      <li class="flex items-start gap-3">
+                        <span class="text-amber-400 font-bold mt-0.5">&#10003;</span>
+                        <span class="text-text-secondary text-sm leading-relaxed">&iquest;La oferta incluye las lesiones, incluso las que puedan manifestarse despu&eacute;s?</span>
+                      </li>
+                      <li class="flex items-start gap-3">
+                        <span class="text-amber-400 font-bold mt-0.5">&#10003;</span>
+                        <span class="text-text-secondary text-sm leading-relaxed">&iquest;Se tienen en cuenta los d&iacute;as que no pudiste trabajar?</span>
+                      </li>
+                      <li class="flex items-start gap-3">
+                        <span class="text-amber-400 font-bold mt-0.5">&#10003;</span>
+                        <span class="text-text-secondary text-sm leading-relaxed">&iquest;El monto es proporcional a la gravedad del accidente?</span>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-              </section>
+              </div>
+            </section>
 
-              <!-- SIN REGISTRO / SIN SEGURO -->
-              <section class="py-20 px-5 md:px-10 lg:px-16 bg-zinc-950">
-                <div class="max-w-4xl mx-auto text-center reveal">
-                  <span class="text-amber-400 text-sm font-bold tracking-widest uppercase">Una duda frecuente</span>
-                  <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white mt-2 mb-6 uppercase"
-                    style='font-family:"Bebas Neue",sans-serif;letter-spacing:0.03em'>
-                    &iquest;No ten&iacute;as registro<br><span class="text-amber-400">o seguro?</span>
-                  </h2>
-                  <p class="text-gray-400 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-6">
-                    Eso no significa autom&aacute;ticamente que hayas perdido tu derecho a reclamar.
-                    La responsabilidad por el accidente se analiza seg&uacute;n c&oacute;mo ocurri&oacute; el hecho
-                    y las circunstancias particulares del caso.
-                  </p>
-                  <p class="text-gray-500 text-sm leading-relaxed max-w-xl mx-auto">
-                    La falta de documentaci&oacute;n puede tener otras consecuencias y eventualmente influir
-                    en determinadas situaciones, pero no descart&eacute;s tu reclamo sin analizarlo primero.
-                  </p>
-                </div>
-              </section>
+            <!-- SIN REGISTRO / SIN SEGURO -->
+            <section class="py-20 px-5 md:px-10 lg:px-16 bg-surface-deep border-b border-surface-border/40">
+              <div class="max-w-4xl mx-auto text-center reveal">
+                <span class="text-amber-400 text-xs font-mono font-semibold tracking-widest uppercase px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 inline-block mb-3">Una duda frecuente</span>
+                <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-text-primary mb-6 uppercase font-headline tracking-tight">
+                  &iquest;No ten&iacute;as registro<br><span class="text-amber-400">o seguro?</span>
+                </h2>
+                <p class="text-text-secondary text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-6 font-body">
+                  Eso no significa autom&aacute;ticamente que hayas perdido tu derecho a reclamar.
+                  La responsabilidad por el accidente se analiza seg&uacute;n c&oacute;mo ocurri&oacute; el hecho
+                  y las circunstancias particulares del caso.
+                </p>
+                <p class="text-text-muted text-sm leading-relaxed max-w-xl mx-auto font-body">
+                  La falta de documentaci&oacute;n puede tener otras consecuencias y eventualmente influir
+                  en determinadas situaciones, pero no descart&eacute;s tu reclamo sin analizarlo primero.
+                </p>
+              </div>
+            </section>
 
               <!-- CONTACTO -->
-
-              <section id="contacto" class="py-20 px-5 md:px-10 lg:px-16 bg-zinc-900">
+              <section id="contacto" class="py-20 px-5 md:px-10 lg:px-16 bg-void-base border-b border-surface-border/40">
                 <div class="max-w-7xl mx-auto">
                   <div class="text-center mb-14 reveal">
-                    <span class="text-amber-400 text-sm font-bold tracking-widest uppercase">Hablemos</span>
-                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white mt-2 mb-4 uppercase"
-                      style='font-family:"Bebas Neue",sans-serif;letter-spacing:0.03em'>Contactanos</h2>
-                    <p class="text-gray-400 max-w-2xl mx-auto text-base sm:text-lg">Contános qué pasó. Cada accidente es distinto. Mandános los datos básicos de tu caso y te damos una primera orientación sin cargo.</p>
+                    <span class="text-amber-400 text-xs font-mono font-semibold tracking-widest uppercase px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 inline-block mb-3">Hablemos</span>
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-text-primary mb-4 uppercase font-headline tracking-tight">Contactanos</h2>
+                    <p class="text-text-secondary max-w-2xl mx-auto text-base sm:text-lg font-body">Contános qué pasó. Cada accidente es distinto. Mandános los datos básicos de tu caso y te damos una primera orientación sin cargo.</p>
                   </div>
 
                   <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                     <!-- Info de contacto -->
                     <div class="space-y-6 reveal">
-                      <h3 class="text-xl font-bold text-white">Información de Contacto</h3>
+                      <h3 class="font-headline text-2xl uppercase font-bold text-text-primary">Información de Contacto</h3>
                       <div class="space-y-4">
                         <a href="https://wa.me/5491164677648?text=Hola%2C%20quiero%20consultar%20por%20un%20siniestro"
                           onclick="return gtagSendEvent('https://wa.me/5491164677648')" target="_blank"
                           rel="noopener noreferrer"
-                          class="flex items-center gap-4 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 hover:border-amber-400/40 p-5 rounded-xl transition-all group">
+                          class="tactical-card p-5 rounded-xl transition-all group flex items-center gap-4">
                           <div
                             class="w-11 h-11 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-amber-400/20 transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
@@ -962,14 +1025,14 @@
                             </svg>
                           </div>
                           <div>
-                            <div class="text-xs text-gray-500 uppercase tracking-wide font-semibold">WhatsApp</div>
-                            <div class="text-white font-bold">11-6467-7648</div>
-                            <div class="text-xs text-gray-500 mt-0.5">Escribinos directamente</div>
+                            <div class="text-xs text-text-muted uppercase tracking-wide font-mono font-semibold">WhatsApp</div>
+                            <div class="text-text-primary font-headline text-lg font-bold">11-6467-7648</div>
+                            <div class="text-xs text-text-secondary font-body mt-0.5">Escribinos directamente</div>
                           </div>
                         </a>
 
                         <a href="mailto:contacto@motoreclamo.ar"
-                          class="flex items-center gap-4 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 hover:border-amber-400/40 p-5 rounded-xl transition-all group">
+                          class="tactical-card p-5 rounded-xl transition-all group flex items-center gap-4">
                           <div
                             class="w-11 h-11 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-amber-400/20 transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
@@ -980,14 +1043,14 @@
                             </svg>
                           </div>
                           <div>
-                            <div class="text-xs text-gray-500 uppercase tracking-wide font-semibold">Email</div>
-                            <div class="text-white font-bold whitespace-nowrap"
+                            <div class="text-xs text-text-muted uppercase tracking-wide font-mono font-semibold">Email</div>
+                            <div class="text-text-primary font-headline text-base font-bold whitespace-nowrap"
                               style="font-size: clamp(0.68rem, 3.6vw, 0.9375rem)">contacto@motoreclamo.ar</div>
-                            <div class="text-xs text-gray-500 mt-0.5">Te respondemos a la brevedad</div>
+                            <div class="text-xs text-text-secondary font-body mt-0.5">Te respondemos a la brevedad</div>
                           </div>
                         </a>
 
-                        <div class="flex items-center gap-4 bg-zinc-800 border border-zinc-700 p-5 rounded-xl">
+                        <div class="tactical-card p-5 rounded-xl flex items-center gap-4">
                           <div
                             class="w-11 h-11 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center flex-shrink-0">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
@@ -1000,13 +1063,13 @@
                             </svg>
                           </div>
                           <div>
-                            <div class="text-xs text-gray-500 uppercase tracking-wide font-semibold">Ubicación</div>
-                            <div class="text-white font-bold">Todo el País</div>
-                            <div class="text-xs text-gray-500 mt-0.5">Profesionales del derecho en distintas jurisdicciones</div>
+                            <div class="text-xs text-text-muted uppercase tracking-wide font-mono font-semibold">Ubicación</div>
+                            <div class="text-text-primary font-headline text-lg font-bold">Todo el País</div>
+                            <div class="text-xs text-text-secondary font-body mt-0.5">Profesionales del derecho en distintas jurisdicciones</div>
                           </div>
                         </div>
 
-                        <div class="flex items-center gap-4 bg-zinc-800 border border-zinc-700 p-5 rounded-xl">
+                        <div class="tactical-card p-5 rounded-xl flex items-center gap-4">
                           <div
                             class="w-11 h-11 bg-amber-400/10 border border-amber-400/30 rounded-lg flex items-center justify-center flex-shrink-0">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
@@ -1017,77 +1080,72 @@
                             </svg>
                           </div>
                           <div>
-                            <div class="text-xs text-gray-500 uppercase tracking-wide font-semibold">Horario</div>
-                            <div class="text-white text-sm">Lunes a S&aacute;bado: 8:00 &ndash; 22:00</div>
-                            <div class="text-xs text-gray-400 mt-1">Pod&eacute;s dejarnos tu consulta en cualquier momento</div>
+                            <div class="text-xs text-text-muted uppercase tracking-wide font-mono font-semibold">Horario</div>
+                            <div class="text-text-primary font-headline text-base font-bold">Lunes a S&aacute;bado: 8:00 &ndash; 22:00</div>
+                            <div class="text-xs text-text-muted font-body mt-1">Pod&eacute;s dejarnos tu consulta en cualquier momento</div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="bg-amber-400 text-black p-7 rounded-xl">
-                        <h4 class="font-black mb-2 uppercase"
-                          style='font-family:"Bebas Neue",sans-serif;letter-spacing:0.02em;font-size:1.5rem'>Consulta
-                          Inicial Sin Cargo</h4>
-                        <p class="text-sm text-black/80 mb-3 leading-relaxed">Analizamos tu caso sin compromiso. Antes de avanzar te explicamos cómo funciona el proceso y qué se espera en tu situación particular.</p>
-                        <p class="font-black text-base">Sin costos adelantados.<br>Solo cobramos si obtenés una indemnización.</p>
+                      <div class="bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-black p-7 rounded-xl shadow-lg">
+                        <h4 class="font-headline font-bold uppercase tracking-tight text-2xl text-black mb-2">Consulta Inicial Sin Cargo</h4>
+                        <p class="text-sm text-black/85 mb-3 leading-relaxed font-body font-medium">Analizamos tu caso sin compromiso. Antes de avanzar te explicamos cómo funciona el proceso y qué se espera en tu situación particular.</p>
+                        <p class="font-headline font-bold text-base uppercase tracking-wide text-black">Sin costos adelantados.<br>Solo cobramos si obtenés una indemnización.</p>
                       </div>
                     </div>
 
                     <!-- Formulario -->
-                    <div class="bg-zinc-950 border border-zinc-800 p-7 sm:p-9 rounded-2xl reveal reveal-delay-1">
-                      <h3 class="text-xl font-bold text-white mb-6">Envianos tu Consulta</h3>
+                    <div class="tactical-card-asphalt p-7 sm:p-9 rounded-2xl reveal reveal-delay-1">
+                      <h3 class="font-headline text-2xl uppercase font-bold text-text-primary mb-6">Envianos tu Consulta</h3>
                       <form id="contactForm" class="space-y-5" novalidate>
                         <div>
                           <label for="name"
-                            class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Nombre
-                            Completo *</label>
+                            class="block font-mono text-xs font-semibold text-text-secondary uppercase tracking-wider mb-2">Nombre Completo *</label>
                           <input type="text" id="name" name="name"
-                            class="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 text-white rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent outline-none transition-all placeholder-gray-600"
+                            class="w-full px-4 py-3.5 bg-surface-deep border border-surface-border text-text-primary rounded-xl focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none transition-all placeholder:text-text-muted font-body text-sm"
                             placeholder="Tu nombre" required autocomplete="name">
                         </div>
                         <div>
                           <label for="phone"
-                            class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Teléfono
-                            *</label>
+                            class="block font-mono text-xs font-semibold text-text-secondary uppercase tracking-wider mb-2">Teléfono *</label>
                           <input type="tel" id="phone" name="phone"
-                            class="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 text-white rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent outline-none transition-all placeholder-gray-600"
+                            class="w-full px-4 py-3.5 bg-surface-deep border border-surface-border text-text-primary rounded-xl focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none transition-all placeholder:text-text-muted font-body text-sm"
                             placeholder="+54 9 11 XXXX-XXXX" required autocomplete="tel">
                         </div>
                         <div>
                           <label for="email"
-                            class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Email
-                            <span class="text-gray-600 normal-case font-normal">(opcional)</span></label>
+                            class="block font-mono text-xs font-semibold text-text-secondary uppercase tracking-wider mb-2">Email
+                            <span class="text-text-muted normal-case font-normal">(opcional)</span></label>
                           <input type="email" id="email" name="email"
-                            class="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 text-white rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent outline-none transition-all placeholder-gray-600"
+                            class="w-full px-4 py-3.5 bg-surface-deep border border-surface-border text-text-primary rounded-xl focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none transition-all placeholder:text-text-muted font-body text-sm"
                             placeholder="tu@email.com" autocomplete="email">
                         </div>
                         <div>
                           <label for="message"
-                            class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Contanos tu
-                            caso *</label>
-                          <textarea id="message" name="message" rows="5"
-                            class="w-full px-4 py-3 bg-zinc-900 border border-zinc-700 text-white rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent outline-none transition-all resize-none placeholder-gray-600"
+                            class="block font-mono text-xs font-semibold text-text-secondary uppercase tracking-wider mb-2">Contanos tu caso *</label>
+                          <textarea id="message" name="message" rows="4"
+                            class="w-full px-4 py-3.5 bg-surface-deep border border-surface-border text-text-primary rounded-xl focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none transition-all resize-none placeholder:text-text-muted font-body text-sm"
                             placeholder="Ej.: Choqué el 15/8 en Av. Corrientes. Un auto no respetó el semáforo, me golpeé la rodilla y la moto quedó destruida."
                             required></textarea>
                         </div>
                         <!-- Trust pills antes del submit -->
-                        <div class="flex flex-wrap gap-2 justify-center">
-                          <span class="inline-flex items-center gap-1.5 bg-zinc-800 border border-zinc-700 rounded-full px-3 py-1 text-xs text-gray-400">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#FFB800" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <div class="flex flex-wrap gap-2 justify-center pt-1">
+                          <span class="inline-flex items-center gap-1.5 bg-surface-deep border border-surface-border rounded-full px-3 py-1 text-xs text-text-secondary font-mono">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                             Consulta sin cargo
                           </span>
-                          <span class="inline-flex items-center gap-1.5 bg-zinc-800 border border-zinc-700 rounded-full px-3 py-1 text-xs text-gray-400">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#FFB800" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                          <span class="inline-flex items-center gap-1.5 bg-surface-deep border border-surface-border rounded-full px-3 py-1 text-xs text-text-secondary font-mono">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                             Sin adelantos
                           </span>
-                          <span class="inline-flex items-center gap-1.5 bg-zinc-800 border border-zinc-700 rounded-full px-3 py-1 text-xs text-gray-400">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#FFB800" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                          <span class="inline-flex items-center gap-1.5 bg-surface-deep border border-surface-border rounded-full px-3 py-1 text-xs text-text-secondary font-mono">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                             Solo si obten&eacute;s indemnizaci&oacute;n
                           </span>
                         </div>
                         <button type="submit"
-                          class="w-full bg-amber-400 text-black px-8 py-4 rounded-lg font-bold hover:bg-amber-300 transition-colors text-base">Enviar consulta</button>
-                        <p class="text-xs text-gray-600 text-center leading-relaxed">Al enviar aceptás nuestra
+                          class="btn-tactical-primary w-full py-4 rounded-xl font-headline font-bold uppercase tracking-wider text-black text-base shadow-lg shadow-amber-500/20">Enviar consulta</button>
+                        <p class="text-xs text-text-muted text-center leading-relaxed font-body">Al enviar aceptás nuestra
                           <a href="/politica-de-privacidad.html" class="underline hover:text-amber-400 transition-colors">Pol&iacute;tica de Privacidad</a>.
                           Tus datos se usan exclusivamente para gestionar tu consulta.</p>
                       </form>
@@ -1096,14 +1154,11 @@
                 </div>
               </section>
 
-
               <!-- INSTAGRAM SECTION -->
-              <section id="instagram" class="py-20 px-5 md:px-10 lg:px-16 bg-zinc-950" style="position:relative;overflow:hidden;border-top:1px solid rgba(255,255,255,0.06);">
-
-                <div class="max-w-4xl mx-auto text-center reveal" style="position:relative;z-index:1;">
-                  <div
-                    style="display:inline-flex;align-items:center;justify-content:center;width:80px;height:80px;border-radius:20px;background:#1e1e22;border:1.5px solid rgba(255,255,255,0.1);margin-bottom:1.5rem;box-shadow:0 4px 24px rgba(0,0,0,0.4);">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none"
+              <section id="instagram" class="py-20 px-5 md:px-10 lg:px-16 bg-surface-deep border-b border-surface-border/40 relative overflow-hidden">
+                <div class="max-w-4xl mx-auto text-center reveal relative z-10">
+                  <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-surface-asphalt border border-surface-border mb-6 shadow-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
                       stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
                       aria-hidden="true">
                       <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
@@ -1111,81 +1166,75 @@
                       <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
                     </svg>
                   </div>
-                  <div
-                    style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:50px;padding:6px 18px;margin-bottom:1.25rem;">
-                    <span
-                      style="width:6px;height:6px;background:#FFB800;border-radius:50%;display:inline-block;"></span>
-                    <span
-                      style="color:rgba(255,255,255,0.6);font-size:0.78rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;">Comunidad MotoReclamo</span>
+                  <div class="inline-flex items-center gap-2 bg-surface-asphalt border border-surface-border rounded-full px-4 py-1.5 mb-4">
+                    <span class="w-1.5 h-1.5 bg-amber-400 rounded-full inline-block"></span>
+                    <span class="text-text-secondary text-xs font-mono font-semibold uppercase tracking-wider">Comunidad MotoReclamo</span>
                   </div>
-                  <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-4 uppercase"
-                    style="font-family:'Bebas Neue',sans-serif;letter-spacing:0.03em;">
+                  <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-text-primary mb-4 uppercase font-headline tracking-tight">
                     Seguinos en<br>
                     <span class="text-amber-400">Instagram</span>
                   </h2>
-                  <p class="text-gray-300 mb-4 leading-relaxed max-w-2xl mx-auto" style="font-size:1.1rem;">
+                  <p class="text-text-secondary mb-4 leading-relaxed max-w-2xl mx-auto font-body text-base sm:text-lg">
                     Consejos legales, casos reales, novedades del mundo moto y mucho m&aacute;s.
                     Unite a la comunidad de motoqueros que ya conocen sus derechos.
                   </p>
-                  <p style="color:rgba(255,255,255,0.45);font-size:0.9rem;margin-bottom:2.5rem;font-weight:500;">
-                    &#128242;&nbsp;<span style="color:rgba(255,255,255,0.7);font-weight:700;">@motoreclamo</span>
+                  <p class="text-text-muted text-sm mb-8 font-mono">
+                    &#128242;&nbsp;<span class="text-text-primary font-bold">@motoreclamo</span>
                   </p>
                   <a href="https://www.instagram.com/motoreclamo" target="_blank" rel="noopener noreferrer"
                     id="ig-follow-btn"
-                    style="display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:14px 32px;border-radius:50px;font-weight:700;font-size:0.9rem;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;color:#000;background:#f5f5f5;border:1.5px solid rgba(255,255,255,0.1);box-shadow:0 4px 16px rgba(0,0,0,0.3);transition:all 0.25s ease;max-width:280px;width:100%;"
-                    onmouseover="this.style.transform='translateY(-2px)';this.style.background='#ffffff'"
-                    onmouseout="this.style.transform='translateY(0)';this.style.background='#f5f5f5'">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                      stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    class="btn-tactical-secondary inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-xl font-headline font-bold text-sm uppercase tracking-wider text-text-primary max-w-xs mx-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
                       <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                       <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
                     </svg>
                     Seguir en Instagram
                   </a>
-                  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;margin-top:3rem;width:100%;">
-                    <div style="text-align:center;padding:0 0.4rem;border-right:1px solid rgba(255,255,255,0.1);">
-                      <div style="font-size:clamp(1.1rem,4vw,1.5rem);font-weight:900;color:white;font-family:'Bebas Neue',sans-serif;line-height:1.1;">&#127949;</div>
-                      <div style="font-size:clamp(0.58rem,1.8vw,0.7rem);color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.04em;margin-top:4px;word-break:break-word;">Accidentes reales</div>
+                  <div class="grid grid-cols-3 gap-0 mt-12 border-t border-surface-border/40 pt-8">
+                    <div class="text-center px-2 border-r border-surface-border/40">
+                      <div class="text-2xl font-headline font-bold text-text-primary">&#127949;</div>
+                      <div class="text-[11px] font-mono text-text-muted uppercase tracking-wider mt-1">Accidentes reales</div>
                     </div>
-                    <div style="text-align:center;padding:0 0.4rem;border-right:1px solid rgba(255,255,255,0.1);">
-                      <div style="font-size:clamp(1.1rem,4vw,1.5rem);font-weight:900;color:white;font-family:'Bebas Neue',sans-serif;line-height:1.1;">&#9878;</div>
-                      <div style="font-size:clamp(0.58rem,1.8vw,0.7rem);color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.04em;margin-top:4px;word-break:break-word;">Tus derechos, explicados simple</div>
+                    <div class="text-center px-2 border-r border-surface-border/40">
+                      <div class="text-2xl font-headline font-bold text-text-primary">&#9878;</div>
+                      <div class="text-[11px] font-mono text-text-muted uppercase tracking-wider mt-1">Tus derechos, simple</div>
                     </div>
-                    <div style="text-align:center;padding:0 0.4rem;">
-                      <div style="font-size:clamp(1.1rem,4vw,1.5rem);font-weight:900;color:white;font-family:'Bebas Neue',sans-serif;line-height:1.1;">&#129309;</div>
-                      <div style="font-size:clamp(0.58rem,1.8vw,0.7rem);color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.04em;margin-top:4px;word-break:break-word;">Comunidad motoquera</div>
+                    <div class="text-center px-2">
+                      <div class="text-2xl font-headline font-bold text-text-primary">&#129309;</div>
+                      <div class="text-[11px] font-mono text-text-muted uppercase tracking-wider mt-1">Comunidad motoquera</div>
                     </div>
                   </div>
                 </div>
               </section>
 
               <!-- FOOTER -->
-              <footer class="bg-black text-white border-t border-zinc-800">
-                <div class="max-w-7xl mx-auto px-5 md:px-10 lg:px-16 py-12">
-                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+              <footer class="bg-void-base text-text-primary border-t border-surface-border">
+                <div class="max-w-7xl mx-auto px-5 md:px-10 lg:px-16 py-14">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
                     <div class="sm:col-span-2 lg:col-span-1">
-                      <img src="img/logo-transparent.webp" alt="MotoReclamo" class="h-20 w-auto object-contain mb-4" loading="lazy">
-                      <p class="text-gray-500 text-sm leading-relaxed">Especialistas en reclamos por accidentes de moto. Motoqueros defendiendo motoqueros en toda Argentina.</p>
+                      <img src="img/logo-transparent.webp" alt="MotoReclamo" class="h-16 w-auto object-contain mb-4" loading="lazy">
+                      <p class="text-text-muted text-sm leading-relaxed font-body">Especialistas en reclamos por accidentes de moto. Motoqueros defendiendo motoqueros en toda Argentina.</p>
                     </div>
 
                     <div>
-                      <h3 class="font-bold text-white text-sm uppercase tracking-widest mb-5">Navegación</h3>
-                      <ul class="space-y-3">
+                      <h3 class="font-headline text-base font-bold uppercase tracking-widest text-text-primary mb-5">Navegación</h3>
+                      <ul class="space-y-3 font-body">
                         <li><a href="#servicios"
-                            class="text-gray-500 hover:text-amber-400 transition-colors text-sm">Servicios</a></li>
+                            class="text-text-secondary hover:text-amber-400 transition-colors text-sm">Servicios</a></li>
                         <li><a href="#nosotros"
-                            class="text-gray-500 hover:text-amber-400 transition-colors text-sm">Nosotros</a></li>
+                            class="text-text-secondary hover:text-amber-400 transition-colors text-sm">Nosotros</a></li>
                         <li><a href="https://motoreclamo.ar/calculadora"
-                            class="text-gray-500 hover:text-amber-400 transition-colors text-sm">Calculadora de indemnización</a></li>
+                            class="text-text-secondary hover:text-amber-400 transition-colors text-sm">Calculadora de indemnización</a></li>
                         <li><a href="#contacto"
-                            class="text-gray-500 hover:text-amber-400 transition-colors text-sm">Contacto</a></li>
+                            class="text-text-secondary hover:text-amber-400 transition-colors text-sm">Contacto</a></li>
                       </ul>
                     </div>
 
                     <div>
-                      <h3 class="font-bold text-white text-sm uppercase tracking-widest mb-5">Servicios</h3>
-                      <ul class="space-y-3 text-gray-500 text-sm">
+                      <h3 class="font-headline text-base font-bold uppercase tracking-widest text-text-primary mb-5">Servicios</h3>
+                      <ul class="space-y-3 text-text-secondary text-sm font-body">
                         <li>Reclamos por Accidentes</li>
                         <li>Indemnizaciones</li>
                         <li>Análisis del caso</li>
@@ -1194,11 +1243,11 @@
                     </div>
 
                     <div>
-                      <h3 class="font-bold text-white text-sm uppercase tracking-widest mb-5">Contacto</h3>
-                      <ul class="space-y-3">
+                      <h3 class="font-headline text-base font-bold uppercase tracking-widest text-text-primary mb-5">Contacto</h3>
+                      <ul class="space-y-3 font-body">
                         <li>
                           <a href="tel:+5491164677648"
-                            class="flex items-center gap-2 text-gray-500 hover:text-amber-400 transition-colors text-sm">
+                            class="flex items-center gap-2 text-text-secondary hover:text-amber-400 transition-colors text-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
                               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                               stroke-linejoin="round" class="text-amber-400 flex-shrink-0" aria-hidden="true">
@@ -1213,7 +1262,7 @@
                           <a href="https://wa.me/5491164677648"
                             onclick="return gtagSendEvent('https://wa.me/5491164677648')" target="_blank"
                             rel="noopener noreferrer"
-                            class="flex items-center gap-2 text-gray-500 hover:text-amber-400 transition-colors text-sm">
+                            class="flex items-center gap-2 text-text-secondary hover:text-amber-400 transition-colors text-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
                               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                               stroke-linejoin="round" class="text-amber-400 flex-shrink-0" aria-hidden="true">
@@ -1224,7 +1273,7 @@
                         </li>
                         <li>
                           <a href="mailto:contacto@motoreclamo.ar"
-                            class="flex items-center gap-2 text-gray-500 hover:text-amber-400 transition-colors text-sm break-all">
+                            class="flex items-center gap-2 text-text-secondary hover:text-amber-400 transition-colors text-sm break-all">
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
                               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                               stroke-linejoin="round" class="text-amber-400 flex-shrink-0" aria-hidden="true">
@@ -1236,7 +1285,7 @@
                         </li>
                         <li>
                           <a href="https://www.instagram.com/motoreclamo" target="_blank" rel="noopener noreferrer"
-                            class="flex items-center gap-2 text-gray-500 hover:text-amber-400 transition-colors text-sm">
+                            class="flex items-center gap-2 text-text-secondary hover:text-amber-400 transition-colors text-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
                               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                               stroke-linejoin="round" class="text-amber-400 flex-shrink-0" aria-hidden="true">
@@ -1247,17 +1296,16 @@
                             motoreclamo
                           </a>
                         </li>
-
                       </ul>
                     </div>
                   </div>
 
-                  <div class="border-t border-zinc-900 pt-8">
+                  <div class="border-t border-surface-border/60 pt-8">
                     <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
-                      <p class="text-gray-600 text-xs text-center sm:text-left">
+                      <p class="text-text-muted text-xs text-center sm:text-left font-body">
                         © 2026 MotoReclamo · motoreclamo.ar · Todos los derechos reservados.
                       </p>
-                      <div class="flex gap-5 text-xs text-gray-600">
+                      <div class="flex gap-5 text-xs text-text-muted font-body">
                         <a href="https://motoreclamo.ar/terminos-y-condiciones.html"
                           class="hover:text-amber-400 transition-colors">Términos y Condiciones</a>
                         <a href="https://motoreclamo.ar/politica-de-privacidad.html"
