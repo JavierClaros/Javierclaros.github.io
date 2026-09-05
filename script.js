@@ -232,7 +232,7 @@ var WA_ICON_HTML =
           'warning', 10000);
       }
 
-      if (btn) { btn.disabled = false; btn.textContent = 'Enviar Consulta Gratis'; }
+      if (btn) { btn.disabled = false; btn.textContent = 'Enviar consulta'; }
 
     });
   });
