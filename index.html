@@ -152,10 +152,13 @@
         <line x1="6" y1="6" x2="18" y2="18"></line>
       </svg>
     </button>
-    <a href="#servicios">Servicios</a>
-    <a href="#nosotros">Nosotros</a>
+    <a href="/" class="active">Inicio</a>
+    <a href="/como-funciona.html">Cómo Funciona</a>
+    <a href="/preguntas-frecuentes.html">Preguntas Frecuentes</a>
+    <a href="/quienes-somos.html">Nosotros</a>
+    <a href="/antes-de-firmar.html">Antes de Firmar</a>
     <a href="#contacto">Contacto</a>
-    <a href="https://www.instagram.com/motoreclamo" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+    <a href="/calculadora.html">Calculadora Orientativa</a>
     <a href="https://wa.me/5491164677648?text=Hola%2C%20quiero%20consultar%20por%20un%20siniestro" onclick="return gtagSendEvent('https://wa.me/5491164677648')" target="_blank"
       rel="noopener noreferrer">WhatsApp</a>
   </nav>
@@ -175,33 +178,25 @@
               </div>
 
               <!-- NAV DESKTOP -->
-              <nav class="relative z-20 flex items-center justify-between px-5 md:px-10 lg:px-16 py-5 border-b border-surface-border/50 bg-[#0A0E17]/85 backdrop-blur-md"
+              <nav class="relative z-20 flex items-center justify-between px-5 md:px-10 lg:px-16 py-3.5 border-b border-surface-border/50 bg-[#0A0E17]/90 backdrop-blur-md"
                 aria-label="Navegación principal">
-                <a href="#" class="flex-shrink-0 group">
-                  <img src="img/logo-transparent.webp" alt="MotoReclamo" class="h-16 w-auto object-contain transition-transform group-hover:scale-105">
+                <a href="/" class="flex-shrink-0 group" aria-label="Volver al inicio de MotoReclamo">
+                  <img src="img/logo-transparent.webp" alt="MotoReclamo" class="site-logo transition-transform group-hover:scale-105" width="160" height="44">
                 </a>
 
                 <!-- Links desktop -->
-                <div class="hidden md:flex items-center gap-8 desktop-nav">
-                  <a href="#servicios"
-                    class="text-text-secondary hover:text-amber-highvis transition-colors text-base font-bold font-headline tracking-wider uppercase">Servicios</a>
-                  <a href="#nosotros"
-                    class="text-text-secondary hover:text-amber-highvis transition-colors text-base font-bold font-headline tracking-wider uppercase">Nosotros</a>
-                  <a href="#contacto"
-                    class="text-text-secondary hover:text-amber-highvis transition-colors text-base font-bold font-headline tracking-wider uppercase">Contacto</a>
-                  <a href="https://www.instagram.com/motoreclamo" target="_blank" rel="noopener noreferrer"
-                    class="text-text-secondary hover:text-amber-highvis transition-colors text-base font-bold font-headline tracking-wider uppercase flex items-center gap-1.5"
-                    aria-label="Instagram @motoreclamo">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      aria-hidden="true">
-                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-                    </svg>
-                    Instagram
-                  </a>
-
+                <div class="hidden md:flex items-center desktop-nav">
+                  <a href="/" class="nav-link-active">Inicio</a>
+                  <span class="nav-divider" aria-hidden="true">|</span>
+                  <a href="/como-funciona.html">Cómo Funciona</a>
+                  <span class="nav-divider" aria-hidden="true">|</span>
+                  <a href="/preguntas-frecuentes.html">Preguntas Frecuentes</a>
+                  <span class="nav-divider" aria-hidden="true">|</span>
+                  <a href="/quienes-somos.html">Nosotros</a>
+                  <span class="nav-divider" aria-hidden="true">|</span>
+                  <a href="/antes-de-firmar.html">Antes de Firmar</a>
+                  <a href="https://wa.me/5491164677648?text=Hola%2C%20quiero%20consultar%20por%20un%20accidente%20de%20moto"
+                    target="_blank" rel="noopener noreferrer" class="nav-cta-btn">Consultar</a>
                 </div>
 
                 <!-- Botón hamburguesa -->
@@ -210,9 +205,9 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     aria-hidden="true">
-                    <line x1="4" x2="20" y1="12" y2="12"></line>
-                    <line x1="4" x2="20" y1="6" y2="6"></line>
-                    <line x1="4" x2="20" y1="18" y2="18"></line>
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <line x1="4" y1="6" x2="20" y2="6"></line>
+                    <line x1="4" y1="18" x2="20" y2="18"></line>
                   </svg>
                 </button>
               </nav>
@@ -275,9 +270,7 @@
                     Motoqueros defendiendo <span class="text-amber-highvis">motoqueros</span>
                   </h2>
                   <p class="text-text-secondary max-w-2xl mx-auto text-base sm:text-lg leading-relaxed font-body">
-                    MotoReclamo nació de este lado: arriba de una moto.<br><br>
-                    Sabemos lo que pasa después de un accidente. La moto rota, las dudas, el silencio de la aseguradora y opiniones de todo el mundo que no te llevan a ningún lado.<br><br>
-                    Por eso creamos MotoReclamo: para que tengas un equipo que entiende de motos <em>y</em> de reclamos.
+                    Nacimos arriba de una moto. Entendemos lo que pasa después de un accidente: las dudas, el silencio de la aseguradora y la necesidad de una respuesta clara de un equipo que conoce las dos ruedas.
                   </p>
                 </div>
 
@@ -328,7 +321,7 @@
                   </p>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
 
                   <!-- Paso 1 -->
                   <div class="tactical-card rounded-2xl p-6 flex flex-col justify-between hover:border-amber-highvis/40 transition-all duration-300 reveal">
@@ -382,6 +375,13 @@
                     <div class="step-progress-bar"><div class="step-progress-fill" style="width: 100%;"></div></div>
                   </div>
 
+                </div>
+
+                <!-- Enlace contextual a página interna -->
+                <div class="text-center reveal">
+                  <a href="/como-funciona.html" class="btn-tactical-secondary inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-headline font-bold text-sm uppercase tracking-wider text-text-primary hover:border-amber-highvis transition-all">
+                    <span>Ver el proceso detallado, etapas y vías de reclamo &rarr;</span>
+                  </a>
                 </div>
               </div>
             </section>
@@ -550,6 +550,12 @@
                         </div>
                       </div>
                     </div>
+
+                    <div class="mt-8">
+                      <a href="/nosotros.html" class="inline-flex items-center gap-2 text-amber-highvis hover:underline text-sm font-semibold font-headline uppercase tracking-wider">
+                        <span>Conocé nuestra historia, valores y equipo completo &rarr;</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -650,154 +656,6 @@
               </div>
             </section>
 
-            <!-- PROCESO -->
-            <section id="proceso" class="py-20 px-5 md:px-10 lg:px-16 bg-void-base border-b border-surface-border/40">
-              <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-14 reveal">
-                  <span class="text-amber-400 text-xs font-mono font-semibold tracking-widest uppercase px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 inline-block mb-3">C&oacute;mo trabajamos</span>
-                  <h2 class="text-4xl sm:text-5xl font-black text-text-primary mb-4 uppercase font-headline tracking-tight">Qu&eacute; pasa despu&eacute;s de tu consulta</h2>
-                  <p class="text-text-secondary max-w-2xl mx-auto font-body text-base sm:text-lg">Del accidente al reclamo, te acompa&ntilde;amos en cada paso.</p>
-                </div>
-
-                <!-- 4 pasos -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
-                  <div class="tactical-card p-6 rounded-xl reveal flex flex-col justify-between">
-                    <div>
-                      <div class="flex items-center gap-3 mb-4">
-                        <span class="text-amber-400 font-mono font-bold text-3xl">01</span>
-                        <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-surface-asphalt text-amber-400 border border-amber-400/30">MotoReclamo</span>
-                      </div>
-                      <h3 class="font-headline text-xl uppercase font-bold text-text-primary mb-2">Cont&aacute;nos qu&eacute; pas&oacute;</h3>
-                      <p class="text-text-secondary text-sm leading-relaxed font-body">Nos mand&aacute;s los datos del accidente, fotos, documentaci&oacute;n y todo lo que ten&eacute;s.</p>
-                    </div>
-                    <div class="step-progress-bar mt-6">
-                      <div class="step-progress-fill" style="width: 25%;"></div>
-                    </div>
-                  </div>
-
-                  <div class="tactical-card p-6 rounded-xl reveal reveal-delay-1 flex flex-col justify-between">
-                    <div>
-                      <div class="flex items-center gap-3 mb-4">
-                        <span class="text-amber-400 font-mono font-bold text-3xl">02</span>
-                        <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-surface-asphalt text-amber-400 border border-amber-400/30">MotoReclamo</span>
-                      </div>
-                      <h3 class="font-headline text-xl uppercase font-bold text-text-primary mb-2">Analizamos tu caso</h3>
-                      <p class="text-text-secondary text-sm leading-relaxed font-body">Revisamos c&oacute;mo ocurri&oacute; el accidente, los da&ntilde;os, las lesiones y la informaci&oacute;n disponible para orientar el reclamo.</p>
-                    </div>
-                    <div class="step-progress-bar mt-6">
-                      <div class="step-progress-fill" style="width: 50%;"></div>
-                    </div>
-                  </div>
-
-                  <div class="tactical-card p-6 rounded-xl reveal reveal-delay-2 flex flex-col justify-between">
-                    <div>
-                      <div class="flex items-center gap-3 mb-4">
-                        <span class="text-amber-400 font-mono font-bold text-3xl">03</span>
-                        <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-surface-asphalt text-text-muted border border-surface-border">Profesional Jurídico</span>
-                      </div>
-                      <h3 class="font-headline text-xl uppercase font-bold text-text-primary mb-2">Se inicia el reclamo</h3>
-                      <p class="text-text-secondary text-sm leading-relaxed font-body">A trav&eacute;s del profesional matriculado que interviene en tu caso, se presenta el reclamo y se negocia con la compa&ntilde;&iacute;a de seguros buscando obtener la reparaci&oacute;n que corresponda seg&uacute;n el caso.</p>
-                    </div>
-                    <div class="step-progress-bar mt-6">
-                      <div class="step-progress-fill" style="width: 75%;"></div>
-                    </div>
-                  </div>
-
-                  <div class="tactical-card p-6 rounded-xl reveal reveal-delay-3 flex flex-col justify-between">
-                    <div>
-                      <div class="flex items-center gap-3 mb-4">
-                        <span class="text-amber-400 font-mono font-bold text-3xl">04</span>
-                        <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-surface-asphalt text-text-muted border border-surface-border">Profesional Jurídico</span>
-                      </div>
-                      <h3 class="font-headline text-xl uppercase font-bold text-text-primary mb-2">Si no hay propuesta razonable</h3>
-                      <p class="text-text-secondary text-sm leading-relaxed font-body">Se eval&uacute;an junto con vos las alternativas para continuar el reclamo, incluida la v&iacute;a judicial cuando corresponda.</p>
-                    </div>
-                    <div class="step-progress-bar mt-6">
-                      <div class="step-progress-fill" style="width: 100%;"></div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="text-center mb-10">
-                  <h3 class="text-3xl sm:text-4xl font-black text-text-primary uppercase font-headline tracking-tight">Dos Caminos Posibles</h3>
-                  <p class="text-text-secondary mt-2 max-w-2xl mx-auto font-body text-base">Te explicamos las diferencias para que puedas entender cu&aacute;l se adapta mejor a tu situaci&oacute;n.</p>
-                </div>
-
-                <!-- Comparativa 2 Caminos Posibles: Equilibrada y Técnica -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-
-                  <!-- Extrajudicial -->
-                  <div class="tactical-card-asphalt p-7 rounded-xl reveal flex flex-col justify-between">
-                    <div>
-                      <div class="flex items-center justify-between gap-3 mb-4">
-                        <div class="flex items-center gap-2">
-                          <span class="font-mono text-amber-400 font-bold text-xl">01</span>
-                          <h4 class="font-headline text-2xl uppercase font-bold text-text-primary">Acuerdo Extrajudicial</h4>
-                        </div>
-                        <span class="text-xs font-mono uppercase px-2.5 py-1 rounded bg-surface-deep border border-surface-border text-text-secondary">Plazo variable</span>
-                      </div>
-                      <p class="text-text-secondary text-sm leading-relaxed font-body mb-5">
-                        Una alternativa enfocada en alcanzar un acuerdo con la compa&ntilde;&iacute;a de seguros sin necesidad de iniciar un juicio. Cuando existe una propuesta razonable, se prioriza resolver el reclamo por v&iacute;a directa.
-                      </p>
-                      <ul class="text-text-secondary text-sm space-y-2.5 mb-5 font-body">
-                        <li class="flex items-start gap-2">
-                          <span class="text-emerald-400 font-bold">&#10003;</span>
-                          <span>Negociaci&oacute;n directa con la compa&ntilde;&iacute;a aseguradora</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                          <span class="text-emerald-400 font-bold">&#10003;</span>
-                          <span>Evita la apertura formal de un proceso judicial</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                          <span class="text-emerald-400 font-bold">&#10003;</span>
-                          <span>Sujeto a la obtenci&oacute;n de una propuesta satisfactoria</span>
-                        </li>
-                      </ul>
-                    </div>
-                    <p class="text-text-muted text-xs pt-4 border-t border-surface-border/40 font-body">
-                      *Los plazos dependen de la aseguradora, las caracter&iacute;sticas del caso y la jurisdicci&oacute;n.
-                    </p>
-                  </div>
-
-                  <!-- Judicial -->
-                  <div class="tactical-card-asphalt p-7 rounded-xl reveal reveal-delay-1 flex flex-col justify-between">
-                    <div>
-                      <div class="flex items-center justify-between gap-3 mb-4">
-                        <div class="flex items-center gap-2">
-                          <span class="font-mono text-amber-400 font-bold text-xl">02</span>
-                          <h4 class="font-headline text-2xl uppercase font-bold text-text-primary">V&iacute;a Judicial</h4>
-                        </div>
-                        <span class="text-xs font-mono uppercase px-2.5 py-1 rounded bg-surface-deep border border-surface-border text-text-secondary">Variable por jurisdicci&oacute;n</span>
-                      </div>
-                      <p class="text-text-secondary text-sm leading-relaxed font-body mb-5">
-                        Cuando no existe una propuesta adecuada o la aseguradora no responde con una oferta justa, se eval&uacute;a continuar el reclamo en sede judicial ante los tribunales competentes.
-                      </p>
-                      <ul class="text-text-secondary text-sm space-y-2.5 mb-5 font-body">
-                        <li class="flex items-start gap-2">
-                          <span class="text-amber-400 font-bold">&#10003;</span>
-                          <span>Permite continuar el reclamo ante la falta de acuerdo</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                          <span class="text-amber-400 font-bold">&#10003;</span>
-                          <span>Intervenci&oacute;n de mediaci&oacute;n prejudicial y sede judicial</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                          <span class="text-amber-400 font-bold">&#10003;</span>
-                          <span>Se reclaman integralmente los da&ntilde;os que correspondan seg&uacute;n cada caso</span>
-                        </li>
-                      </ul>
-                    </div>
-                    <p class="text-text-muted text-xs pt-4 border-t border-surface-border/40 font-body">
-                      *La duraci&oacute;n del proceso judicial es variable seg&uacute;n jurisdicci&oacute;n, fueros y complejidad del hecho.
-                    </p>
-                  </div>
-
-                </div>
-
-                <p class="text-text-muted text-sm text-center mt-8 max-w-2xl mx-auto font-body">En tu consulta inicial te explicamos qu&eacute; alternativas existen seg&uacute;n las caracter&iacute;sticas de tu caso, tus tiempos y la jurisdicci&oacute;n que corresponda.</p>
-              </div>
-            </section>
-
             <!-- FAQ -->
             <section id="faq" class="py-20 px-5 md:px-10 lg:px-16 bg-surface-deep border-b border-surface-border/40">
               <div class="max-w-4xl mx-auto">
@@ -808,7 +666,7 @@
                 <div class="space-y-4" id="faq-list">
                   <div class="faq-item tactical-card rounded-xl reveal">
                     <button class="faq-toggle" aria-expanded="false">
-                      <h3 class="font-headline text-lg sm:text-xl font-bold uppercase tracking-wide text-text-primary text-left">&iquest;Puedo reclamar si no ten&iacute;a registro?</h3>
+                      <h3 class="font-headline text-lg sm:text-xl font-bold uppercase tracking-wide text-text-primary text-left">&iquest;Puedo reclamar si no ten&iacute;a registro o seguro?</h3>
                       <span class="faq-icon text-amber-400" aria-hidden="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
                           stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -818,12 +676,12 @@
                       </span>
                     </button>
                     <div class="faq-body">
-                      <div class="faq-body-inner text-text-secondary font-body">No necesariamente perd&eacute;s el derecho a reclamar. La responsabilidad por el accidente se analiza seg&uacute;n c&oacute;mo ocurri&oacute; el hecho y las circunstancias particulares del caso. La falta de documentaci&oacute;n puede tener otras consecuencias, pero no descart&eacute;s tu reclamo sin analizarlo primero.</div>
+                      <div class="faq-body-inner text-text-secondary font-body">No necesariamente perd&eacute;s el derecho a reclamar. La responsabilidad por el accidente se analiza seg&uacute;n c&oacute;mo ocurri&oacute; el hecho y las circunstancias particulares del caso. La falta de documentaci&oacute;n o seguro propio puede originar faltas administrativas, pero no descart&eacute;s tu reclamo indemnizatorio sin analizarlo primero.</div>
                     </div>
                   </div>
                   <div class="faq-item tactical-card rounded-xl reveal">
                     <button class="faq-toggle" aria-expanded="false">
-                      <h3 class="font-headline text-lg sm:text-xl font-bold uppercase tracking-wide text-text-primary text-left">&iquest;Puedo reclamar si mi moto no ten&iacute;a seguro?</h3>
+                      <h3 class="font-headline text-lg sm:text-xl font-bold uppercase tracking-wide text-text-primary text-left">&iquest;Tengo que pagar por adelantado o ir a juicio?</h3>
                       <span class="faq-icon text-amber-400" aria-hidden="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
                           stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -833,67 +691,7 @@
                       </span>
                     </button>
                     <div class="faq-body">
-                      <div class="faq-body-inner text-text-secondary font-body">La falta de seguro propio no determina por s&iacute; sola la responsabilidad por el accidente. El caso debe analizarse individualmente. Cont&aacute;nos tu situaci&oacute;n y evaluamos las alternativas disponibles.</div>
-                    </div>
-                  </div>
-                  <div class="faq-item tactical-card rounded-xl reveal">
-                    <button class="faq-toggle" aria-expanded="false">
-                      <h3 class="font-headline text-lg sm:text-xl font-bold uppercase tracking-wide text-text-primary text-left">&iquest;Qu&eacute; pasa si el otro conductor no ten&iacute;a seguro?</h3>
-                      <span class="faq-icon text-amber-400" aria-hidden="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                          <line x1="12" y1="5" x2="12" y2="19" />
-                          <line x1="5" y1="12" x2="19" y2="12" />
-                        </svg>
-                      </span>
-                    </button>
-                    <div class="faq-body">
-                      <div class="faq-body-inner text-text-secondary font-body">Puede cambiar la forma de reclamar y contra qui&eacute;n. Que el otro no tuviera seguro no significa autom&aacute;ticamente que no existe reclamo. Analizamos qu&eacute; alternativas existen seg&uacute;n el caso.</div>
-                    </div>
-                  </div>
-                  <div class="faq-item tactical-card rounded-xl reveal">
-                    <button class="faq-toggle" aria-expanded="false">
-                      <h3 class="font-headline text-lg sm:text-xl font-bold uppercase tracking-wide text-text-primary text-left">&iquest;Cu&aacute;nto tarda un reclamo?</h3>
-                      <span class="faq-icon text-amber-400" aria-hidden="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                          <line x1="12" y1="5" x2="12" y2="19" />
-                          <line x1="5" y1="12" x2="19" y2="12" />
-                        </svg>
-                      </span>
-                    </button>
-                    <div class="faq-body">
-                      <div class="faq-body-inner text-text-secondary font-body">Depende de la aseguradora, la documentaci&oacute;n disponible, la jurisdicci&oacute;n y de si puede alcanzarse un acuerdo o resulta necesario avanzar por otras v&iacute;as. No existe un plazo &uacute;nico: te orientamos seg&uacute;n tu caso concreto.</div>
-                    </div>
-                  </div>
-                  <div class="faq-item tactical-card rounded-xl reveal">
-                    <button class="faq-toggle" aria-expanded="false">
-                      <h3 class="font-headline text-lg sm:text-xl font-bold uppercase tracking-wide text-text-primary text-left">&iquest;Tengo que ir a juicio?</h3>
-                      <span class="faq-icon text-amber-400" aria-hidden="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                          <line x1="12" y1="5" x2="12" y2="19" />
-                          <line x1="5" y1="12" x2="19" y2="12" />
-                        </svg>
-                      </span>
-                    </button>
-                    <div class="faq-body">
-                      <div class="faq-body-inner text-text-secondary font-body">No necesariamente. Muchos reclamos pueden resolverse mediante un acuerdo sin iniciar un proceso judicial. Si no existe una propuesta adecuada, evaluamos junto con vos las alternativas disponibles para continuar el reclamo.</div>
-                    </div>
-                  </div>
-                  <div class="faq-item tactical-card rounded-xl reveal">
-                    <button class="faq-toggle" aria-expanded="false">
-                      <h3 class="font-headline text-lg sm:text-xl font-bold uppercase tracking-wide text-text-primary text-left">&iquest;Existe mediaci&oacute;n obligatoria antes del juicio?</h3>
-                      <span class="faq-icon text-amber-400" aria-hidden="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                          <line x1="12" y1="5" x2="12" y2="19" />
-                          <line x1="5" y1="12" x2="19" y2="12" />
-                        </svg>
-                      </span>
-                    </button>
-                    <div class="faq-body">
-                      <div class="faq-body-inner text-text-secondary font-body">Depende de la jurisdicci&oacute;n. En determinadas provincias o jurisdicciones puede ser necesario cumplir una instancia de mediaci&oacute;n prejudicial antes de iniciar una demanda civil. Te informamos lo que corresponde seg&uacute;n d&oacute;nde ocurri&oacute; el accidente.</div>
+                      <div class="faq-body-inner text-text-secondary font-body">La orientaci&oacute;n inicial es sin cargo. Cuando interviene un profesional matriculado, se trabaja a resultado (solo se cobran honorarios si obten&eacute;s una indemnizaci&oacute;n). Adem&aacute;s, la gran mayor&iacute;a de los reclamos se resuelve mediante un acuerdo extrajudicial sin necesidad de iniciar un juicio.</div>
                     </div>
                   </div>
                   <div class="faq-item tactical-card rounded-xl reveal">
@@ -911,21 +709,12 @@
                       <div class="faq-body-inner text-text-secondary font-body">S&iacute;. MotoReclamo recibe consultas de motociclistas de todo el pa&iacute;s. Trabajamos con profesionales del derecho en distintas jurisdicciones para gestionar cada caso donde corresponda.</div>
                     </div>
                   </div>
-                  <div class="faq-item tactical-card rounded-xl reveal">
-                    <button class="faq-toggle" aria-expanded="false">
-                      <h3 class="font-headline text-lg sm:text-xl font-bold uppercase tracking-wide text-text-primary text-left">&iquest;Cu&aacute;nto vale mi reclamo?</h3>
-                      <span class="faq-icon text-amber-400" aria-hidden="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                          <line x1="12" y1="5" x2="12" y2="19" />
-                          <line x1="5" y1="12" x2="19" y2="12" />
-                        </svg>
-                      </span>
-                    </button>
-                    <div class="faq-body">
-                      <div class="faq-body-inner text-text-secondary font-body">No existe una cifra &uacute;nica. Depende de las lesiones, da&ntilde;os materiales, edad, ingresos, incapacidad y dem&aacute;s circunstancias del accidente. Pod&eacute;s usar nuestra calculadora para una estimaci&oacute;n inicial orientativa, o contarnos tu caso directamente.</div>
-                    </div>
-                  </div>
+                </div>
+
+                <div class="text-center mt-10 reveal">
+                  <a href="/preguntas-frecuentes.html" class="btn-tactical-secondary inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-headline font-bold text-sm uppercase tracking-wider text-text-primary hover:border-amber-highvis transition-all">
+                    <span>Ver todas las preguntas frecuentes (8+) &rarr;</span>
+                  </a>
                 </div>
               </div>
             </section>
@@ -949,10 +738,16 @@
                       Una vez que acept&aacute;s y cerr&aacute;s un acuerdo, puede resultar dif&iacute;cil o imposible
                       reclamar nuevamente por los mismos conceptos.
                     </p>
-                    <a href="#contacto"
-                      class="btn-tactical-primary inline-flex items-center justify-center text-black px-8 py-4 rounded-xl text-base font-bold font-headline uppercase tracking-wider">
-                      Quiero revisar la oferta
-                    </a>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                      <a href="/oferta-aseguradora.html"
+                        class="btn-tactical-primary inline-flex items-center justify-center text-black px-6 py-3.5 rounded-xl text-sm font-bold font-headline uppercase tracking-wider">
+                        Revisar mi oferta antes de firmar
+                      </a>
+                      <a href="#contacto"
+                        class="btn-tactical-secondary inline-flex items-center justify-center text-text-primary px-6 py-3.5 rounded-xl text-sm font-bold font-headline uppercase tracking-wider">
+                        Contanos qué pasó
+                      </a>
+                    </div>
                   </div>
                   <div class="tactical-card-asphalt p-8 rounded-2xl reveal reveal-delay-1">
                     <h3 class="font-headline text-xl uppercase font-bold text-text-primary mb-6">Antes de aceptar cualquier propuesta, cheque&aacute; esto:</h3>
@@ -976,25 +771,6 @@
                     </ul>
                   </div>
                 </div>
-              </div>
-            </section>
-
-            <!-- SIN REGISTRO / SIN SEGURO -->
-            <section class="py-20 px-5 md:px-10 lg:px-16 bg-surface-deep border-b border-surface-border/40">
-              <div class="max-w-4xl mx-auto text-center reveal">
-                <span class="text-amber-400 text-xs font-mono font-semibold tracking-widest uppercase px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 inline-block mb-3">Una duda frecuente</span>
-                <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-text-primary mb-6 uppercase font-headline tracking-tight">
-                  &iquest;No ten&iacute;as registro<br><span class="text-amber-400">o seguro?</span>
-                </h2>
-                <p class="text-text-secondary text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-6 font-body">
-                  Eso no significa autom&aacute;ticamente que hayas perdido tu derecho a reclamar.
-                  La responsabilidad por el accidente se analiza seg&uacute;n c&oacute;mo ocurri&oacute; el hecho
-                  y las circunstancias particulares del caso.
-                </p>
-                <p class="text-text-muted text-sm leading-relaxed max-w-xl mx-auto font-body">
-                  La falta de documentaci&oacute;n puede tener otras consecuencias y eventualmente influir
-                  en determinadas situaciones, pero no descart&eacute;s tu reclamo sin analizarlo primero.
-                </p>
               </div>
             </section>
 
@@ -1087,10 +863,16 @@
                         </div>
                       </div>
 
-                      <div class="bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-black p-7 rounded-xl shadow-lg">
-                        <h4 class="font-headline font-bold uppercase tracking-tight text-2xl text-black mb-2">Consulta Inicial Sin Cargo</h4>
-                        <p class="text-sm text-black/85 mb-3 leading-relaxed font-body font-medium">Analizamos tu caso sin compromiso. Antes de avanzar te explicamos cómo funciona el proceso y qué se espera en tu situación particular.</p>
-                        <p class="font-headline font-bold text-base uppercase tracking-wide text-black">Sin costos adelantados.<br>Solo cobramos si obtenés una indemnización.</p>
+                      <div class="tactical-card-asphalt p-6 sm:p-7 rounded-xl border border-amber-400/40 bg-[#161D2F] shadow-xl mb-6 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500"></div>
+                        <div class="flex items-center gap-2 mb-2">
+                          <span class="w-2.5 h-2.5 rounded-full bg-amber-400 shadow-[0_0_8px_rgba(251,191,36,0.6)]"></span>
+                          <h4 class="font-headline font-bold uppercase tracking-tight text-xl sm:text-2xl text-amber-400">Consulta Inicial Sin Cargo</h4>
+                        </div>
+                        <p class="text-sm sm:text-base text-slate-200 mb-4 leading-relaxed font-body">Analizamos tu caso sin compromiso. Antes de avanzar te explicamos cómo funciona el proceso y qué se espera en tu situación particular.</p>
+                        <div class="pt-3 border-t border-slate-700/60">
+                          <p class="font-headline font-bold text-sm sm:text-base uppercase tracking-wide text-white">Sin costos adelantados.<br><span class="text-amber-400 font-bold">Solo cobramos si obtenés una indemnización.</span></p>
+                        </div>
                       </div>
                     </div>
 
@@ -1211,31 +993,33 @@
                 <div class="max-w-7xl mx-auto px-5 md:px-10 lg:px-16 py-12">
                   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
                     <div class="sm:col-span-2 lg:col-span-1">
-                      <img src="img/logo-transparent.webp" alt="MotoReclamo" class="h-16 w-auto object-contain mb-4" loading="lazy">
-                      <p class="text-text-muted text-sm leading-relaxed font-body">Especialistas en reclamos por accidentes de moto. Motoqueros defendiendo motoqueros en toda Argentina.</p>
+                      <img src="img/logo-transparent.webp" alt="MotoReclamo" class="site-logo mb-4" width="160" height="44" loading="lazy">
+                      <p class="text-text-muted text-sm leading-relaxed font-body">Orientación especializada para motociclistas ante accidentes de tránsito en toda Argentina.</p>
                     </div>
 
                     <div>
-                      <h3 class="font-headline text-base font-bold uppercase tracking-widest text-text-primary mb-5">Navegación</h3>
-                      <ul class="space-y-3 font-body">
-                        <li><a href="#servicios"
-                            class="text-text-secondary hover:text-amber-400 transition-colors text-sm">Servicios</a></li>
-                        <li><a href="#nosotros"
-                            class="text-text-secondary hover:text-amber-400 transition-colors text-sm">Nosotros</a></li>
-                        <li><a href="https://motoreclamo.ar/calculadora"
-                            class="text-text-secondary hover:text-amber-400 transition-colors text-sm">Calculadora de indemnización</a></li>
-                        <li><a href="#contacto"
-                            class="text-text-secondary hover:text-amber-400 transition-colors text-sm">Contacto</a></li>
+                      <h3 class="font-headline text-base font-bold uppercase tracking-widest text-text-primary mb-5">Páginas</h3>
+                      <ul class="space-y-3 font-body text-sm">
+                        <li><a href="/"
+                            class="text-amber-400 transition-colors">Inicio</a></li>
+                        <li><a href="/como-funciona.html"
+                            class="text-text-secondary hover:text-amber-400 transition-colors">Cómo Funciona</a></li>
+                        <li><a href="/preguntas-frecuentes.html"
+                            class="text-text-secondary hover:text-amber-400 transition-colors">Preguntas Frecuentes</a></li>
+                        <li><a href="/quienes-somos.html"
+                            class="text-text-secondary hover:text-amber-400 transition-colors">Nosotros</a></li>
+                        <li><a href="/antes-de-firmar.html"
+                            class="text-text-secondary hover:text-amber-400 transition-colors">Antes de Firmar</a></li>
                       </ul>
                     </div>
 
                     <div>
-                      <h3 class="font-headline text-base font-bold uppercase tracking-widest text-text-primary mb-5">Servicios</h3>
+                      <h3 class="font-headline text-base font-bold uppercase tracking-widest text-text-primary mb-5">Reclamos</h3>
                       <ul class="space-y-3 text-text-secondary text-sm font-body">
-                        <li>Reclamos por Accidentes</li>
-                        <li>Indemnizaciones</li>
-                        <li>Análisis del caso</li>
-                        <li>Reclamos ante aseguradoras</li>
+                        <li><a href="/antes-de-firmar.html" class="hover:text-amber-400 transition-colors">Revisión de Ofertas</a></li>
+                        <li><a href="/calculadora.html" class="hover:text-amber-400 transition-colors">Calculadora Orientativa</a></li>
+                        <li><a href="/como-funciona.html" class="hover:text-amber-400 transition-colors">Vía Extrajudicial y Judicial</a></li>
+                        <li><a href="/#contacto" class="hover:text-amber-400 transition-colors">Contacto Directo</a></li>
                       </ul>
                     </div>
 
@@ -1303,9 +1087,9 @@
                         © 2026 MotoReclamo · motoreclamo.ar · Todos los derechos reservados.
                       </p>
                       <div class="flex gap-5 text-xs text-text-muted font-body">
-                        <a href="https://motoreclamo.ar/terminos-y-condiciones.html"
+                        <a href="/terminos-y-condiciones.html"
                           class="hover:text-amber-400 transition-colors">Términos y Condiciones</a>
-                        <a href="https://motoreclamo.ar/politica-de-privacidad.html"
+                        <a href="/politica-de-privacidad.html"
                           class="hover:text-amber-400 transition-colors">Privacidad</a>
                       </div>
                     </div>
